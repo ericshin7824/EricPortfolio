@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="descrption" content="Developer,Development,Web Portfolio,Developer Dortfolio,html,css,javascript,Front-End">
+        <meta name="keywords" content="Developer,Development,Web Portfolio,Developer Dortfolio,html,css,javascript,Front-End">
+        <title>Erichoonshin.com</title>
+        <link rel="stylesheet" href="stylesheet.css" />
+        <script src="https://kit.fontawesome.com/2310046e07.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div class="body-wrapper">
+            <p>
+                <a href="#home" id="back-to-top" class="text">Top</a>
+            </p>
+            <header class="header-wraper layout-wraper">
+                <div class="header-inner layout-inner">
+                    <a href="#" class="logo">EHS</a>
+                    <nav class="nav-container">
+                        <div class="nav-items-holder">
+                            <ul class="nav-items">
+                                <a href="#home" class="page-btn">Home</a>
+                                <a href="#about" class="page-btn">About</a>
+                                <!-- <a href="./portfolio.html" class="page-btn">Portfolio</a> -->
+                                <a href="#contact" class="page-btn">Contact</a>
+                            </ul>
+                        </div>
+                    </nav>
+
+                    <div class="right-icons">
+                        <div class="media-icons">
+                            <a href="#"><i class="fab fa-facebook-square"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-github-square"></i></a>
+                        </div>
+                        <div class="menu-btn">
+                            <span class="btn-top"></span>
+                            <span class="btn-middle"></span>
+                            <span class="btn-bottom"></span>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <script>
+                const menuBtn = document.querySelector('.menu-btn');
+                const menuNav = document.querySelector('.nav-container');
+
+                // document.onclick = function(e){
+                //     if(e.target.id !== 'menuNav' && e.target.id !== 'menuBtn'){
+                //         menuBtn.classList.remove('open')
+                //         menuNav.classList.remove('open')
+                //     }
+                // }
+
+                // menuBtn.onclick = function(){
+                //     menuBtn.classList.toggle('open');
+                //     menuNav.classList.toggle('open');
+                // }
+                //위 두개는 왜 안될까??
+
+                
+                menuBtn.addEventListener('click', function () {
+                    menuBtn.classList.toggle('open');
+                    menuBtn.querySelectorAll('span').forEach((span) => span.classList.toggle('open'));
+                    menuNav.classList.toggle('open');
+                });
+            </script>
+
+            <!-- <section class="side-menu-wraper">
+                <div class="side-menu-container">
+                    <ul class="side-menu-inner">
+                        <li><a href="./index.html" class="page-btn">Home</a></li>
+                        <li><a href="./about.html" class="page-btn">About</a></li>
+                        <li><a href="./portfolio.html" class="page-btn">Portfolio</a></li>
+                        <li><a href="#" class="page-btn">Contact</a></li>
+                    </ul>
+                </div>
+            </section> -->
+
+            <main>
+                <section class="home-wraper layout-wraper" id="home">
+                    <div class="home-inner layout-inner">
+                        <div class="home-container">
+                            <div class="home-content-photo reveal">
+                                <div class="content-inner">
+                                    <img src="./images/person.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="home-content-text reveal">
+                                <h1>
+                                    eric<br>
+                                    <span>Hoon</span><br>
+                                    Shin
+                                </h1>
+                                <h1>Developer</h1>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="sect-divider-wraper layout-wraper">
+                    <div class="sect-divider-inner layout-inner">
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam exercitationem blanditiis, cumque repellat recusandae ipsa aspernatur accusantium consequuntur, eos ad minus nisi quo odit? Quia facere aspernatur repudiandae atque perferendis. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deserunt id corrupti quam pariatur nesciunt aut odio assumenda cumque possimus. Placeat sint ab officia et vel sapiente ipsa accusantium itaque labore.</p>
+                    </div>
+                </section>
+                <section class="about-wraper layout-wraper"  id="about">
+                    <div class="about-inner layout-inner">
+                        <div class="about-container">
+                            <div class="about-title reveal">
+                                <p>About</p>
+                                <h4>what i do</h4>
+                            </div>
+                            <div class="about-grid-container  reveal">
+                                <a class="about-grid-item">
+                                    <div class="photo-item">
+                                        <i class="fas fa-cogs"></i>
+                                    </div>
+                                    <div class="discript-item">
+                                        <h2>ux / ui</h2>
+                                        <p>It’s all about the user’s experience.</p>
+                                    </div>
+                                </a>
+                                <a class="about-grid-item">
+                                    <div class="photo-item">
+                                        <i class="fas fa-desktop"></i>
+                                    </div>
+                                    <div class="discript-item">
+                                        <h2>web</h2>
+                                        <p>From websites to web apps.</p>
+                                    </div>
+                                </a>
+                                <a class="about-grid-item">
+                                    <div class="photo-item">
+                                        <i class="fas fa-mobile-alt"></i>
+                                    </div>
+                                    <div class="discript-item">
+                                        <h2>app</h2>
+                                        <p>Phone to tablet to wearable tech.</p>
+                                    </div>
+                                </a>
+                                <a class="about-grid-item">
+                                    <div class="photo-item">
+                                        <i class="fas fa-bullhorn"></i>
+                                    </div>
+                                    <div class="discript-item">
+                                        <h2>marketing</h2>
+                                        <p>Dominate your market. Grow your business.</p>
+                                    </div>
+                                </a>
+                                <!-- <a class="about-grid-item">Photo</a> -->
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            <section class="sect-divider-wraper layout-wraper">
+                <div class="sect-divider-inner layout-inner">
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam exercitationem blanditiis, cumque repellat recusandae ipsa aspernatur accusantium consequuntur, eos ad minus nisi quo odit? Quia facere aspernatur repudiandae atque perferendis. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deserunt id corrupti quam pariatur nesciunt aut odio assumenda cumque possimus. Placeat sint ab officia et vel sapiente ipsa accusantium itaque labore.</p>
+                </div>
+            </section>
+            <footer class="footer-wraper layout-wraper" id="contact">
+                <div class="footer-inner layout-inner">
+                    <div class="contact-container">
+                        <div class="contact-title  reveal">
+                            <p>ready <br>to hire <br>me?</p>
+                        </div>
+
+                        <div class="contact-grid-container  reveal">
+                            <div class="contact-grid-item">
+                                <h5>call me</h5>
+                                <div>
+                                    <span>1-949-266-4421</span>
+                                </div>
+                            </div>
+                            <div class="contact-grid-item">
+                                <h5>email me</h5>
+                                <div>
+                                    <a href="#contact-form" id="email-form">ericshin7824@gmail.com</a>
+                                </div>
+                            </div>
+                            <div class="contact-grid-item">
+                                <h5>contact with me</h5>
+                                <div class="contact-media-icons">
+                                    <a href="#"><i class="fab fa-facebook-square"></i></a>
+                                    <a href="#"><i class="fab fa-instagram"></i></a>
+                                    <a href="#"><i class="fab fa-github-square"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer-bottom-container">
+                        <div class="footer-bottom-items">
+                            <a href="">facebook</a>
+                            <a href="">instagram</a>
+                            <a href="">github</a>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+
+
+            <section class="contact-form" id="contact-form">
+                <div class="form-container">
+                    <form action="https://formspree.io/f/mwkajgyv" method="POST" id="my-form">
+                        <div class="form-group">
+                            <label for="firstName">First Name</label>
+                            <input type="text" id="firstName" name="firstName" />
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="lastName">Last Name</label>
+                            <input type="text" id="lastName" name="lastName" />
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="text" id="email" name="email" />
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="massage">Massage</label>
+                            <!-- <input type="text" id="massage" name="massage" /> -->
+                            <textarea name="massage" id="massage" cols="30" rows="10"></textarea>
+                        </div>
+    
+                        <button class="form-submit-btn" type="submit">Submit</button>
+                    </form>
+                    <div class="form-close-btn" id="form-close-btn"></div>
+                </div>
+                <div id="status"></div>
+            </section>
+
+            <script>
+                const sendEmail = document.getElementById('email-form');
+                const contactForm = document.getElementById('contact-form');
+                const formCloseBtn = document.getElementById('form-close-btn')
+
+                sendEmail.onclick = function() {
+                    contactForm.classList.add('active')
+                }
+                formCloseBtn.onclick = function() {
+                    contactForm.classList.remove('active')
+                }
+            </script>
+    
+            <script>
+                var form = document.getElementById('my-form');
+    
+                async function handleSubmit(event) {
+                    event.preventDefault();
+                    var status = document.getElementById('status');
+                    var data = new FormData(event.target);
+                    fetch(event.target.action, {
+                        method: form.method,
+                        body: data,
+                        headers: {
+                            Accept: 'application/json',
+                        },
+                    })
+                        .then((response) => {
+                            status.innerHTML = 'Thanks for your submission!';
+                            status.classList.add('response');
+                            form.reset();
+                        })
+                        .catch((error) => {
+                            status.innerHTML = 'Oops! There was a problem submitting your form';
+                            status.classList.add('error');
+                        });
+                }
+                form.addEventListener('submit', handleSubmit);
+            </script>
+   
+            <script src="mainPage.js"></script>
+    </body>
+</html>
+
+
