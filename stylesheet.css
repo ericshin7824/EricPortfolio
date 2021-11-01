@@ -39,7 +39,7 @@ a {
     position: fixed;
     bottom: 80px;
     right: 80px;
-    background-color: #999;
+    background-color: #333;
     color: #fff;
     border: none;
     border-radius: 4px;
@@ -55,7 +55,7 @@ a {
     z-index: 9999;
 }
 #back-to-top:hover {
-    background-color: crimson;
+    background-color: #999;
     padding: 1em 3em;
 }
 #back-to-top.visible {
@@ -137,7 +137,6 @@ a {
 
 .header-wraper .nav-container .nav-items a {
     position: relative;
-    width: 120px;
     color: #fff;
     padding: 10px 40px;
     transition: 0.3s ease-in-out;
@@ -146,8 +145,7 @@ a {
 }
 
 .header-wraper .nav-container .nav-items a:hover {
-    color: crimson;
-    transform: scale(1.1);
+    color: #999;
 }
 
 /* --------------- header icons --------------- */
@@ -167,8 +165,8 @@ a {
     margin: 0 20px 0 0;
 }
 .right-icons .media-icons a:hover {
-    transform: scale(1.2);
-    color: crimson;
+    transform: scale(1.1);
+    color: #999;
 }
 
 /* ------------------------------------------------------------- home ---------------------------------------------------------------- */
@@ -453,8 +451,8 @@ a {
     margin-right: 40px;
 }
 .footer-wraper .contact-container .contact-grid-item .contact-media-icons a:hover {
-    transform: scale(1.2);
-    color: crimson;
+    transform: scale(1.1);
+    color: #999;
 }
 
 /* ------------------- footer bottom ------------------- */
@@ -551,7 +549,7 @@ a {
     transition: all 0.4s ease-in-out;
 }
 .form-container .form-submit-btn[type='submit']:hover {
-    background: crimson;
+    background: lightgreen;
 }
 
 .form-close-btn {
@@ -601,11 +599,11 @@ a {
     border-radius: 4px;
 }
 #status.response {
-    background: #56db6e;
+    background: lightgreen;
     /* animation: status 8s ease-in-out forwards; */
 }
 #status.error {
-    background: #e8a51e;
+    background: orange;
     /* animation: status 8s ease-in-out forwards; */
 }
 /* @keyframes status {
