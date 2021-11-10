@@ -181,7 +181,6 @@ a {
 
 .home-wraper .home-inner {
     position: relative;
-    /* padding: 220px 0 120px 0; */
     color: #fff;
 }
 
@@ -639,20 +638,7 @@ a {
     background: orange;
     /* animation: status 8s ease-in-out forwards; */
 }
-/* @keyframes status {
-    0% {
-        opacity: 1;
-        pointer-events: all;
-    }
-    90% {
-        opacity: 1;
-        pointer-events: all;
-    }
-    100% {
-        opacity: 0;
-        pointer-events: none;
-    }
-} */
+
 /* --------------- media --------------- */
 @media (max-width: 960px) {
     .scroll-down .header-wraper {
@@ -674,7 +660,7 @@ a {
         height: 100vh;
         visibility: hidden;
         opacity: 0;
-        background: rgba(1, 1, 1, 0.4);
+        background: rgba(1, 1, 1, 0.3);
         transition: 0.5s ease-in-out;
         z-index: -1;
     }
@@ -687,20 +673,20 @@ a {
     .header-wraper .nav-container .nav-items-holder {
         background: #222;
         position: fixed;
-        top: -300px;
+        top: 0;
         right: 0;
         width: 100%;
         height: 360px;
         padding: 60px 0 0;
-        /* display: flex;
-        justify-content: center;
-        align-items: center; */
-        transition: 0.5s ease-in-out;
+        transition: 0.8s ease-in-out;
         filter: drop-shadow(0 -10px 20px rgb(170, 170, 170));
+        visibility: hidden;
+        opacity: 0;
     }
 
     .header-wraper .nav-container.open .nav-items-holder {
-        top: 0;
+        visibility: visible;
+        opacity: 1;
     }
 
     .header-wraper .nav-container .nav-items-holder .nav-items {
@@ -708,8 +694,6 @@ a {
         box-shadow: 0 5px 25px rgb(1, 1, 1 /20%);
     }
 
-    /* .header-wraper .nav-container .nav-items-holder .nav-items .page-btn {
-    } */
     .header-wraper .nav-container .nav-items a {
         width: 100%;
         height: 60px;
@@ -726,47 +710,9 @@ a {
     /* --------------------------------------------------------- back to top ---------------------------------------------------------- */
 
     #back-to-top {
-        bottom: 40px;
+        bottom: 80px;
         right: 40px;
     }
-
-    /* --------------- side menu --------------- */
-
-    /* .side-menu-wraper {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100vh;
-        visibility: visible;
-        opacity: 100;
-        background: #999;
-        transition: 0.5s ease-in-out;
-        z-index: 8888;
-    }
-    .side-menu-wraper .side-menu-container {
-        background: cyan;
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 300px;
-        height: 100vh;
-        padding: 60px 20px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .side-menu-wraper .side-menu-container .side-menu-inner li {
-        background: chartreuse;
-        padding: 20px;
-        margin: 20px;
-    }
-    .side-menu-wraper .side-menu-container .side-menu-inner li a {
-        font-size: 2em;
-        font-weight: 700;
-        text-transform: uppercase;
-        color: #fff;
-    } */
 
     /* --------------- media icons --------------- */
 
@@ -845,13 +791,13 @@ a {
         height: 720px;
     } */
 
-    .home-wraper .home-container {
+    /* .home-wraper .home-container {
         position: relative;
         background: #000;
-        /* padding: 160px 0 100px; */
+        padding: 160px 0 100px;
         width: 100%;
         height: 900px;
-    }
+    } */
 
     .home-wraper .home-content-photo {
         position: absolute;
