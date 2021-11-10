@@ -503,7 +503,7 @@ a {
     display: flex;
     justify-content: left;
     align-items: center;
-    border-top: 2px solid #fff;
+    border-top: 1px solid #fff;
     /* filter: drop-shadow(0 -10px 20px rgb(170, 170, 170)); */
 }
 .footer-bottom-container .footer-bottom-items a:not(:last-child) {
@@ -986,7 +986,9 @@ a {
     }
 
     /* ------------------------------------------------------------- footer ----------------------------------------------------------- */
-
+    .footer-wraper .contact-container {
+        margin-bottom: 80px;
+    }
     .footer-wraper .contact-container .contact-title p {
         font-size: 4em;
         font-weight: 900;
@@ -1000,7 +1002,7 @@ a {
         grid-template-columns: 1fr;
         grid-template-rows: 3;
         grid-gap: 40px;
-        padding-bottom: 40px;
+        /* padding-bottom: 40px; */
     }
 
     .footer-wraper .contact-container .contact-grid-item {
