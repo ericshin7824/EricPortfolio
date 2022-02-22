@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="descrption" content="Developer,Development,Web Portfolio,Developer Dortfolio,html,css,javascript,Front-End,software engineer">
+        <meta name="keywords" content="Developer,Development,Web Portfolio,Developer Dortfolio,html,css,javascript,Front-End,software engineer">
+        <title>Erichoonshin.com</title>
+        <link rel="stylesheet" href="stylesheet.css" />
+        <script src="https://kit.fontawesome.com/2310046e07.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+
+        <div class="body-wrapper">
+
+            <div>
+                <a href="#home" id="back-to-top" class="text">Top</a>
+            </div>
+
+            <header>
+                <section class="header-wraper">
+                    <div class="header-inner max-width-grid">
+    
+                        <h1 class="logo-container">
+                            <a href="#">hoon.</a>
+                        </h1>
+    
+                        <nav class="nav-container">
+                            <div class="nav-items-holder">
+                                <ul class="nav-items">
+                                    <a href="#home" class="page-btn">Home</a>
+                                    <a href="#about" class="page-btn">About</a>
+                                    <a href="#services" class="page-btn">Services</a>
+                                    <a href="#contact" class="page-btn">Contact</a>
+                                </ul>
+                            </div>
+                        </nav>
+    
+                        <div class="right-icons">
+                            <ul class="media-icons">
+                                <a href="#"><i class="fab fa-facebook-square"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                                <a href="https://github.com/ericshin7824/EricPortfolio"><i class="fab fa-github-square"></i></a>
+                            </ul>
+                            <ul class="menu-btn">
+                                <span class="btn-top"></span>
+                                <span class="btn-middle"></span>
+                                <span class="btn-bottom"></span>
+                            </ul>
+                        </div>
+    
+                    </div>
+                </section>
+            </header>
+
+            <script>
+                const menuBtn = document.querySelector('.menu-btn');
+                const menuNav = document.querySelector('.nav-container');
+
+                // document.onclick = function(e){
+                //     if(e.target.id !== 'menuNav' && e.target.id !== 'menuBtn'){
+                //         menuBtn.classList.remove('open')
+                //         menuNav.classList.remove('open')
+                //     }
+                // }
+
+                // menuBtn.onclick = function(){
+                //     menuBtn.classList.toggle('open');
+                //     menuNav.classList.toggle('open');
+                // }
+                //위 두개는 왜 안될까??
+
+                
+                menuBtn.addEventListener('click', function () {
+                    menuBtn.classList.toggle('open');
+                    menuBtn.querySelectorAll('span').forEach((span) => span.classList.toggle('open'));
+                    menuNav.classList.toggle('open');
+                });
+            </script>
+
+            <main>
+                <section class="home-wraper" id="home">
+                    <div class="home-inner max-width-grid">
+                        <div class="home-container">
+                            <div class="home-contents">
+                                <span class="home-banner-main">Hi, I am Eric.</span>
+                                <span class="home-banner-main">I am a front-end</span>
+                                <span class="home-banner-main">web developer.</span>
+                            </div>
+
+                            <span>Do you want to work with me?</span>
+
+                            <div class="contact-btn-container">
+                                <a href="#contact">Contact me</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="about-wraper" id="about">
+                    <div class="about-inner max-width-grid">
+                        <div class="about-container">
+                            <div class="about-contents">
+                                    <div class="about-text reveal">
+                                        <h3>About.</h3>
+                                        <p>
+                                            <span>I'm a web developer based in Los Angeles
+                                                Califonia, USA.</span>
+                                            <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                                                Quam ullam corporisconsequuntur officia dolorem modi quae 
+                                                remvelit molestiae laboriosam, teneturprovident 
+                                                neque eveniet alias quaerat dolor 
+                                                veritatis vel esse.</span>
+                                        </p>
+
+                                        <span>Do you want to work with me?</span>
+
+                                        <div class="contact-btn-container">
+                                            <a href="#contact">Contact me</a>
+                                        </div>
+                                    </div>
+
+                                    <div class="about-photo reveal">
+                                        <img src="./images/person.jpg" alt="">
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="services-wraper"  id="services">
+                    <div class="services-inner max-width-grid">
+                        <div class="services-container">
+                            <div class="services-contents">
+                                <div class="services-title reveal">
+                                    <h3>Services.</h3>
+                                    <p>What i can do.</p>
+                                </div>
+
+                                <ul class="services-grid reveal">
+                                    <li class="services-card">
+                                        <div class="services-icons">
+                                            <i class="fas fa-cogs"></i>
+                                        </div>
+                                        <div class="service-discription">
+                                            <h2>UX / UI</h2>
+                                            <p>It’s all services the 
+                                                user’s experience.</p>
+                                        </div>
+                                    </li>
+
+                                    <li class="services-card">
+                                        <div class="services-icons">
+                                            <i class="fas fa-desktop"></i>
+                                        </div>
+                                        <div class="service-discription">
+                                            <h2>Web</h2>
+                                            <p>From websites to web apps.</p>
+                                        </div>
+                                    </li>
+
+                                    <li class="services-card">
+                                        <div class="services-icons">
+                                            <i class="fas fa-mobile-alt"></i>
+                                        </div>
+                                        <div class="service-discription">
+                                            <h2>App</h2>
+                                            <p>Phone to tablet to wearable tech.</p>
+                                        </div>
+                                    </li>
+
+                                    <li class="services-card">
+                                        <div class="services-icons">
+                                            <i class="fas fa-bullhorn"></i>
+                                        </div>
+                                        <div class="service-discription">
+                                            <h2>Marketing</h2>
+                                            <p>Dominate your market. 
+                                                Grow your business.</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="portfolio-wraper">
+                    <div class="portfolio-inner max-width-grid">
+                        <div class="portfolio-container">
+                            <div class="portfolio-contents">
+                                <div class="portfolio-tittle reveal">
+                                    <h3>Portfolio.</h3>
+                                    <p>
+                                        <span>Check out some of my latest Web Development
+                                        case studies.</span>
+                                        <span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                                            Consequatur impedit aspernatur distinctio sit.
+                                             Ex minima eos optio perspiciatis consequatur repellendus.</span>
+                                    </p>
+                                </div>
+                                <ul class="portfolio-grid">
+                                    <li class="portfolio-card reveal">
+                                        <p>Coming Soon..</p>
+                                    </li>
+                                    <li class="portfolio-card reveal">
+                                        <p>Coming Soon..</p>
+                                    </li>
+                                    <li class="portfolio-card reveal">
+                                        <p>Coming Soon..</p>
+                                    </li>
+                                    <li class="portfolio-card reveal">
+                                        <p>Coming Soon..</p>
+                                    </li>
+                                    <li class="portfolio-card reveal">
+                                        <p>Coming Soon..</p>
+                                    </li>
+                                    <li class="portfolio-card reveal">
+                                        <p>Coming Soon..</p>
+                                    </li>
+                                    <li class="portfolio-card reveal">
+                                        <p>Coming Soon..</p>
+                                    </li>
+                                    <li class="portfolio-card reveal">
+                                        <p>Coming Soon..</p>
+                                    </li>
+                                    <li class="portfolio-card reveal">
+                                        <p>Coming Soon..</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+
+            <footer>
+                <section class="contact-wraper" id="contact">
+                    <div class="contact-inner max-width-grid">
+                        <div class="contact-container">
+                            <div class="contact-title  reveal">
+                                <p>ready <br>to hire <br>me?</p>
+                            </div>
+
+                            <div class="contact-detail  reveal">
+                                <div class="contact-detail-item">
+                                    <h5>call me</h5>
+                                    <span>1-949-XXX-XXXX</span>
+                                </div>
+
+                                <div class="contact-detail-item">
+                                    <h5>email me</h5>
+                                    <a href="#contact-form" id="email-form">ericshin7824@gmail.com</a>
+                                </div>
+
+                                <div class="contact-detail-item">
+                                    <h5>contact with me</h5>
+                                    <div class="contact-media-icons">
+                                        <a href="#"><i class="fab fa-facebook-square"></i></a>
+                                        <a href="#"><i class="fab fa-instagram"></i></a>
+                                        <a href="https://github.com/ericshin7824/EricPortfolio"><i class="fab fa-github-square"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <section class="footer-bottom-container">
+                            <div class="footer-bottom-items">
+                                <a href="">facebook</a>
+                                <a href="">instagram</a>
+                                <a href="https://github.com/ericshin7824/EricPortfolio">github</a>
+                            </div>
+                        </section>
+                    </div>
+                </section>
+
+
+                <section class="contact-form" id="contact-form">
+                    <div class="form-container">
+                        <form action="https://formspree.io/f/mwkajgyv" method="POST" id="my-form">
+                            <div class="form-group">
+                                <label for="firstName">First Name</label>
+                                <input type="text" id="firstName" name="firstName" />
+                            </div>
+
+                            <div class="form-group">
+                                <label for="lastName">Last Name</label>
+                                <input type="text" id="lastName" name="lastName" />
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="text" id="email" name="email" />
+                            </div>
+
+                            <div class="form-group">
+                                <label for="massage">Massage</label>
+                                <!-- <input type="text" id="massage" name="massage" /> -->
+                                <textarea name="massage" id="massage" cols="30" rows="10"></textarea>
+                            </div>
+
+                            <button class="form-submit-btn" type="submit">Submit</button>
+                        </form>
+                        <div class="form-close-btn" id="form-close-btn"></div>
+                    </div>
+                    <div id="status"></div>
+                </section>
+            </footer>
+            
+
+            <script>
+                const sendEmail = document.getElementById('email-form');
+                const contactForm = document.getElementById('contact-form');
+                const formCloseBtn = document.getElementById('form-close-btn')
+
+                sendEmail.onclick = function() {
+                    contactForm.classList.add('active')
+                }
+                formCloseBtn.onclick = function() {
+                    contactForm.classList.remove('active')
+                }
+            </script>
+    
+            <script>
+                var form = document.getElementById('my-form');
+    
+                async function handleSubmit(event) {
+                    event.preventDefault();
+                    var status = document.getElementById('status');
+                    var data = new FormData(event.target);
+                    fetch(event.target.action, {
+                        method: form.method,
+                        body: data,
+                        headers: {
+                            Accept: 'application/json',
+                        },
+                    })
+                        .then((response) => {
+                            status.innerHTML = 'Thanks for your submission!';
+                            status.classList.add('response');
+                            form.reset();
+                        })
+                        .catch((error) => {
+                            status.innerHTML = 'Oops! There was a problem submitting your form';
+                            status.classList.add('error');
+                        });
+                }
+                form.addEventListener('submit', handleSubmit);
+            </script>
+   
+            <script src="mainPage.js"></script>
+    </body>
+</html>
+
+
