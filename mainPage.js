@@ -91,6 +91,42 @@ function reveal() {
     }
 }
 
+window.addEventListener('scroll', revealLeft);
+
+function revealLeft() {
+    var revealsLeft = document.querySelectorAll('.revealLeft');
+
+    for (var i = 0; i < revealsLeft.length; i++) {
+        var windowHeight = window.innerHeight;
+        var revealTop = revealsLeft[i].getBoundingClientRect().top;
+        var revealPoint = 200;
+
+        if (revealTop < windowHeight - revealPoint) {
+            revealsLeft[i].classList.add('active');
+        } else {
+            revealsLeft[i].classList.remove('active');
+        }
+    }
+}
+
+window.addEventListener('scroll', revealRight);
+
+function revealRight() {
+    var revealsRight = document.querySelectorAll('.revealRight');
+
+    for (var i = 0; i < revealsRight.length; i++) {
+        var windowHeight = window.innerHeight;
+        var revealTop = revealsRight[i].getBoundingClientRect().top;
+        var revealPoint = 200;
+
+        if (revealTop < windowHeight - revealPoint) {
+            revealsRight[i].classList.add('active');
+        } else {
+            revealsRight[i].classList.remove('active');
+        }
+    }
+}
+
 // --------------- scroll down & up event ---------------
 
 var goTopBtn = document.getElementById('back-to-top'),
