@@ -108,7 +108,7 @@ a {
 }
 /* .scroll-up header {
     filter: drop-shadow(0 -10px 20px rgb(170, 170, 170));
-}
+} */
 
 /* ------------------------------------------------------------- header --------------------------------------------------------------- */
 
@@ -135,7 +135,6 @@ header {
         z-index: 9999;
         opacity: 0;
         visibility: hidden;
-
         animation-name: header_in;
         animation-duration: 0.7s;
         /* animation-delay: 1s; */
@@ -460,7 +459,7 @@ main {
                             padding: 40px 0;
                             border-radius: 6px;
                             border: 1px solid rgb(225, 225, 225);
-                            box-shadow: 0px 3px 3px 0px rgb(220, 220, 220);
+                            box-shadow: 0px 3px 3px 0px rgb(10, 8, 8);
 
                             .services-icons {
                                 background: #111;
