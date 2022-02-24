@@ -516,8 +516,8 @@ main .services-wraper .services-inner .services-container .services-contents .se
   padding: 40px 0;
   border-radius: 6px;
   border: 1px solid #e1e1e1;
-  -webkit-box-shadow: 0px 3px 3px 0px #0a0808;
-          box-shadow: 0px 3px 3px 0px #0a0808;
+  -webkit-box-shadow: 0px 3px 3px 0px gainsboro;
+          box-shadow: 0px 3px 3px 0px gainsboro;
 }
 
 main .services-wraper .services-inner .services-container .services-contents .services-grid .services-card .services-icons {
