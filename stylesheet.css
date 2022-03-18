@@ -119,13 +119,13 @@ a {
 
 /* ----------------------------------------------------------- scroll stuff */
 .scroll-down .header-wraper {
-  -webkit-transform: translate3d(0, -100%, 0);
-          transform: translate3d(0, -100%, 0);
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
 }
 
-.scroll-up header {
-  -webkit-transform: translate3d(0);
-          transform: translate3d(0);
+.scroll-up .header-wraper {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
 }
 
 /* ------------------------------------------------------------- header --------------------------------------------------------------- */
@@ -767,6 +767,15 @@ body footer .footer-bottom-container .footer-bottom-items {
   font-weight: 300;
   text-transform: uppercase;
   text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 body footer .footer-bottom-container .footer-bottom-items a:not(:last-child) {
@@ -1266,11 +1275,6 @@ body .contact-form #status.error {
   body footer .contact-wraper .contact-inner .contact-container .contact-elements .ctt-el-wraper .ctt_el {
     height: 40px;
     margin-bottom: 80px;
-  }
-  body footer .footer-bottom-container {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
   }
   body footer .footer-bottom-container .footer-bottom-items a:not(:last-child) {
     padding-right: 60px;

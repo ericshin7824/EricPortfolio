@@ -104,11 +104,12 @@ a {
 /* ----------------------------------------------------------- scroll stuff */
 
 .scroll-down .header-wraper {
-    transform: translate3d(0, -100%, 0);
+    // transform: translate3d(0, -100%, 0);
+    transform: translateY(-100%);
 }
-.scroll-up header {
+.scroll-up .header-wraper {
     // filter: drop-shadow(0 -10px 20px rgb(170, 170, 170));
-    transform: translate3d(0);
+    transform: translateY(0);
 }
 
 /* ------------------------------------------------------------- header --------------------------------------------------------------- */
@@ -661,6 +662,10 @@ body {
                 text-transform: uppercase;
                 text-align: center;
 
+                display: flex;
+                justify-content: left;
+                align-items: center;
+
                 a {
                     &:not(:last-child) {
                         margin-right: 80px;
@@ -1199,8 +1204,6 @@ body {
             }
 
             .footer-bottom-container {
-                justify-content: center;
-
                 .footer-bottom-items {
                     a {
                         &:not(:last-child) {
