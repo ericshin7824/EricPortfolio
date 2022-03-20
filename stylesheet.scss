@@ -1,9 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Gothic+A1:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+$full-width: 100%;
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: "Gothic A1", sans-serif;
+}
+
+html {
+    word-break: keep-all;
 }
 
 body {
@@ -115,6 +122,7 @@ a {
 /* ------------------------------------------------------------- header --------------------------------------------------------------- */
 body {
     position: relative;
+    overflow-x: hidden;
 
     header {
         @keyframes header_in {
@@ -130,7 +138,7 @@ body {
 
         .header-wraper {
             background: #000;
-            width: 100%; // need width cause of positioning
+            width: 100%;
             position: fixed;
             top: 0;
             left: 0;
@@ -141,7 +149,6 @@ body {
             visibility: hidden;
             animation-name: header_in;
             animation-duration: 0.7s;
-            /* animation-delay: 1s; */
             animation-timing-function: ease-in;
             animation-fill-mode: forwards;
 
@@ -260,13 +267,15 @@ body {
                 position: relative;
 
                 .home-container {
-                    color: #fff;
                     width: 100%;
                     height: 100vh;
                     padding-top: 60px;
+                    color: #fff;
+
                     display: flex;
                     justify-content: center;
                     flex-direction: column;
+                    z-index: 999;
 
                     .home-contents {
                         display: block;
@@ -276,7 +285,7 @@ body {
                             display: block;
                             font-size: 4em;
                             font-weight: 900;
-                            line-height: 1.45em;
+                            line-height: 1.5em;
                             white-space: pre-line;
 
                             opacity: 0;
@@ -331,39 +340,29 @@ body {
 
                     .about-contents {
                         display: flex;
-                        gap: 24px;
 
                         .about-photo {
                             position: relative;
-                            width: 100%;
-                            height: 550px;
+                            width: 50%;
+                            height: 540px;
                             overflow: hidden;
-                            border-radius: 5px;
                             box-shadow: 0px 5px 10px 0px #757575;
 
-                            .about-photo-wraper {
+                            img {
                                 position: absolute;
-                                top: 0;
-                                left: 0;
-                                right: 0;
-                                bottom: 0;
-
-                                img {
-                                    // position: absolute;
-                                    // top: 50%;
-                                    // left: 50%;
-                                    transform: translateY(-10%);
-                                    width: 100%;
-                                    height: auto;
-                                    border-radius: 5px;
-                                    object-fit: cover;
-                                }
+                                top: 50%;
+                                left: 50%;
+                                transform: translate(-40%, -35%);
+                                width: 800px;
+                                // object-fit: cover;
                             }
                         }
 
                         .about-text {
-                            width: 100%;
+                            width: 50%;
                             height: auto;
+                            padding-right: 180px;
+
                             display: flex;
                             flex-direction: column;
                             justify-content: center;
@@ -371,28 +370,24 @@ body {
 
                             h3 {
                                 font-size: 5em;
-                                font-weight: 800;
-                                margin-bottom: 4px;
+                                font-weight: 900;
+                                margin-bottom: 8px;
                             }
 
                             p {
                                 line-height: 1.5;
+                            }
 
-                                span {
-                                    display: block;
-                                    white-space: pre-line;
-                                    color: #757575;
+                            p:nth-of-type(1) {
+                                color: #757575;
+                                font-size: 1.5em;
+                                font-weight: 500;
+                                margin-bottom: 24px;
+                            }
 
-                                    &:nth-child(1) {
-                                        font-size: 1.5em;
-                                        font-weight: 500;
-                                        margin-bottom: 14px;
-                                    }
-
-                                    &:nth-child(2) {
-                                        margin-bottom: 36px;
-                                    }
-                                }
+                            p:nth-of-type(2) {
+                                color: #333;
+                                margin-bottom: 32px;
                             }
 
                             > span {
@@ -406,20 +401,20 @@ body {
             }
         }
 
-        .services-wraper {
+        .tools-wraper {
             background: rgb(252, 252, 252);
             border: 1px solid rgb(215, 215, 215);
             box-shadow: inset 0px 3px 3px 0px rgb(220, 220, 220);
 
-            .services-inner {
+            .tools-inner {
                 position: relative;
 
-                .services-container {
+                .tools-container {
                     color: #333333;
                     padding: 80px 0 72px;
 
-                    .services-contents {
-                        .services-title {
+                    .tools-ctnts {
+                        .tools_ttl {
                             text-align: center;
                             padding-bottom: 60px;
 
@@ -430,54 +425,59 @@ body {
                             }
                             p {
                                 color: #757575;
-                                font-size: 1.1em;
+                                font-size: 1.5em;
                                 font-weight: 500;
-                                white-space: pre-line;
+                                // white-space: pre-line;
                             }
                         }
 
-                        .services-grid {
-                            display: grid;
-                            grid-gap: 24px;
-                            grid-template-columns: repeat(4, 1fr);
+                        .tools-grid {
+                            display: flex;
+                            gap: 24px;
 
-                            .services-card {
+                            .tools-crd {
                                 background: #fff;
-                                width: 100%;
+                                width: 300px;
+                                height: 360px;
                                 padding: 40px 0;
                                 border-radius: 5px;
                                 border: 1px solid rgb(225, 225, 225);
                                 box-shadow: 0px 3px 3px 0px rgb(220, 220, 220);
 
-                                .services-icons {
-                                    background: #111;
-                                    width: 160px;
-                                    height: 160px;
-                                    padding: 80px;
-                                    margin: 0 auto;
-                                    border-radius: 500px;
+                                .tools_crd_wrpr {
+                                    margin: 0 0 30px 0;
 
-                                    display: flex;
-                                    justify-content: center;
-                                    align-items: center;
-                                    overflow: hidden;
-                                    transition: all 0.4s ease-in-out;
-                                    z-index: 111;
+                                    .tools_ic {
+                                        background: #111;
+                                        width: 120px;
+                                        height: 120px;
+                                        padding: 72px;
+                                        margin: 0 auto;
+                                        border-radius: 500px;
 
-                                    i {
-                                        color: #fff;
-                                        font-size: 5em;
+                                        display: flex;
+                                        justify-content: center;
+                                        align-items: center;
+                                        // overflow: hidden;
+                                        // transition: all 0.4s ease-in-out;
+                                        // z-index: 111;
+
+                                        i {
+                                            color: #fff;
+                                            font-size: 5em;
+                                        }
                                     }
                                 }
 
-                                .service-discription {
+                                .tools_dscpt {
                                     text-align: center;
                                     overflow: hidden;
-                                    padding: 0 20px;
+                                    padding: 0 24px;
 
                                     h2 {
-                                        width: 100%;
-                                        margin: 40px 0 20px;
+                                        // width: 100%;
+                                        // margin: 40px 0 20px;
+                                        margin-bottom: 16px;
                                         font-size: 1.5em;
                                         font-weight: 700;
                                         white-space: nowrap;
@@ -485,8 +485,9 @@ body {
 
                                     p {
                                         color: #757575;
-                                        font-size: 1.1em;
-                                        font-weight: 400;
+                                        font-weight: 500;
+                                        line-height: 1.5;
+                                        white-space: pre-wrap;
                                     }
                                 }
                             }
@@ -507,61 +508,68 @@ body {
                     padding: 80px 0 72px;
                     overflow: hidden;
 
-                    .portfolio-contents {
-                        .portfolio-tittle {
+                    .portfolio-ctnts {
+                        .portfolio_ttl {
                             text-align: left;
-                            padding-bottom: 80px;
+                            padding-bottom: 60px;
 
                             h3 {
-                                font-size: 4em;
+                                font-size: 5em;
                                 font-weight: 900;
                                 margin-bottom: 8px;
                             }
 
                             p {
                                 line-height: 1.5;
+                            }
 
-                                span {
-                                    color: #757575;
-                                    display: block;
-                                    white-space: pre-line;
+                            p:nth-of-type(1) {
+                                color: #757575;
+                                font-size: 1.5em;
+                                font-weight: 500;
+                                margin-bottom: 18px;
+                            }
 
-                                    &:nth-child(1) {
-                                        font-size: 1.5em;
-                                        font-weight: 500;
-                                        margin-bottom: 18px;
-                                    }
-
-                                    &:nth-child(2) {
-                                        font-size: 1.1em;
-                                        font-weight: 300;
-                                        color: #333;
-                                    }
-                                }
+                            p:nth-of-type(2) {
+                                color: #333;
                             }
                         }
+
                         .portfolio-grid {
                             display: grid;
                             grid-template-columns: repeat(2, 1fr);
-                            grid-template-rows: repeat(2, 350px);
+                            grid-template-rows: repeat(2, auto);
                             grid-auto-flow: row;
-                            grid-gap: 20px;
+                            grid-gap: 32px;
 
-                            .portfolio-card {
+                            .portfolio-crd {
                                 background: rgb(252, 252, 252);
                                 border: 1px solid rgb(225, 225, 225);
                                 border-radius: 6px;
                                 box-shadow: 0px 3px 3px 0px rgb(220, 220, 220);
+                                padding: 16px;
 
-                                display: flex;
-                                justify-content: center;
-                                align-items: center;
+                                .portfolio_crd_image {
+                                    background: rgb(240, 240, 240);
+                                    width: 100%;
+                                    height: 250px;
 
-                                p {
-                                    color: #757575;
-                                    font-size: 1.5em;
-                                    font-weight: 800;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
                                 }
+
+                                .portfolio_crd_dscpt {
+                                    width: 100%;
+                                    height: 100px;
+                                    padding: 18px 42px 18px 18px;
+                                }
+
+                                // p {
+                                //     color: #757575;
+                                //     font-size: 1.5em;
+                                //     font-weight: 800;
+                                // }
                             }
                         }
                     }
@@ -581,39 +589,39 @@ body {
                     color: #fff;
                     padding: 80px 0 72px;
 
-                    .contact-title {
-                        // padding: 80px 0;
-                        padding: 0 0 60px;
+                    .contact-ttl {
+                        // padding: 0 0 60px;
+                        padding-bottom: 60px;
 
                         p {
                             font-size: 6em;
                             font-weight: 900;
                             text-transform: uppercase;
+
+                            span {
+                                display: block;
+                            }
                         }
                     }
 
-                    .contact-elements {
-                        // display: flex;
-                        // justify-content: space-between;
-                        // gap: 24px;
-                        padding: 0 0 60px;
-                        display: grid;
-                        grid-template-columns: 1fr 1fr 1fr;
-                        grid-gap: 20px;
+                    .contact-elmts {
+                        width: 100%;
+                        display: flex;
+                        justify-content: space-between;
+                        gap: 24px;
 
-                        .ctt-el-wraper {
+                        .contact-elmt-wrpr {
                             width: 100%;
-                            // background: crimson;
 
-                            .ctt_el {
-                                height: 60px;
+                            .contact_el {
+                                height: 100px;
                                 transition: 0.5s ease-in-out;
 
                                 h5 {
                                     font-size: 0.8em;
                                     font-weight: 600;
                                     text-transform: uppercase;
-                                    padding-bottom: 40px;
+                                    margin-bottom: 36px;
                                 }
 
                                 span {
@@ -621,7 +629,7 @@ body {
                                     font-weight: 400;
                                 }
 
-                                .ctt-media-ics {
+                                .contact-mda-ics {
                                     display: flex;
                                     font-size: 1.3em;
                                     transition: 0.5s ease-in-out;
@@ -1011,25 +1019,31 @@ body {
 
                         .about-contents {
                             flex-direction: column;
-                            gap: 12px;
 
                             .about-photo {
-                                height: 500px;
-                                padding: 0;
+                                width: 100%;
+                                height: 440px;
+
+                                img {
+                                    transform: translate(-50%, -35%);
+                                }
                             }
 
                             .about-text {
-                                padding: 0px;
+                                width: 100%;
+                                padding-right: 40px;
 
-                                p {
-                                    span {
-                                        white-space: normal;
-                                        line-height: 2;
+                                h3 {
+                                    margin-bottom: 0;
+                                }
 
-                                        &:nth-child(2) {
-                                            margin-bottom: 2px;
-                                        }
-                                    }
+                                p:nth-of-type(1) {
+                                    margin-bottom: 18px;
+                                }
+
+                                p:nth-of-type(2) {
+                                    font-size: 1.2em;
+                                    margin-bottom: 32px;
                                 }
 
                                 > span,
@@ -1042,43 +1056,54 @@ body {
                 }
             }
 
-            .services-wraper {
-                .services-inner {
-                    .services-container {
+            .tools-wraper {
+                .tools-inner {
+                    .tools-container {
                         padding: 60px 0 42px;
 
-                        .services-contents {
-                            .services-title {
-                                padding-bottom: 40px;
+                        .tools-ctnts {
+                            .tools-ttl {
+                                padding-bottom: 42px;
+
                                 h3 {
-                                    height: 50px;
-                                    font-size: 3em;
+                                    margin-bottom: 0;
                                 }
 
                                 p {
-                                    white-space: nowrap;
+                                    // white-space: nowrap;
                                 }
                             }
 
-                            .services-grid {
+                            .tools-grid {
+                                flex-direction: column;
                                 gap: 12px;
-                                grid-template-columns: repeat(1, 1fr);
 
-                                .services-card {
+                                .tools-crd {
+                                    width: 100%;
+                                    height: 100%;
                                     display: flex;
+                                    align-items: center;
+                                    justify-content: left;
                                     padding: 40px;
 
-                                    .services-icons {
-                                        margin: 0 0 20px;
-                                        width: 100px;
-                                        height: 100px;
+                                    .tools_crd_wrpr {
+                                        margin: 0 24px 0 0;
+                                        width: 30%;
 
-                                        i {
-                                            font-size: 2em;
+                                        .tools_ic {
+                                            width: 180px;
+                                            height: 180px;
+                                            // margin-bottom: 0;
+                                            // width: 100px;
+                                            // height: 100px;
+                                            // float: left;
                                         }
                                     }
 
-                                    .service-discription {
+                                    .tools_dscpt {
+                                        width: 70%;
+                                        height: 140px;
+
                                         display: flex;
                                         justify-content: center;
                                         flex-direction: column;
@@ -1086,15 +1111,10 @@ body {
 
                                         h2 {
                                             margin: 0 0 15px;
-                                            font-size: 1.4em;
-                                            font-weight: 900;
                                         }
 
                                         p {
-                                            font-size: 0.8em;
-                                            font-weight: 700;
                                             margin: 0 0 20px;
-                                            white-space: pre-line;
                                             text-align: left;
                                         }
                                     }
@@ -1110,58 +1130,26 @@ body {
                     .portfolio-container {
                         padding: 60px 0 42px;
 
-                        .portfolio-contents {
-                            .portfolio-tittle {
+                        .portfolio-ctnts {
+                            .portfolio_ttl {
+                                padding-bottom: 0;
+                                margin-bottom: 32px;
+
                                 h3 {
-                                    font-size: 4em;
-                                    font-weight: 900;
-                                    margin-bottom: 8px;
+                                    margin-bottom: 6px;
                                 }
 
-                                p {
-                                    line-height: 1.5;
-
-                                    span {
-                                        color: #757575;
-                                        display: block;
-                                        white-space: pre-line;
-
-                                        &:nth-child(1) {
-                                            font-size: 1.5em;
-                                            font-weight: 500;
-                                            margin-bottom: 18px;
-                                        }
-
-                                        &:nth-child(2) {
-                                            font-size: 1.1em;
-                                            font-weight: 300;
-                                            color: #333;
-                                        }
-                                    }
+                                p:nth-of-type(1) {
+                                    margin-bottom: 18px;
+                                }
+                                p:nth-of-type(2) {
+                                    color: #333;
                                 }
                             }
                             .portfolio-grid {
-                                display: grid;
                                 grid-template-columns: repeat(1, 1fr);
                                 grid-template-rows: repeat(4, 350px);
                                 grid-gap: 20px;
-
-                                .portfolio-card {
-                                    background: rgb(252, 252, 252);
-                                    border: 1px solid rgb(225, 225, 225);
-                                    border-radius: 6px;
-                                    box-shadow: 0px 3px 3px 0px rgb(220, 220, 220);
-
-                                    display: flex;
-                                    justify-content: center;
-                                    align-items: center;
-
-                                    p {
-                                        color: #757575;
-                                        font-size: 1.5em;
-                                        font-weight: 800;
-                                    }
-                                }
                             }
                         }
                     }
@@ -1175,9 +1163,7 @@ body {
                     .contact-container {
                         padding: 60px 0 42px;
 
-                        .contact-title {
-                            // padding: 80px 0;
-
+                        .contact-ttl {
                             p {
                                 font-size: 4em;
                                 font-weight: 900;
@@ -1185,17 +1171,18 @@ body {
                             }
                         }
 
-                        .contact-elements {
-                            width: 40%;
-                            display: grid;
-                            grid-template-columns: 1fr;
-                            grid-template-rows: 3;
-                            grid-gap: 40px;
+                        .contact-elmts {
+                            margin-bottom: 36px;
+                            flex-direction: column;
+                            gap: 72px;
 
-                            .ctt-el-wraper {
-                                .ctt_el {
-                                    height: 40px;
-                                    margin-bottom: 80px;
+                            .contact-elmt-wrpr {
+                                .contact_el {
+                                    height: 60px;
+
+                                    h5 {
+                                        margin-bottom: 24px;
+                                    }
                                 }
                             }
                         }

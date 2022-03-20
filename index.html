@@ -35,7 +35,7 @@
                                 <ul class="nav-items">
                                     <a href="#home" class="page-btn">Home</a>
                                     <a href="#about" class="page-btn">About</a>
-                                    <a href="#services" class="page-btn">Services</a>
+                                    <a href="#tools" class="page-btn">Tools</a>
                                     <a href="#contact" class="page-btn">Contact</a>
                                 </ul>
                             </div>
@@ -60,6 +60,7 @@
 
         <main>
             <section class="home-wraper" id="home">
+                <!-- <div class="home-bg-container"></div> -->
                 <div class="home-inner max-width-grid">
                     <div class="home-container">
                         <div class="home-contents">
@@ -83,13 +84,13 @@
                         <div class="about-contents">
                             <div class="about-text reveal">
                                 <h3>About.</h3>
+
+                                <p><span>I'm a web developer based in</span> <span> Los Angeles Califonia, USA.</span></p>
+
                                 <p>
-                                    <span>I'm a web developer based in Los Angeles Califonia, USA.</span>
-                                    <span>
-                                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam ullam corporisconsequuntur officia
-                                        dolorem modi quae remvelit molestiae laboriosam, teneturprovident neque eveniet alias quaerat dolor
-                                        veritatis vel esse.
-                                    </span>
+                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam ullam corporisconsequuntur officia
+                                    dolorem modi quae remvelit molestiae laboriosam, teneturprovident neque eveniet alias quaerat dolor
+                                    veritatis vel esse.
                                 </p>
 
                                 <span>Do you want to work with me?</span>
@@ -100,61 +101,69 @@
                             </div>
 
                             <div class="about-photo reveal">
-                                <div class="about-photo-wraper">
-                                    <img src="./images/person.jpg" alt="" />
-                                </div>
+                                <img src="./images/person.jpg" alt="" />
+                                <!-- <div class="about-photo-wraper">
+                                </div> -->
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <section class="services-wraper" id="services">
-                <div class="services-inner max-width-grid">
-                    <div class="services-container">
-                        <div class="services-contents">
-                            <div class="services-title reveal">
-                                <h3>Services.</h3>
+            <section class="tools-wraper" id="tools">
+                <div class="tools-inner max-width-grid">
+                    <div class="tools-container">
+                        <div class="tools-ctnts">
+                            <div class="tools_ttl reveal">
+                                <h3>Tools.</h3>
                                 <p>What i can do.</p>
                             </div>
 
-                            <ul class="services-grid reveal">
-                                <li class="services-card reveal">
-                                    <div class="services-icons">
-                                        <i class="fas fa-cogs"></i>
+                            <ul class="tools-grid reveal">
+                                <li class="tools-crd reveal">
+                                    <div class="tools_crd_wrpr">
+                                        <div class="tools_ic">
+                                            <i class="fab fa-html5"></i>
+                                        </div>
                                     </div>
-                                    <div class="service-discription">
-                                        <h2>UX / UI</h2>
-                                        <p>It’s all services the user’s experience.</p>
-                                    </div>
-                                </li>
-
-                                <li class="services-card reveal">
-                                    <div class="services-icons">
-                                        <i class="fas fa-desktop"></i>
-                                    </div>
-                                    <div class="service-discription">
-                                        <h2>Web</h2>
-                                        <p>From websites to web apps.</p>
+                                    <div class="tools_dscpt">
+                                        <h2>HTML</h2>
+                                        <p>It’s all tools the user’s experience.</p>
                                     </div>
                                 </li>
 
-                                <li class="services-card reveal">
-                                    <div class="services-icons">
-                                        <i class="fas fa-mobile-alt"></i>
+                                <li class="tools-crd reveal">
+                                    <div class="tools_crd_wrpr">
+                                        <div class="tools_ic">
+                                            <i class="fab fa-css3"></i>
+                                        </div>
                                     </div>
-                                    <div class="service-discription">
-                                        <h2>App</h2>
+                                    <div class="tools_dscpt">
+                                        <h2>CSS</h2>
+                                        <p>Add style to a web page by dictating how a site is displayed on a browser.</p>
+                                    </div>
+                                </li>
+
+                                <li class="tools-crd reveal">
+                                    <div class="tools_crd_wrpr">
+                                        <div class="tools_ic">
+                                            <i class="fab fa-js"></i>
+                                        </div>
+                                    </div>
+                                    <div class="tools_dscpt">
+                                        <h2>Java Script</h2>
                                         <p>Phone to tablet to wearable tech.</p>
                                     </div>
                                 </li>
 
-                                <li class="services-card reveal">
-                                    <div class="services-icons">
-                                        <i class="fas fa-bullhorn"></i>
+                                <li class="tools-crd reveal">
+                                    <div class="tools_crd_wrpr">
+                                        <div class="tools_ic">
+                                            <i class="fas fa-database"></i>
+                                        </div>
                                     </div>
-                                    <div class="service-discription">
-                                        <h2>Marketing</h2>
+                                    <div class="tools_dscpt">
+                                        <h2>MySQL</h2>
                                         <p>Dominate your market. Grow your business.</p>
                                     </div>
                                 </li>
@@ -167,42 +176,70 @@
             <section class="portfolio-wraper">
                 <div class="portfolio-inner max-width-grid">
                     <div class="portfolio-container">
-                        <div class="portfolio-contents">
-                            <div class="portfolio-tittle reveal">
+                        <div class="portfolio-ctnts">
+                            <div class="portfolio_ttl reveal">
                                 <h3>Portfolio.</h3>
                                 <p>
                                     <span>Check out some of my latest Web Development case studies.</span>
-                                    <span
-                                        >Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur impedit aspernatur distinctio
-                                        sit. Ex minima eos optio perspiciatis consequatur repellendus.</span
-                                    >
+                                </p>
+                                <p>
+                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur impedit aspernatur distinctio sit.
+                                    <br />
+                                    Ex minima eos optio perspiciatis consequatur repellendus.
                                 </p>
                             </div>
                             <ul class="portfolio-grid">
-                                <li class="portfolio-card revealLeft">
-                                    <p>Coming Soon..</p>
+                                <li class="portfolio-crd revealLeft">
+                                    <div class="portfolio_crd_image">
+                                        <p>Coming Soon..</p>
+                                    </div>
+
+                                    <div class="portfolio_crd_dscpt">
+                                        <p>
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio eos quae iste inventore
+                                            fugit deleniti.
+                                        </p>
+                                    </div>
                                 </li>
-                                <li class="portfolio-card revealRight">
-                                    <p>Coming Soon..</p>
+
+                                <li class="portfolio-crd revealRight">
+                                    <div class="portfolio_crd_image">
+                                        <p>Coming Soon..</p>
+                                    </div>
+
+                                    <div class="portfolio_crd_dscpt">
+                                        <p>
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio eos quae iste inventore
+                                            fugit deleniti.
+                                        </p>
+                                    </div>
                                 </li>
-                                <li class="portfolio-card revealLeft">
-                                    <p>Coming Soon..</p>
+
+                                <li class="portfolio-crd revealLeft">
+                                    <div class="portfolio_crd_image">
+                                        <p>Coming Soon..</p>
+                                    </div>
+
+                                    <div class="portfolio_crd_dscpt">
+                                        <p>
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio eos quae iste inventore
+                                            fugit deleniti.
+                                        </p>
+                                    </div>
                                 </li>
-                                <li class="portfolio-card revealRight">
-                                    <p>Coming Soon..</p>
+
+                                <li class="portfolio-crd revealRight">
+                                    <div class="portfolio_crd_image">
+                                        <p>Coming Soon..</p>
+                                    </div>
+
+                                    <div class="portfolio_crd_dscpt">
+                                        <p>
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio eos quae iste inventore
+                                            fugit deleniti.
+                                        </p>
+                                    </div>
                                 </li>
-                                <!-- <li class="portfolio-card revealLeft">
-                                    <p>Coming Soon..</p>
-                                </li>
-                                <li class="portfolio-card revealRight">
-                                    <p>Coming Soon..</p>
-                                </li> -->
-                                <!-- <li class="portfolio-card revealLeft">
-                                    <p>Coming Soon..</p>
-                                </li>
-                                <li class="portfolio-card revealRight">
-                                    <p>Coming Soon..</p>
-                                </li> -->
                             </ul>
                         </div>
                     </div>
@@ -214,29 +251,29 @@
             <section class="contact-wraper" id="contact">
                 <div class="contact-inner max-width-grid">
                     <div class="contact-container">
-                        <div class="contact-title reveal">
-                            <p>ready <br />to hire <br />me?</p>
+                        <div class="contact-ttl reveal">
+                            <p><span>ready</span> <span>to hire</span><span>me?</span></p>
                         </div>
 
-                        <div class="contact-elements reveal">
-                            <div class="ctt-el-wraper">
-                                <div class="ctt_el">
+                        <div class="contact-elmts reveal">
+                            <div class="contact-elmt-wrpr">
+                                <div class="contact_el">
                                     <h5>call me</h5>
                                     <span>1-949-XXX-XXXX</span>
                                 </div>
                             </div>
 
-                            <div class="ctt-el-wraper">
-                                <div class="ctt_el">
+                            <div class="contact-elmt-wrpr">
+                                <div class="contact_el">
                                     <h5>email me</h5>
                                     <a href="#contact-form" id="email-form">ericshin7824@gmail.com</a>
                                 </div>
                             </div>
 
-                            <div class="ctt-el-wraper">
-                                <div class="ctt_el">
+                            <div class="contact-elmt-wrpr">
+                                <div class="contact_el">
                                     <h5>contact with me</h5>
-                                    <div class="ctt-media-ics">
+                                    <div class="contact-mda-ics">
                                         <a href="#"><i class="fab fa-facebook-square"></i></a>
                                         <a href="#"><i class="fab fa-instagram"></i></a>
                                         <a href="https://github.com/ericshin7824/EricPortfolio"><i class="fab fa-github-square"></i></a>
