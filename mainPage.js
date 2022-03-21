@@ -60,7 +60,7 @@ function reveal() {
     for (var i = 0; i < reveals.length; i++) {
         var windowHeight = window.innerHeight;
         var revealTop = reveals[i].getBoundingClientRect().top;
-        var revealPoint = 150;
+        var revealPoint = 200;
 
         if (revealTop < windowHeight - revealPoint) {
             reveals[i].classList.add("active");
@@ -144,26 +144,3 @@ function scrollToTop() {
         }
     }, 15);
 }
-
-// const body = document.body;
-// var lastScroll = 0;
-
-// window.addEventListener("scroll", function () {
-//     const currentScroll = window.pageYOffset;
-
-//     if (currentScroll <= 0) {
-//         body.classList.remove("scroll-up");
-//     }
-
-//     if (currentScroll > lastScroll && !body.classList.contains("scroll-down")) {
-//         body.classList.remove("scroll-up");
-//         body.classList.add("scroll-down");
-//     }
-
-//     if (currentScroll < lastScroll && body.classList.contains("scroll-down")) {
-//         body.classList.remove("scroll-down");
-//         body.classList.add("scroll-up");
-//     }
-
-//     lastScroll = currentScroll;
-// });

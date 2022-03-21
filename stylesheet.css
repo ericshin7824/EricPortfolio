@@ -426,12 +426,9 @@ body main .about-wraper .about-inner .about-container .about-contents .about-pho
 }
 
 body main .about-wraper .about-inner .about-container .about-contents .about-photo img {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-40%, -35%);
-          transform: translate(-40%, -35%);
-  width: 800px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 body main .about-wraper .about-inner .about-container .about-contents .about-text {
@@ -1119,14 +1116,21 @@ body .contact-form #status.error {
             flex-direction: column;
   }
   body main .about-wraper .about-inner .about-container .about-contents .about-photo {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
     width: 100%;
     height: 440px;
+    margin-bottom: 32px;
   }
   body main .about-wraper .about-inner .about-container .about-contents .about-photo img {
-    -webkit-transform: translate(-50%, -35%);
-            transform: translate(-50%, -35%);
+    -webkit-transform: translateY(-10%);
+            transform: translateY(-10%);
   }
   body main .about-wraper .about-inner .about-container .about-contents .about-text {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
     width: 100%;
     padding-right: 40px;
   }
@@ -1138,7 +1142,7 @@ body .contact-form #status.error {
   }
   body main .about-wraper .about-inner .about-container .about-contents .about-text p:nth-of-type(2) {
     font-size: 1.2em;
-    margin-bottom: 32px;
+    margin-bottom: 0;
   }
   body main .about-wraper .about-inner .about-container .about-contents .about-text > span,
   body main .about-wraper .about-inner .about-container .about-contents .about-text .contact-btn-container {
