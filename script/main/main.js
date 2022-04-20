@@ -1,6 +1,6 @@
 "use strict";
 
-const navMenu = document.querySelector(".nav-container");
+const navMenu = document.querySelector(".middle-container");
 const overlay = document.querySelector(".overlay");
 const navMenuBtn = document.querySelector(".menu-btn");
 

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Digital clock switch hours format with Javascript</title>
+        <link rel="stylesheet" href="../style/digitalClock/digitalClock.css" />
+        <script src="https://kit.fontawesome.com/2310046e07.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div class="overlay hidden"></div>
+        <div>
+            <a href="#home" id="back-to-top" class="text">Top</a>
+        </div>
+        <header>
+            <section class="nav-bar-wraper">
+                <nav class="nav-bar">
+                    <a href="https://www.erichoonshin.com" class="logo">
+                        <h1>Hn.</h1>
+                    </a>
+                    <ul class="middle-container">
+                        <a href="https://www.erichoonshin.com/#about" class="page-btn">About</a>
+                        <a href="https://www.erichoonshin.com/#service" class="page-btn">Services</a>
+                        <a href="https://www.erichoonshin.com/#portfolio" class="page-btn">Portfolio</a>
+                        <a href="https://www.erichoonshin.com/#contact" class="page-btn">Contact</a>
+                    </ul>
+                    <ul class="menu-btn">
+                        <span class="btn-top"></span>
+                        <span class="btn-middle"></span>
+                        <span class="btn-bottom"></span>
+                    </ul>
+                </nav>
+            </section>
+        </header>
+
+        <main>
+            <section class="content-BG">
+                <div class="digital-clock">
+                    <div class="menu-box">
+                        <i onclick="showMenu(this)" class="fas fa-cog dot-menu-btn" id="active-menu"></i>
+                        <ul class="dot-menu active-menu" id="active-menu">
+                            <li class="menu-item" id="active-menu">
+                                <span class="clock-format-text active-menu" id="active-menu">Switch format</span>
+                                <div class="format-switch-btn active-menu" id="active-menu" data-format="12"></div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="tittle-container">
+                        <div class="tittle">
+                            <span>Javascript project</span>
+                            <h2>DIGITAL COLOCK</h2>
+                            <p>Switch hours format</p>
+                        </div>
+                    </div>
+
+                    <div class="clock">
+                        <div class="calender">
+                            <span class="month-name">Month</span>
+                            <span class="day-name">Day</span>
+                            <span class="day-number">Number</span>
+                            <!-- <span class="years">0000</span> -->
+                        </div>
+
+                        <div class="time">
+                            <span class="hours">00</span>
+                            <span class="dots">:</span>
+                            <span class="minutes">00</span>
+                            <div class="right-side">
+                                <span class="period">AM/PM</span>
+                                <span class="seconds">00</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <script src="../script/digitalClock/digitalClock.js"></script>
+        <script src="../script/main/main.js"></script>
+    </body>
+</html>

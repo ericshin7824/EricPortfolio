@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link rel="stylesheet" href="../../style/guessMyNumber/guessMyNumber.css" />
+        <title>Guess My Number!</title>
+    </head>
+    <body>
+        <div class="overlay hidden"></div>
+        <div>
+            <a href="#home" id="back-to-top" class="text">Top</a>
+        </div>
+        <header>
+            <section class="nav-bar-wraper">
+                <nav class="nav-bar">
+                    <a href="https://www.erichoonshin.com/" class="logo">
+                        <h1>Hn.</h1>
+                    </a>
+                    <ul class="middle-container">
+                        <a href="https://www.erichoonshin.com/#about" class="page-btn">About</a>
+                        <a href="https://www.erichoonshin.com/#service" class="page-btn">Services</a>
+                        <a href="https://www.erichoonshin.com/#portfolio" class="page-btn">Portfolio</a>
+                        <a href="https://www.erichoonshin.com/#contact" class="page-btn">Contact</a>
+                    </ul>
+                    <ul class="menu-btn">
+                        <span class="btn-top"></span>
+                        <span class="btn-middle"></span>
+                        <span class="btn-bottom"></span>
+                    </ul>
+                </nav>
+            </section>
+        </header>
+        <main>
+            <section class="guess-my-number" id="guess-my-number">
+                <div class="tittle">
+                    <span>Javascript Project</span>
+                    <h1>Guess My Number</h1>
+                </div>
+
+                <div class="screen">
+                    <div class="scores-container">
+                        <div class="left">
+                            <p class="label-highscore">Highscore: <span class="highscore" id="highscore">0</span></p>
+                            <p class="label-score">Score: <span class="score" id="score">5</span></p>
+                        </div>
+                        <p class="between">Between 1 and 10</p>
+                    </div>
+                    <div class="number-wrapper">
+                        <div class="number" id="number">?</div>
+                    </div>
+                    <p class="message" id="message">Start guessing..</p>
+                </div>
+
+                <div class="controls">
+                    <button class="btn check" id="check">Check</button>
+                    <div class="middle-btn-box">
+                        <button class="btn start" id="start">Start</button>
+                        <button class="btn reset" id="reset">Reset</button>
+                    </div>
+                    <input type="number" class="guess" id="guess" />
+                </div>
+            </section>
+        </main>
+
+        <script src="../../script/guessMyNumber/guessMyNumber.js"></script>
+        <script src="../../script/main/main.js"></script>
+    </body>
+</html>

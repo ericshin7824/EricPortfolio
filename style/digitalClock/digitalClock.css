@@ -1,0 +1,599 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Orbitron&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background: #fff;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+body .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 8888;
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 100%;
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
+  opacity: 90%;
+  -webkit-transition: 0.4s all ease-in-out;
+  transition: 0.4s all ease-in-out;
+}
+
+body .overlay.hidden {
+  display: none;
+  visibility: hidden;
+  opacity: 0;
+}
+
+body .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 8888;
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 100%;
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
+  opacity: 90%;
+  -webkit-transition: 0.4s all ease-in-out;
+  transition: 0.4s all ease-in-out;
+}
+
+body .overlay.hidden {
+  display: none;
+  visibility: hidden;
+  opacity: 0;
+}
+
+@-webkit-keyframes header_in {
+  from {
+    /* top: -60px; */
+  }
+  to {
+    /* top: 0px; */
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+@keyframes header_in {
+  from {
+    /* top: -60px; */
+  }
+  to {
+    /* top: 0px; */
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+body header .nav-bar-wraper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  background: #191919;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-animation-name: header_in;
+          animation-name: header_in;
+  -webkit-animation-duration: 0.7s;
+          animation-duration: 0.7s;
+  -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+body header .nav-bar-wraper .nav-bar {
+  position: relative;
+  width: 100%;
+  height: 48px;
+  padding: 0 40px;
+  max-width: 1280px;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body header .nav-bar-wraper .nav-bar .logo {
+  color: #f8f8f8;
+  font-size: 1.2em;
+  font-weight: 900;
+}
+
+body header .nav-bar-wraper .nav-bar .middle-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 20px;
+          column-gap: 20px;
+  -webkit-transition: 0.4s ease-in-out;
+  transition: 0.4s ease-in-out;
+}
+
+body header .nav-bar-wraper .nav-bar .middle-container a {
+  padding: 8px 6px 6px;
+  color: #f8f8f8;
+  font-size: 0.8em;
+  font-weight: 500;
+  text-transform: uppercase;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+body header .nav-bar-wraper .nav-bar .middle-container a:hover {
+  color: crimson;
+}
+
+body header .nav-bar-wraper .nav-bar .menu-btn {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  z-index: 999;
+  width: 30px;
+  height: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  visibility: hidden;
+  opacity: 0;
+}
+
+body header .nav-bar-wraper .nav-bar .menu-btn .btn-top,
+body header .nav-bar-wraper .nav-bar .menu-btn .btn-bottom,
+body header .nav-bar-wraper .nav-bar .menu-btn .btn-middle {
+  position: absolute;
+  background: #f8f8f8;
+  width: 70%;
+  height: 2px;
+  border-radius: 4px;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+body header .nav-bar-wraper .nav-bar .menu-btn .btn-top {
+  left: 15%;
+  -webkit-transform: translateY(6px);
+          transform: translateY(6px);
+}
+
+body header .nav-bar-wraper .nav-bar .menu-btn .btn-top.open {
+  -webkit-transform: translateX(0) rotate(-45deg);
+          transform: translateX(0) rotate(-45deg);
+}
+
+body header .nav-bar-wraper .nav-bar .menu-btn .btn-middle {
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+body header .nav-bar-wraper .nav-bar .menu-btn .btn-middle.open {
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+
+body header .nav-bar-wraper .nav-bar .menu-btn .btn-bottom {
+  right: 15%;
+  -webkit-transform: translateY(-6px);
+          transform: translateY(-6px);
+}
+
+body header .nav-bar-wraper .nav-bar .menu-btn .btn-bottom.open {
+  -webkit-transform: translateX(0) rotate(45deg);
+          transform: translateX(0) rotate(45deg);
+}
+
+body header .nav-bar-wraper .nav-bar .right-container .media-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  z-index: 888;
+}
+
+body header .nav-bar-wraper .nav-bar .right-container .media-icons a {
+  color: #fff;
+  font-size: 1.3em;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+body header .nav-bar-wraper .nav-bar .right-container .media-icons a:not(:last-child) {
+  margin: 0 20px 0 0;
+}
+
+body header .nav-bar-wraper .nav-bar .right-container .media-icons a:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  color: crimson;
+}
+
+body main .content-BG {
+  background: #333;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 888;
+}
+
+body main .content-BG .digital-clock::before {
+  content: "";
+  background: -webkit-linear-gradient(90deg, #b4b4b4 0%, #f0f0f0 74%);
+  width: 620px;
+  height: 420px;
+  border-radius: 18px;
+  -webkit-box-shadow: 1px 1px 1px 0 rgba(255, 255, 255, 0.9), 20px 25px 20px -5px rgba(0, 0, 0, 0.6), 20px 20px 30px 5px rgba(150, 150, 150, 0.2), 20px 30px 30px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 1px 1px 1px 0 rgba(255, 255, 255, 0.9), 20px 25px 20px -5px rgba(0, 0, 0, 0.6), 20px 20px 30px 5px rgba(150, 150, 150, 0.2), 20px 30px 30px 10px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+body main .content-BG .digital-clock {
+  background: -webkit-linear-gradient(-45deg, #a0a0a0 0%, #6e6e6e 60%, #4b4b4b 100%);
+  width: 600px;
+  height: 400px;
+  padding: 24px 60px;
+  border-radius: 18px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body main .content-BG .digital-clock .menu-box {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+body main .content-BG .digital-clock .menu-box .dot-menu-btn {
+  margin: 10px;
+  background: -webkit-linear-gradient(90deg, #b4b4b4 0%, #f0f0f0 74%);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+body main .content-BG .digital-clock .menu-box .dot-menu.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+body main .content-BG .digital-clock .menu-box .dot-menu {
+  background: #222;
+  padding: 10px 20px;
+  border-radius: 12px;
+  -webkit-box-shadow: 0 5px 25px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 5px 25px rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  visibility: hidden;
+  opacity: 0;
+  list-style: none;
+  z-index: 999;
+}
+
+body main .content-BG .digital-clock .menu-box .dot-menu .menu-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body main .content-BG .digital-clock .menu-box .dot-menu .menu-item .clock-format-text {
+  color: #fff;
+  font-size: 0.9em;
+  margin-right: 20px;
+}
+
+body main .content-BG .digital-clock .menu-box .dot-menu .menu-item .format-switch-btn {
+  background: -webkit-linear-gradient(90deg, #b4b4b4 0%, #f0f0f0 74%);
+  width: 54px;
+  height: 14px;
+  border-radius: 75px;
+  -webkit-box-shadow: inset 2px 2px 4px rgba(255, 255, 255, 0.1), inset 2px 2px 4px rgba(0, 0, 0, 0.2);
+          box-shadow: inset 2px 2px 4px rgba(255, 255, 255, 0.1), inset 2px 2px 4px rgba(0, 0, 0, 0.2);
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+body main .content-BG .digital-clock .menu-box .dot-menu .menu-item .format-switch-btn:before {
+  content: "";
+  background: #ff5e9a;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 5px 25px #ff5e9a;
+          box-shadow: 0 5px 25px #ff5e9a;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(-11px, -50%);
+          transform: translate(-11px, -50%);
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  -webkit-transition-property: background, -webkit-transform;
+  transition-property: background, -webkit-transform;
+  transition-property: background, transform;
+  transition-property: background, transform, -webkit-transform;
+}
+
+body main .content-BG .digital-clock .menu-box .dot-menu .menu-item .format-switch-btn.active:before {
+  background: #0bff8d;
+  -webkit-box-shadow: 0 5px 25px #0bff8d;
+          box-shadow: 0 5px 25px #0bff8d;
+  -webkit-transform: translate(11px, -50%);
+          transform: translate(11px, -50%);
+}
+
+body main .content-BG .digital-clock .tittle-container {
+  background: transparent;
+  color: #fff;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body main .content-BG .digital-clock .tittle-container .tittle {
+  text-align: left;
+  line-height: 1.4;
+}
+
+body main .content-BG .digital-clock .tittle-container .tittle h2 {
+  font-size: 2.2em;
+  font-weight: 600;
+}
+
+body main .content-BG .digital-clock .tittle-container .tittle span {
+  font-size: 0.8em;
+  font-weight: 300;
+}
+
+body main .content-BG .digital-clock .tittle-container .tittle p {
+  font-size: 1.2em;
+  font-weight: 400;
+}
+
+body main .content-BG .digital-clock .clock {
+  background: transparent;
+  color: #fff;
+  width: 100%;
+  padding: 20px 45px;
+  margin-top: 30px;
+  margin-bottom: 12px;
+  border-radius: 10px;
+  border: 1px solid #fff;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body main .content-BG .digital-clock .clock .time {
+  color: #fff;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body main .content-BG .digital-clock .clock .time .hours,
+body main .content-BG .digital-clock .clock .time .dots,
+body main .content-BG .digital-clock .clock .time .minutes {
+  padding: 0 10px;
+  font-weight: 600;
+  font-family: "Orbitron", sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body main .content-BG .digital-clock .clock .time .hours,
+body main .content-BG .digital-clock .clock .time .minutes,
+body main .content-BG .digital-clock .clock .time .dots {
+  background: -webkit-linear-gradient(90deg, #b4b4b4 0%, #f0f0f0 74%);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+body main .content-BG .digital-clock .clock .time .hours,
+body main .content-BG .digital-clock .clock .time .minutes {
+  font-size: 6em;
+}
+
+body main .content-BG .digital-clock .clock .time .dots {
+  font-size: 5em;
+  margin-bottom: 12px;
+}
+
+body main .content-BG .digital-clock .clock .time .right-side {
+  color: #fff;
+  margin: 0 0 3px 12px;
+  height: 90px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body main .content-BG .digital-clock .clock .time .right-side .period,
+body main .content-BG .digital-clock .clock .time .right-side .seconds {
+  background: -webkit-linear-gradient(90deg, #b4b4b4 0%, #f0f0f0 74%);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  font-family: "Orbitron", sans-serif;
+  font-size: 1.2em;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+body main .content-BG .digital-clock .calender {
+  font-size: 1.2em;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body main .content-BG .digital-clock .calender .day-name,
+body main .content-BG .digital-clock .calender .day-number,
+body main .content-BG .digital-clock .calender .years {
+  margin-left: 12px;
+}
+
+body main .content-BG .digital-clock .calender .month-name,
+body main .content-BG .digital-clock .calender .day-name,
+body main .content-BG .digital-clock .calender .day-number,
+body main .content-BG .digital-clock .calender .years {
+  background: -webkit-linear-gradient(90deg, #b4b4b4 0%, #f0f0f0 74%);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  font-family: "Orbitron", sans-serif;
+}
+/*# sourceMappingURL=digitalClock.css.map */
