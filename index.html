@@ -22,25 +22,21 @@
             <a href="#home" id="back-to-top" class="text">Top</a>
         </div>
 
-        <header>
-            <section class="nav-bar-wraper">
-                <nav class="nav-bar">
-                    <a href="https://www.erichoonshin.com" class="logo">
-                        <h1>Hn.</h1>
-                    </a>
-                    <ul class="middle-container">
-                        <a href="https://www.erichoonshin.com/#about" class="page-btn">About</a>
-                        <a href="https://www.erichoonshin.com/#service" class="page-btn">Services</a>
-                        <a href="https://www.erichoonshin.com/#portfolio" class="page-btn">Portfolio</a>
-                        <a href="https://www.erichoonshin.com/#contact" class="page-btn">Contact</a>
-                    </ul>
-                    <ul class="menu-btn">
-                        <span class="btn-top"></span>
-                        <span class="btn-middle"></span>
-                        <span class="btn-bottom"></span>
-                    </ul>
-                </nav>
-            </section>
+        <header class="global-header">
+            <nav class="navbar max-width-bander-xl">
+                <a class="logo" href="https://www.erichoonshin.com">Hn.</a>
+                <ul class="nav-links-bander">
+                    <a class="page-btn link-txt-s" href="https://www.erichoonshin.com/#about">About</a>
+                    <a class="page-btn link-txt-s" href="https://www.erichoonshin.com/#service">Service</a>
+                    <a class="page-btn link-txt-s" href="https://www.erichoonshin.com/#portfolio">Work</a>
+                    <a class="page-btn link-txt-s" href="https://www.erichoonshin.com/#contact">Contact</a>
+                </ul>
+                <ul class="nav-btn-bander">
+                    <span class="btn-top"></span>
+                    <span class="btn-middle"></span>
+                    <span class="btn-bottom"></span>
+                </ul>
+            </nav>
         </header>
 
         <main>
@@ -51,251 +47,154 @@
                     <a href="https://github.com/ericshin7824/EricPortfolio"><i class="fab fa-github-square"></i></a>
                 </ul>
             </div> -->
-            <section class="home-wraper" id="home">
-                <div class="home">
-                    <div class="heading">
-                        <span class="home-banner-main">Hi, I am Eric.</span>
-                        <span class="home-banner-main">I am a front-end</span>
-                        <span class="home-banner-main">web developer.</span>
+            <section class="home" id="home">
+                <div class="content-wrapper-xl max-width-bander-xl">
+                    <div class="heading-xl">
+                        <p class="title-xl">Hi, I am Eric. I am a front-end web developer.</p>
                     </div>
-
-                    <span>Do you want to work with me?</span>
-
-                    <div class="contact-btn-container">
-                        <a href="#contact">Contact me</a>
+                    <div class="btn-wrapper">
+                        <a href="#portfolio" class="section-link-btn link-txt-m">See projects</a>
                     </div>
                 </div>
             </section>
 
-            <section class="about-wraper" id="about">
-                <div class="about">
-                    <div class="heading">
-                        <h3>About.</h3>
-                        <span
-                            ><span>I'm a web developer based in</span
-                            ><span> Los Angeles Califonia, America.</span></span
-                        >
+            <section class="about" id="about">
+                <div class="content-wrapper-xl max-width-bander-xl">
+                    <div class="heading-xl">
+                        <h3 class="title">About<span class="emph-color">.</span></h3>
+                        <p class="metatitle">I'm a junior web developer. and I,m based in Los Angeles, California.</p>
                         <p>
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam ullam corporisconsequuntur
-                            officia dolorem modi quae remvelit molestiae laboriosam, teneturprovident neque eveniet
-                            alias quaerat dolor veritatis vel esse.
+                            "- I am very curious and love to be creative. And I enjoy learning about questions. I am
+                            currently focusing on the front-end and love to dive deeper into programming. And I'm also
+                            very interested in server-side and other programming languages. My current ultimate goal is
+                            to programmatically implement many of the things I want or need. -"
                         </p>
-                        <!-- <span>Do you want to work with me?</span> -->
-                        <div class="contact-btn-container">
-                            <a href="#contact">Contact me</a>
-                        </div>
                     </div>
-                    <div class="image-wrapper">
-                        <div class="image"></div>
+                    <div class="image"></div>
+                    <div class="btn-wrapper">
+                        <a href="#contact" class="section-link-btn link-txt-m">Let's talk</a>
                     </div>
                 </div>
             </section>
 
-            <section class="service-wrapper" id="service">
-                <div class="service">
-                    <div class="heading">
-                        <h3>Services.</h3>
-                        <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</span>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate nulla similique omnis
-                            <br />beatae ipsa sit explicabo laborum quisquam fugiat ad.
-                        </p>
+            <section class="service" id="service">
+                <div class="max-width-bander-xl">
+                    <div class="heading-xl">
+                        <h3 class="title">Service<span class="emph-color">.</span></h3>
+                        <p class="metatitle">Check out the services I can help for your website.</p>
+                        <p>"- Cupiditate nulla similique omnis beatae ipsa sit dolor explicabo laborum fugiat. -"</p>
                     </div>
-                    <ul class="layout-container">
+                    <ul class="cards-container">
                         <li class="card">
                             <div class="icon-warpper">
                                 <i class="fab fa-connectdevelop"></i>
-                            </div>
-                            <div class="detail">
-                                <h2><span>Development</span></h2>
-                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus.</p>
+                                <h2 class="content-title"><span>Development</span></h2>
                             </div>
                         </li>
 
                         <li class="card">
                             <div class="icon-warpper">
                                 <i class="fas fa-tools"></i>
-                            </div>
-                            <div class="detail">
-                                <h2><span>Maintenance</span></h2>
-                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                                <h2 class="content-title"><span>Maintenance</span></h2>
                             </div>
                         </li>
                         <li class="card">
                             <div class="icon-warpper">
                                 <i class="fas fa-recycle"></i>
-                            </div>
-                            <div class="detail">
-                                <h2>Renewal</h2>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                                <h2 class="content-title">Renewal</h2>
                             </div>
                         </li>
                         <li class="card">
                             <div class="icon-warpper">
                                 <i class="fas fa-volume-up"></i>
-                            </div>
-
-                            <div class="detail">
-                                <h2><span>Marketing</span></h2>
-                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                                <h2 class="content-title"><span>Marketing</span></h2>
                             </div>
                         </li>
                     </ul>
                 </div>
             </section>
 
-            <section class="portfolio-wrapper" id="portfolio">
-                <div class="portfolio">
-                    <div class="heading">
-                        <h3>Portfolio.</h3>
-                        <span>Check out some of my latest Web Development case studies.</span>
+            <section class="portfolio" id="portfolio">
+                <div class="max-width-bander-xl">
+                    <div class="heading-xl">
+                        <h3 class="title">Work<span class="emph-color">.</span></h3>
+                        <p class="metatitle">Check out my latest development study cases.</p>
                         <p>
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur impedit aspernatur
-                            distinctio sit.
-                            <br />
-                            Ex minima eos optio perspiciatis consequatur repellendus.
+                            "- Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur impedit aspernatur
+                            distinctio sit. sit amet consectetur adipisicing elit. Consequatur impedit aspernatur
+                            distinctio sit. sit amet consectetur adipisicing elit. Consequatur impedit aspernatur
+                            distinctio sit. -"
                         </p>
                     </div>
-                    <ul class="layout-container">
-                        <a href="./doc/diceGame2P.HTML" class="project-box">
+
+                    <ul class="projects-container">
+                        <a class="project" href="./doc/diceGame2P.HTML">
                             <img src="./image/index_images/diceGame2P-thum.png" alt="" width="600" />
                         </a>
+                        <!-- <img src="./diceGame_thumb.jpg" alt="" srcset="" width="500" /> -->
 
-                        <a href="./doc/todoList.html" class="project-box">
+                        <a class="project" href="./doc/todoList.html">
                             <img src="./image/index_images/todoList-thum.png" alt="" width="600" />
+                            <!-- <img src="./todoListThumb.jpg" alt="" srcset="" width="500" /> -->
                         </a>
 
-                        <a href="./doc/digitalClock.html" class="project-box">
+                        <a class="project" href="./doc/digitalClock.html">
                             <img src="./image/index_images/digitalClock-thum.png" alt="" width="600" />
+                            <!-- <img src="./digitalClock_thumb.jpg" alt="" srcset="" width="500" /> -->
                         </a>
-                        <a href="./doc/guessMyNumber.html" class="project-box">
+                        <a class="project" href="./doc/guessMyNumber.html">
                             <img src="./image/index_images/guessMyNumber-thum.png" alt="" width="600" />
+                            <!-- <img src="./guessMyNum_thumb.jpg" alt="" srcset="" width="500" /> -->
                         </a>
-                        <a href="#" class="project-box"> </a>
-                        <a href="#" class="project-box"> </a>
                     </ul>
+
+                    <div class="btn-wrapper">
+                        <a href="#contact" class="section-link-btn link-txt-m">Let's talk</a>
+                    </div>
                 </div>
             </section>
         </main>
 
-        <footer>
-            <section class="contact-wraper" id="contact">
-                <div class="contact-inner max-width-grid">
-                    <div class="contact-container">
-                        <div class="contact-ttl reveal">
-                            <p><span>ready</span> <span>to hire</span><span>me?</span></p>
-                        </div>
-
-                        <div class="contact-elmts reveal">
-                            <div class="contact-elmt-wrpr">
-                                <div class="contact_el">
-                                    <h5>call me</h5>
-                                    <span>1-949-XXX-XXXX</span>
-                                </div>
-                            </div>
-
-                            <div class="contact-elmt-wrpr">
-                                <div class="contact_el">
-                                    <h5>email me</h5>
-                                    <!-- <a href="#contact-form" id="email-form">ericshin7824@gmail.com</a> -->
-                                    <span>ericshin7824@gmail.com</span>
-                                </div>
-                            </div>
-
-                            <div class="contact-elmt-wrpr">
-                                <div class="contact_el">
-                                    <h5>contact with me</h5>
-                                    <ul class="contact-mda-ics">
-                                        <a href="#"><i class="fab fa-facebook-square"></i></a>
-                                        <a href="#"><i class="fab fa-instagram"></i></a>
-                                        <a href="https://github.com/ericshin7824/EricPortfolio"
-                                            ><i class="fab fa-github-square"></i
-                                        ></a>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
+        <footer class="global-footer" id="contact">
+            <section class="contact-me max-width-bander-xl">
+                <div class="heading-xl">
+                    <p class="title-xl">
+                        Ready to <br />work
+                        <span class="emph-color"
+                            >with<br />
+                            me?</span
+                        >
+                    </p>
+                </div>
+                <form class="email-send-form">
+                    <div class="first-name">
+                        <label class="link-txt-m" for="contact-first_name">First name</label>
+                        <input type="text" id="contact-first_name" />
                     </div>
-                    <section class="footer-bottom-container">
-                        <div class="footer-bottom-items">
-                            <a href="">facebook</a>
-                            <a href="">instagram</a>
-                            <a href="https://github.com/ericshin7824/EricPortfolio">github</a>
-                        </div>
-                    </section>
-                </div>
+                    <div class="last-name">
+                        <label class="link-txt-m" for="contact-last_name">Last name</label>
+                        <input type="text" id="contact-last_name" />
+                    </div>
+                    <div class="email">
+                        <label class="link-txt-m" for="E-mail">Email</label>
+                        <input type="text" id="contact-email" />
+                    </div>
+                    <div class="message">
+                        <label class="link-txt-m" for="contact-task">How can i help you?</label>
+                        <input type="text" id="contact-task" />
+                    </div>
+                    <button class="link-txt-s">Send</button>
+                </form>
             </section>
-
-            <!-- <section class="contact-form" id="contact-form">
-                <div class="form-container">
-                    <form action="https://formspree.io/f/mwkajgyv" method="POST" id="my-form">
-                        <div class="form-group">
-                            <label for="firstName">First Name</label>
-                            <input type="text" id="firstName" name="firstName" />
-                        </div>
-
-                        <div class="form-group">
-                            <label for="lastName">Last Name</label>
-                            <input type="text" id="lastName" name="lastName" />
-                        </div>
-
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="text" id="email" name="email" />
-                        </div>
-
-                        <div class="form-group">
-                            <label for="massage">Massage</label>
-                            <textarea name="massage" id="massage" cols="30" rows="10"></textarea>
-                        </div>
-
-                        <button class="form-submit-btn" type="submit">Submit</button>
-                    </form>
-                    <div class="form-close-btn" id="form-close-btn"></div>
+            <section class="footer max-width-bander-xl">
+                <div class="media-container link-txt-s">
+                    <a href="">facebook</a>
+                    <a href="">instagram</a>
+                    <a href="https://github.com/ericshin7824/EricPortfolio">github</a>
                 </div>
-                <div id="status"></div>
-            </section> -->
+                <span class="footer-email link-txt-s">ericshin7824@gmail.com</span>
+            </section>
         </footer>
-
-        <!-- <script>
-            const sendEmail = document.getElementById("email-form");
-            const contactForm = document.getElementById("contact-form");
-            const formCloseBtn = document.getElementById("form-close-btn");
-
-            sendEmail.onclick = function () {
-                contactForm.classList.add("active");
-            };
-            formCloseBtn.onclick = function () {
-                contactForm.classList.remove("active");
-            };
-        </script>
-
-        <script>
-            var form = document.getElementById("my-form");
-
-            async function handleSubmit(event) {
-                event.preventDefault();
-                var status = document.getElementById("status");
-                var data = new FormData(event.target);
-                fetch(event.target.action, {
-                    method: form.method,
-                    body: data,
-                    headers: {
-                        Accept: "application/json",
-                    },
-                })
-                    .then(response => {
-                        status.innerHTML = "Thanks for your submission!";
-                        status.classList.add("response");
-                        form.reset();
-                    })
-                    .catch(error => {
-                        status.innerHTML = "Oops! There was a problem submitting your form";
-                        status.classList.add("error");
-                    });
-            }
-            form.addEventListener("submit", handleSubmit);
-        </script> -->
 
         <script src="./script/main/main.js"></script>
     </body>
