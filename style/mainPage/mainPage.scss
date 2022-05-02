@@ -52,6 +52,7 @@ body {
     background-blend-mode: darken;
     width: 100%;
     height: 100vh;
+    overflow-x: hidden;
 
     &::before {
         content: "";
@@ -117,14 +118,14 @@ body {
     }
 
     .overlay {
-        position: absolute;
+        position: fixed;
         top: 0;
         left: 0;
         z-index: 8888;
 
         background-color: rgba(0, 0, 0, 0.6);
         width: 100%;
-        height: 100%;
+        height: 100vh;
         backdrop-filter: blur(3px);
 
         opacity: 90%;
@@ -160,31 +161,23 @@ body {
     //     // transform: translate3d(0, 0, 0);
     //     transform: none;
     // }
-
-    .section-link-btn {
-        background: transparent;
-        // padding: 12px 40px;
-        width: 140px;
-        height: 40px;
-        border: 2px solid $primary-emph-color;
-        border-radius: 5px;
-        text-align: center;
-
+    .btn-wrapper {
+        width: 100%;
         display: flex;
-        justify-content: center;
-        align-items: center;
+        .section-link-btn {
+            width: 180px;
+            height: 48px;
+            border-radius: $primary-border-radius;
+            text-align: center;
+            cursor: pointer;
 
-        // visibility: hidden;
-        // opacity: 0;
-        cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
 
-        // animation-name: home_in;
-        // animation-duration: 0.7s;
-        // animation-delay: 1s;
-        // animation-timing-function: ease-in-out;
-        // animation-fill-mode: forwards;
-        &:hover {
-            background: $primary-emph-color;
+            &:hover {
+                background: $primary-emph-color;
+            }
         }
     }
     #back-to-top {
@@ -216,7 +209,7 @@ body {
     }
 
     .global-header {
-        position: absolute;
+        position: fixed;
         top: 0;
         left: 0;
         z-index: 9999;
@@ -301,7 +294,6 @@ body {
                     }
                 }
             }
-
             // .right-container {
             //     .media-icons {
             //         display: flex;
@@ -362,15 +354,19 @@ body {
                 justify-content: center;
                 align-items: flex-start;
                 flex-direction: column;
+                gap: 0;
 
                 .heading-xl {
                     width: 100%;
                     margin-bottom: 30px;
                 }
                 .btn-wrapper {
-                    width: 100%;
-                    display: flex;
                     justify-content: center;
+                    .section-link-btn {
+                        margin-top: 20px;
+                        color: $primary-dark-color;
+                        background: $primary-emph-color;
+                    }
                 }
             }
         }
@@ -393,7 +389,7 @@ body {
                 align-items: center;
 
                 .heading-xl {
-                    grid-column: 8 / span 5;
+                    grid-column: 8 / span 4;
 
                     .title {
                         width: 100%;
@@ -418,14 +414,12 @@ body {
                     box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.6);
                 }
                 .btn-wrapper {
-                    grid-column: 8 / span 2;
-                    margin-top: 20px;
-                    display: flex;
+                    grid-column: 8 / span 4;
                     justify-content: flex-start;
 
                     .section-link-btn {
+                        margin-top: 20px;
                         background: $primary-dark-color;
-                        border: 2px solid $primary-dark-color;
                         color: $primary-light-color;
                     }
                 }
@@ -450,8 +444,6 @@ body {
 
                 .heading-xl {
                     grid-column: 2 / span 4;
-                    // padding-right: 40px;
-
                     color: $primary-light-color;
 
                     .title {
@@ -464,24 +456,21 @@ body {
                 }
 
                 .cards-container {
-                    grid-column: 7 / span 5;
-                    // padding-left: 40px;
+                    grid-column: 7 / span 6;
                     display: flex;
                     justify-content: space-between;
                     gap: 20px;
 
                     .card {
                         border-radius: $primary-border-radius;
-
                         display: flex;
                         justify-content: center;
                         align-items: center;
 
                         .icon-warpper {
+                            background: $primary-emph-color;
                             width: 120px;
                             height: 120px;
-                            background: $primary-emph-color;
-
                             border-radius: $primary-border-radius;
 
                             display: flex;
@@ -499,6 +488,17 @@ body {
                                 color: $primary-light-color;
                             }
                         }
+                    }
+                }
+                .btn-wrapper {
+                    grid-column: 1 / span 6;
+                    padding: 0 120px;
+                    justify-content: flex-start;
+
+                    .section-link-btn {
+                        margin-top: 20px;
+                        background: $primary-light-color;
+                        color: $primary-dark-color;
                     }
                 }
             }
@@ -541,7 +541,8 @@ body {
                 align-items: center;
 
                 .heading-xl {
-                    grid-column: 8 / span 5;
+                    grid-column: 8 / span 4;
+
                     .title {
                         width: 100%;
                         margin-bottom: 5px;
@@ -558,9 +559,7 @@ body {
                     grid-row: 1 / span 2;
 
                     display: grid;
-
                     grid-template-columns: repeat(2, 1fr);
-
                     gap: 10px;
                     .project {
                         background: rgba(220, 220, 220, 1);
@@ -575,16 +574,13 @@ body {
                     }
                 }
                 .btn-wrapper {
-                    grid-column: 8 / span 5;
-                    margin-top: 20px;
-
-                    display: flex;
+                    grid-column: 8 / span 4;
                     justify-content: flex-start;
-                }
-                .section-link-btn {
-                    background: $primary-dark-color;
-                    border: 2px solid $primary-dark-color;
-                    color: $primary-light-color;
+                    .section-link-btn {
+                        margin-top: 20px;
+                        background: $primary-dark-color;
+                        color: $primary-light-color;
+                    }
                 }
             }
         }
@@ -688,7 +684,6 @@ body {
     }
 }
 
-/* --------------- media --------------- */
 @media (max-width: 960px) {
     :root {
         font-size: 14px;
@@ -733,7 +728,6 @@ body {
         main {
             .home {
                 .max-width-bander-xl {
-                    height: 70vh;
                     text-align: center;
                 }
             }
@@ -755,7 +749,6 @@ body {
                     .btn-wrapper {
                         grid-column: 2 / span 10;
                         grid-row: 3;
-
                         justify-content: center;
                     }
                 }
@@ -766,11 +759,9 @@ body {
                     text-align: center;
                     .heading-xl {
                         grid-column: 2 / span 10;
-                        padding: 0 60px;
                     }
                     .cards-container {
-                        grid-column: 2 / span 10;
-                        padding: 0 60px;
+                        grid-column: 3 / span 8;
 
                         .card {
                             .icon-warpper {
@@ -808,23 +799,7 @@ body {
 
                 .heading-xl,
                 .email-send-form {
-                    grid-column: 2 / span 10;
-                }
-                .contact {
-                    text-align: center;
-                    align-items: center;
-                    // .heading-xl {
-                    // }
-
-                    .layout-container {
-                        flex-direction: column;
-                        align-items: center;
-
-                        .info-bander {
-                            align-items: center;
-                            padding-right: 0px;
-                        }
-                    }
+                    grid-column: 3 / span 8;
                 }
             }
         }

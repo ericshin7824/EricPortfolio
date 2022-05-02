@@ -21,8 +21,6 @@ document.addEventListener("keydown", function (e) {
     }
 });
 
-// navMenuBtn.addEventListener("click", function () {});
-
 // --------------- scroll down & up event ---------------
 const body = document.body;
 var lastScroll = 0;
