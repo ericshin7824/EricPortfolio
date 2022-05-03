@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="contact.css" />
+    </head>
+    <body>
+        <div class="overlay hidden"></div>
+        <div>
+            <a href="#home" id="back-to-top" class="text">Top</a>
+        </div>
+        <!-- <div class="alert-success">
+            <span>Message Sent! Thank you for contacting me.</span>
+        </div>
+        <div class="alert-error">
+            <span>Something went wrong. please try again.</span>
+        </div> -->
+        <header class="global-header">
+            <nav class="navbar max-width-bander-xl">
+                <a class="logo" href="https://www.erichoonshin.com">Hn.</a>
+                <ul class="nav-links-bander">
+                    <a class="page-btn link-text-s" href="https://www.erichoonshin.com/#about">About</a>
+                    <a class="page-btn link-text-s" href="https://www.erichoonshin.com/#service">Service</a>
+                    <a class="page-btn link-text-s" href="https://www.erichoonshin.com/#portfolio">Work</a>
+                    <a class="page-btn link-text-s" href="./index.html/#contact">Contact</a>
+                </ul>
+                <ul class="nav-btn-bander">
+                    <span class="btn-top"></span>
+                    <span class="btn-middle"></span>
+                    <span class="btn-bottom"></span>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section class="contact-me max-width-bander-xl">
+                <div class="heading-xl">
+                    <p class="title-xl"><span>Ready to</span><span>work</span><span class="outline">with me?</span></p>
+                </div>
+                <form class="contact-form" action="https://formsubmit.co/4baedba34c5b14e6074e8f5cdfe3085e" method="post">
+                    <!-- honeypot -->
+                    <input type="text" name="_honey" style="display: none;">
+
+                    <!-- disable captcha -->
+                    <input type="hidden" name="_captcha" value="false">
+                    <!--  -->
+                    <input type="hidden" name="_nextPage" value="https://www.erichoonshin.com/#portfolio">
+
+                    <!-- contact form -->
+                    <div class="first-name">
+                        <label class="link-text-m" for="contact-firstName">First name *</label>
+                        <input class="form-control" type="text" name="First&nbsp;name" id="contact-firstName" required />
+                    </div>
+
+                    <div class="last-name">
+                        <label class="link-text-m" for="contact-lastName">Last name *</label>
+                        <input class="form-control" type="text" name="Last&nbsp;name" id="contact-lastName" required />
+                    </div>
+
+                    <div class="email">
+                        <label class="link-text-m" for="contact-email">Email *</label>
+                        <input class="form-control" type="email" name="Email" id="contact-email" required />
+                    </div>
+
+                    <div class="mobile">
+                        <label class="link-text-m" for="contact-mobile" name="Mobile">Mobile</label>
+                        <input
+                            class="form-control"
+                            type="number"
+                            name="mobile"
+                            placeholder="+1 (000) 000 - 0000"
+                            id="contact-mobile"
+                            required
+                        />
+                    </div>
+
+                    <div class="comment">
+                        <label class="link-text-m" for="contact-comment">Comment *</label>
+                        <textarea class="form-control" name="Comment" id="contact-comment" rows="5" required></textarea>
+                    </div>
+                    <button class="submit-btn link-text-s" type="submit">Send</button>
+                    </div>
+                </form>
+            </section>
+        </main>
+        <footer class="global-footer" id="contact">
+            <section class="footer max-width-bander-xl">
+                <div class="media-container link-text-s">
+                    <a href="">facebook</a>
+                    <a href="">instagram</a>
+                    <a href="https://github.com/ericshin7824/EricPortfolio">github</a>
+                </div>
+                <span class="footer-email link-text-s">dvlperichoonshin@gmail.com</span>
+            </section>
+        </footer>
+        <script src="../script/main/main.js"></script>
+    </body>
+</html>
