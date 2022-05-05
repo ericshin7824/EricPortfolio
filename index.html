@@ -13,6 +13,17 @@
             content="Developer,Development,Web Portfolio,Developer Dortfolio,html,css,javascript,Front-End,software engineer"
         />
         <title>Erichoonshin.com</title>
+        <!-- <style>
+            // $primary-dark-color: rgba(25, 25, 25, 1);
+            // $primary-light-color: rgba(255, 255, 255, 1);
+            // $primary-emph-color: rgba(255, 194, 41, 1);
+            // $primary-gray-color: rgba(160, 160, 160, 1);
+            // $max-screen-size: 1400px;
+            // $mobile-screen-size: 540px;
+            // $max-screen-padding: 0 20px;
+            // $primary-border-radius: 4px;
+            // $default-text-align: left;
+        </style> -->
         <link rel="stylesheet" href="./style/mainPage/mainPage.css" />
         <script src="https://kit.fontawesome.com/2310046e07.js" crossorigin="anonymous"></script>
     </head>
@@ -22,13 +33,13 @@
             <a href="#home" id="back-to-top" class="text">Top</a>
         </div>
         <header class="global-header">
-            <nav class="navbar max-width-bander-xl">
+            <nav class="navbar max-width-bander-xl grid-12">
                 <a class="logo" href="https://www.erichoonshin.com">Hn.</a>
                 <ul class="nav-links-bander">
-                    <a class="page-btn link-text-s" href="https://www.erichoonshin.com/#about">About</a>
-                    <a class="page-btn link-text-s" href="https://www.erichoonshin.com/#service">Service</a>
-                    <a class="page-btn link-text-s" href="https://www.erichoonshin.com/#portfolio">Work</a>
-                    <a class="page-btn link-text-s" href="./contact/contact.html">Contact</a>
+                    <a class="page-btn" href="https://www.erichoonshin.com/#about">About</a>
+                    <a class="page-btn" href="https://www.erichoonshin.com/#service">Service</a>
+                    <a class="page-btn" href="https://www.erichoonshin.com/#portfolio">Work</a>
+                    <a class="page-btn" href="./contact/contact.html">Contact</a>
                 </ul>
                 <ul class="nav-btn-bander">
                     <span class="btn-top"></span>
@@ -40,24 +51,23 @@
 
         <main>
             <section class="home" id="home">
-                <div class="content-wrapper-xl max-width-bander-xl">
-                    <div class="heading-xl">
-                        <!-- <p class="title-xl">I am Eric, front-end web developer</p> -->
-                        <p class="title-xl">
-                            Front-End<br />
-                            Web Developer
-                        </p>
-                    </div>
-                    <div class="btn-wrapper">
-                        <a href="#portfolio" class="section-link-btn link-text-m">See projects</a>
+                <div class="content-wrapper-xl max-width-bander-xl grid-12">
+                    <!-- <div class="heading">
+                    </div> -->
+                    <p class="title-xl">
+                        Front-End<br />
+                        Web Developer
+                    </p>
+                    <div class="section-link-wrapper">
+                        <a href="#portfolio" class="section-link-btn">See projects</a>
                     </div>
                 </div>
             </section>
 
             <section class="about" id="about">
-                <div class="content-wrapper-xl max-width-bander-xl">
-                    <div class="heading-xl">
-                        <h3 class="title">About<span class="emph-color">.</span></h3>
+                <div class="content-wrapper-xl max-width-bander-xl grid-12">
+                    <div class="heading">
+                        <h3 class="title-m">About<span class="emph-color">.</span></h3>
                         <p class="metatitle">I'm a junior web developer. and I,m based in Los Angeles, California.</p>
                         <p>
                             "- I am very curious and love to be creative. And I enjoy learning about questions. I am
@@ -69,56 +79,44 @@
                     <div class="image">
                         <img src="./image/mainPage-imgs/about_img.jpg" alt="" width="750" />
                     </div>
-                    <div class="btn-wrapper">
-                        <a href="#contact" class="section-link-btn link-text-m">Let's talk</a>
+                    <div class="section-link-wrapper">
+                        <a href="#contact" class="section-link-btn">Let's talk</a>
                     </div>
                 </div>
             </section>
 
             <section class="service" id="service">
-                <div class="max-width-bander-xl">
-                    <div class="heading-xl">
-                        <h3 class="title">Service<span class="emph-color">.</span></h3>
+                <div class="max-width-bander-xl grid-12">
+                    <div class="heading">
+                        <h3 class="title-m">Service<span class="emph-color">.</span></h3>
                         <p class="metatitle">Check out the services I can help for your website.</p>
                         <p>"- Cupiditate nulla similique omnis beatae ipsa sit dolor explicabo laborum fugiat. -"</p>
                     </div>
                     <ul class="cards-container">
                         <li class="card">
-                            <div class="icon-warpper">
-                                <i class="fab fa-connectdevelop"></i>
-                                <h2 class="content-title"><span>Development</span></h2>
-                            </div>
-                        </li>
-
-                        <li class="card">
-                            <div class="icon-warpper">
-                                <i class="fas fa-tools"></i>
-                                <h2 class="content-title"><span>Maintenance</span></h2>
-                            </div>
+                            <i class="fab fa-connectdevelop"></i>
+                            <h2>Development</h2>
                         </li>
                         <li class="card">
-                            <div class="icon-warpper">
-                                <i class="fas fa-recycle"></i>
-                                <h2 class="content-title">Renewal</h2>
-                            </div>
+                            <i class="fas fa-tools"></i>
+                            <h2>Maintenance</h2>
                         </li>
                         <li class="card">
-                            <div class="icon-warpper">
-                                <i class="fas fa-volume-up"></i>
-                                <h2 class="content-title"><span>Marketing</span></h2>
-                            </div>
+                            <i class="fas fa-recycle"></i>
+                            <h2>Renewal</h2>
+                        </li>
+                        <li class="card">
+                            <i class="fas fa-volume-up"></i>
+                            <h2>Marketing</h2>
                         </li>
                     </ul>
-                    <!-- <div class="btn-wrapper">
-                        <a href="#contact" class="section-link-btn link-text-m">Let's talk</a>
-                    </div> -->
                 </div>
             </section>
 
             <section class="portfolio" id="portfolio">
-                <div class="max-width-bander-xl">
-                    <div class="heading-xl">
-                        <h3 class="title">Work<span class="emph-color">.</span></h3>
+                <div class="max-width-bander-xl grid-12">
+                    <div class="heading">
+                        <h3 class="title-m">Work<span class="emph-color">.</span></h3>
                         <p class="metatitle">Check out my latest development study cases.</p>
                         <p>
                             "- Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur impedit aspernatur
@@ -145,60 +143,49 @@
                         </a>
                     </ul>
 
-                    <div class="btn-wrapper">
-                        <a href="#contact" class="section-link-btn link-text-m">Let's talk</a>
+                    <div class="section-link-wrapper">
+                        <a href="#contact" class="section-link-btn">Let's talk</a>
                     </div>
                 </div>
             </section>
         </main>
 
         <footer class="global-footer" id="contact">
-            <section class="contact-me max-width-bander-xl">
-                <div class="heading-xl">
-                    <p class="title-xl">
-                        Ready to <br />work
-                        <span class="emph-color"
-                            >with<br />
-                            me?</span
-                        >
-                    </p>
-                </div>
-                <form class="email-send-form">
-                    <div class="first-name">
-                        <label class="link-text-m" for="contact-first_name">First name</label>
-                        <input type="text" id="contact-first_name" />
+            <div class="max-width-bander-xl grid-12">
+                <section class="information">
+                    <div class="explanation">
+                        <h3 class="heading title-m">informations</h3>
+                        <div class="details">
+                            <div class="location">
+                                <h3>location</h3>
+                                <span>Los angeles, California</span>
+                            </div>
+                            <div class="email">
+                                <h3>Email</h3>
+                                <span>dvlperichoonshin@gmail.com</span>
+                            </div>
+
+                            <div class="media">
+                                <h3>Media</h3>
+                                <div class="icons-bander">
+                                    <a href="#"><i class="fab fa-facebook-square"></i></a>
+                                    <a href="#"><i class="fab fa-instagram"></i></a>
+                                    <a href="https://github.com/ericshin7824/EricPortfolio"
+                                        ><i class="fab fa-github-square"></i
+                                    ></a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="last-name">
-                        <label class="link-text-m" for="contact-last_name">Last name</label>
-                        <input type="text" id="contact-last_name" />
-                    </div>
-                    <div class="email">
-                        <label class="link-text-m" for="E-mail">Email</label>
-                        <input type="text" id="contact-email" />
-                    </div>
-                    <div class="message">
-                        <label class="link-text-m" for="contact-task">How can i help you?</label>
-                        <input type="text" id="contact-task" />
-                    </div>
-                    <button class="link-text-s">Send</button>
-                </form>
-            </section>
-            <section class="footer max-width-bander-xl">
-                <div class="media-container link-text-s">
-                    <a href="">facebook</a>
-                    <a href="">instagram</a>
-                    <a href="https://github.com/ericshin7824/EricPortfolio">github</a>
-                </div>
-                <span class="footer-email link-text-s">dvlperichoonshin@gmail.com</span>
-            </section>
+                </section>
+                <section class="legal-links grid-12">
+                    <span class="legal-left">www.erichoonshin.com</span>
+                    <span class="legal-mid">© 2022 - Hn.</span>
+                    <span class="legal-right">United States</span>
+                </section>
+            </div>
         </footer>
-        <!-- <div class="right-container">
-                <ul class="media-icons">
-                    <a href="#"><i class="fab fa-facebook-square"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="https://github.com/ericshin7824/EricPortfolio"><i class="fab fa-github-square"></i></a>
-                </ul>
-            </div> -->
+
         <script src="./script/main/main.js"></script>
     </body>
 </html>
