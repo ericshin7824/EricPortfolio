@@ -13,83 +13,74 @@
             content="Developer,Development,Web Portfolio,Developer Dortfolio,html,css,javascript,Front-End,software engineer"
         />
         <title>Erichoonshin.com</title>
-        <!-- <style>
-            // $primary-dark-color: rgba(25, 25, 25, 1);
-            // $primary-light-color: rgba(255, 255, 255, 1);
-            // $primary-emph-color: rgba(255, 194, 41, 1);
-            // $primary-gray-color: rgba(160, 160, 160, 1);
-            // $max-screen-size: 1400px;
-            // $mobile-screen-size: 540px;
-            // $max-screen-padding: 0 20px;
-            // $primary-border-radius: 4px;
-            // $default-text-align: left;
-        </style> -->
-        <link rel="stylesheet" href="./style/mainPage/mainPage.css" />
+        <link rel="stylesheet" href="./style/mainPage/indexPage.css" />
+        <link rel="stylesheet" href="./style/main.css/main.css" />
         <script src="https://kit.fontawesome.com/2310046e07.js" crossorigin="anonymous"></script>
     </head>
     <body>
         <div class="overlay hidden"></div>
-        <div>
-            <a href="#home" id="back-to-top" class="text">Top</a>
-        </div>
-        <header class="global-header">
-            <nav class="navbar max-width-bander grid-12">
+        <a class="back-to-top hidden" href="#home" id="back-to-top">Top</a>
+        <nav>
+            <div class="max-width-bander">
                 <a class="logo" href="https://www.erichoonshin.com">Hn.</a>
                 <ul class="nav-links-bander">
-                    <a class="page-btn" href="https://www.erichoonshin.com/#about">About</a>
-                    <a class="page-btn" href="https://www.erichoonshin.com/#service">Service</a>
-                    <a class="page-btn" href="https://www.erichoonshin.com/#portfolio">Work</a>
-                    <a class="page-btn" href="./contact/contact.html">Contact</a>
+                    <a href="./#about">About</a>
+                    <a href="./#service">Service</a>
+                    <a href="./#work-wrapper">Work</a>
+                    <a href="./#infomation">Info</a>
+                    <a href="./contact/contact.html">Contact</a>
                 </ul>
-                <ul class="nav-btn-bander">
+                <ul class="nav-btn-bander query-visible">
                     <span class="btn-top"></span>
                     <span class="btn-middle"></span>
                     <span class="btn-bottom"></span>
                 </ul>
-            </nav>
-        </header>
-
-        <main>
+            </div>
+        </nav>
+        <header>
             <section class="home" id="home">
                 <div class="max-width-bander grid-12">
-                    <p class="title-xl">
+                    <h1 class="title-xl">
                         Front-End<br />
-                        Web Developer
-                    </p>
+                        Developer
+                    </h1>
                     <div class="section-link-wrapper">
-                        <a href="#portfolio" class="section-link-btn">See projects</a>
+                        <a href="#work-wrapper" class="section-link-btn">See projects</a>
                     </div>
                 </div>
             </section>
-
-            <section class="about" id="about">
-                <div class="max-width-bander grid-12">
-                    <div class="details">
+        </header>
+        <main>
+            <section class="about-wrapper" id="about">
+                <div class="about-content max-width-bander grid-12">
+                    <article class="details">
                         <h3 class="title-m">About<span class="emph-color">.</span></h3>
-                        <p class="metatitle">I'm a junior web developer. and I,m based in Los Angeles, California.</p>
+                        <p class="metatitle-m">
+                            Hi, my name is ERIC HOON SHIN and I'm based in Los Angeles, California.
+                        </p>
                         <p>
-                            "- I am very curious and love to be creative. And I enjoy learning about questions. I am
+                            I am very curious and love to be creative. And I enjoy learning about questions. I am
                             currently focusing on the front-end and love to dive deeper into programming. And I'm also
                             very interested in server-side and other programming languages. My current ultimate goal is
-                            to programmatically implement many of the things I want or need. -"
+                            to programmatically implement many of the things I want or need.
                         </p>
-                    </div>
-                    <div class="image">
+                    </article>
+                    <article class="image">
                         <img src="./image/mainPage-imgs/about_img.jpg" alt="" width="750" />
-                    </div>
+                    </article>
                     <div class="section-link-wrapper">
                         <a href="#contact" class="section-link-btn">Let's talk</a>
                     </div>
                 </div>
             </section>
 
-            <section class="service" id="service">
-                <div class="max-width-bander grid-12">
-                    <div class="details">
+            <section class="service-wrapper" id="service">
+                <div class="service-content max-width-bander grid-12">
+                    <article class="details">
                         <h3 class="title-m">Service<span class="emph-color">.</span></h3>
-                        <p class="metatitle">Check out the services I can help for your website.</p>
-                        <p>"- Cupiditate nulla similique omnis beatae ipsa sit dolor explicabo laborum fugiat. -"</p>
-                    </div>
+                        <p class="metatitle-m">Check out the services I can help for your website.</p>
+                        <p>Cupiditate nulla similique omnis beatae ipsa sit dolor explicabo laborum fugiat.</p>
+                    </article>
                     <ul class="cards-container">
                         <li class="card">
                             <i class="fab fa-connectdevelop"></i>
@@ -115,18 +106,18 @@
                 </div>
             </section>
 
-            <section class="portfolio" id="portfolio">
-                <div class="max-width-bander grid-12">
-                    <div class="details">
+            <section class="work-wrapper" id="work-wrapper">
+                <div class="work-content max-width-bander grid-12">
+                    <article class="details">
                         <h3 class="title-m">Work<span class="emph-color">.</span></h3>
-                        <p class="metatitle">Check out my latest development study cases.</p>
+                        <p class="metatitle-m">Check out my latest development study cases.</p>
                         <p>
-                            "- Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur impedit aspernatur
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur impedit aspernatur
                             distinctio sit. sit amet consectetur adipisicing elit. Consequatur impedit aspernatur
                             distinctio sit. sit amet consectetur adipisicing elit. Consequatur impedit aspernatur
-                            distinctio sit. -"
+                            distinctio sit.
                         </p>
-                    </div>
+                    </article>
 
                     <ul class="projects-container">
                         <a class="project" href="./doc/diceGame2P.HTML">
@@ -152,10 +143,10 @@
             </section>
         </main>
 
-        <footer class="global-footer" id="contact">
-            <div class="max-width-bander grid-12">
-                <section class="informations">
-                    <div class="details">
+        <footer class="global-footer">
+            <section class="information-wrapper" id="infomation">
+                <div class="information-content max-width-bander grid-12">
+                    <article class="details">
                         <h3 class="title-m">information</h3>
                         <div class="location">
                             <h4>location</h4>
@@ -165,7 +156,6 @@
                             <h4>Email</h4>
                             <span>dvlperichoonshin@gmail.com</span>
                         </div>
-
                         <div class="media">
                             <h4>Media</h4>
                             <div class="icons-bander">
@@ -176,18 +166,19 @@
                                 ></a>
                             </div>
                         </div>
-                        <!-- <div class="details"></div> -->
+                    </article>
+                </div>
+            </section>
+            <section class="legal-wrapper">
+                <div class="legal-content max-width-bander">
+                    <div class="lega-links">
+                        <span class="legal-left">© 2022 - Hn.</span>
+                        <span class="legal-mid">Eric Hoon Shin</span>
+                        <span class="legal-right">United States</span>
                     </div>
-                    <!-- <div class="explanation"></div> -->
-                </section>
-                <section class="legal-links">
-                    <span class="legal-left">www.erichoonshin.com</span>
-                    <!-- <div></div> -->
-                    <span class="legal-mid">© 2022 - Hn.</span>
-                    <!-- <div></div> -->
-                    <span class="legal-right">United States</span>
-                    <!-- <div></div> -->
-                </section>
+                </div>
+            </section>
+            <!-- <div class="max-width-bander"> -->
             </div>
         </footer>
 

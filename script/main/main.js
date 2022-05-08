@@ -3,12 +3,14 @@
 const navMenu = document.querySelector(".nav-links-bander");
 const overlay = document.querySelector(".overlay");
 const navMenuBtn = document.querySelector(".nav-btn-bander");
+const body = document.body;
 
 const toggleNavMenu = function () {
     navMenuBtn.classList.toggle("open");
     navMenu.classList.toggle("open");
     overlay.classList.toggle("hidden");
     navMenuBtn.querySelectorAll("span").forEach(span => span.classList.toggle("open"));
+    // body.classList.toggle("disabled");
 };
 
 navMenuBtn.addEventListener("click", toggleNavMenu);
@@ -22,31 +24,31 @@ document.addEventListener("keydown", function (e) {
 });
 
 // --------------- scroll down & up event ---------------
-const body = document.body;
-var lastScroll = 0;
-var windowWidth = window.innerWidth;
 
-console.log(windowWidth);
+// var lastScroll = 0;
+// var windowWidth = window.innerWidth;
 
-window.addEventListener("scroll", function () {
-    const currentScroll = window.pageYOffset;
+// console.log(windowWidth);
 
-    if (currentScroll <= 0) {
-        body.classList.remove("scroll-up");
-    }
+// window.addEventListener("scroll", function () {
+//     const currentScroll = window.pageYOffset;
 
-    if (currentScroll > lastScroll && !body.classList.contains("scroll-down")) {
-        body.classList.remove("scroll-up");
-        body.classList.add("scroll-down");
-    }
+//     if (currentScroll <= 0) {
+//         body.classList.remove("scroll-up");
+//     }
 
-    if (currentScroll < lastScroll && body.classList.contains("scroll-down")) {
-        body.classList.remove("scroll-down");
-        body.classList.add("scroll-up");
-    }
+//     if (currentScroll > lastScroll && !body.classList.contains("scroll-down")) {
+//         body.classList.remove("scroll-up");
+//         body.classList.add("scroll-down");
+//     }
 
-    lastScroll = currentScroll;
-});
+//     if (currentScroll < lastScroll && body.classList.contains("scroll-down")) {
+//         body.classList.remove("scroll-down");
+//         body.classList.add("scroll-up");
+//     }
+
+//     lastScroll = currentScroll;
+// });
 
 // ------------------ scroll animation ------------------
 
@@ -70,7 +72,7 @@ function reveal() {
 
 // --------------- scroll down & up event ---------------
 
-var goTopBtn = document.getElementById("back-to-top"),
+let backToTop = document.getElementById("back-to-top"),
     docElem = document.documentElement,
     offset,
     scrollPos,
@@ -82,17 +84,16 @@ scrollPos = docElem.scrollTop;
 if (docHeight !== undefined) {
     offset = docHeight / 10;
 }
-// console.log(docHeight);
 
 //스크롤 이벤트 추가
 window.addEventListener("scroll", function () {
     scrollPos = docElem.scrollTop;
     // console.log(scrollPos);
 
-    goTopBtn.className = scrollPos > offset ? "visible" : "";
+    backToTop.className = scrollPos > offset ? "visible" : "hidden";
 });
 
-goTopBtn.addEventListener("click", function (ev) {
+backToTop.addEventListener("click", function (ev) {
     ev.preventDefault(); //a 의 기능 막음.
     //docElem.scrollTop = 0;
     scrollToTop();
