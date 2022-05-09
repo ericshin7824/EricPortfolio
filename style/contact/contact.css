@@ -1,20 +1,15 @@
 @use "foundation/main";
-body {
-  position: relative;
-}
-
 body main {
   width: inherit;
-  position: relative;
 }
 
 body main .contact-wrapper {
   width: 100%;
+  padding: var(--space-140) 0 var(--space-140);
   background: var(--primary-color-dark);
 }
 
 body main .contact-wrapper .contact-content {
-  padding: var(--space-140) 0 var(--space-140);
   color: var(--primary-color-light);
 }
 
@@ -52,17 +47,11 @@ body main .contact-wrapper .contact-content .details .title-xl span {
 
 body main .contact-wrapper .contact-content .contact-form {
   text-align: left;
-  -webkit-column-gap: var(--space-20);
-          column-gap: var(--space-20);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
-body main .contact-wrapper .contact-content .contact-form > * {
-  margin-bottom: var(--space-20);
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-20);
 }
 
 body main .contact-wrapper .contact-content .contact-form label,
@@ -88,18 +77,14 @@ body main .contact-wrapper .contact-content .contact-form input {
 
 body main .contact-wrapper .contact-content .contact-form .first-name,
 body main .contact-wrapper .contact-content .contact-form .last-name {
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+  grid-column: span 1;
 }
 
 body main .contact-wrapper .contact-content .contact-form .email,
 body main .contact-wrapper .contact-content .contact-form .mobile,
 body main .contact-wrapper .contact-content .contact-form .comment,
 body main .contact-wrapper .contact-content .contact-form .submit-btn {
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+  grid-column: span 2;
 }
 
 body main .contact-wrapper .contact-content .contact-form .submit-btn {
@@ -111,15 +96,55 @@ body main .contact-wrapper .contact-content .contact-form .submit-btn {
   cursor: pointer;
 }
 
-@media (max-width: 960px) {
-  body .contact-content.max-width-bander-xl {
-    text-align: center;
+@media only screen and (max-width: 960px) {
+  body main .contact-wrapper {
+    padding: var(--space-120) 0 var(--space-120);
   }
-  body .contact-content.max-width-bander-xl .details,
-  body .contact-content.max-width-bander-xl .contact-form {
+  body main .contact-wrapper .contact-content .details,
+  body main .contact-wrapper .contact-content .contact-form {
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 8;
+    grid-column: 3 / span 8;
+  }
+  body main .contact-wrapper .contact-content .details {
+    margin-bottom: var(--space-30);
+  }
+  body main .contact-wrapper .contact-content .contact-form {
+    gap: var(--space-15);
+  }
+  body main .contact-wrapper .contact-content .contact-form textarea,
+  body main .contact-wrapper .contact-content .contact-form input {
+    padding: var(--space-7h);
+  }
+  body main .contact-wrapper .contact-content .submit-btn {
+    padding: var(--space-10);
+    margin-top: var(--space-15);
+  }
+}
+
+@media only screen and (max-width: 560px) {
+  body main .contact-wrapper {
+    padding: var(--space-100) 0 var(--space-100);
+  }
+  body main .contact-wrapper .contact-content .details,
+  body main .contact-wrapper .contact-content .contact-form {
     -ms-grid-column: 2;
     -ms-grid-column-span: 10;
     grid-column: 2 / span 10;
+  }
+  body main .contact-wrapper .contact-content .details {
+    margin-bottom: var(--space-20);
+  }
+  body main .contact-wrapper .contact-content .contact-form {
+    gap: var(--space-10);
+  }
+  body main .contact-wrapper .contact-content .contact-form textarea,
+  body main .contact-wrapper .contact-content .contact-form input {
+    padding: var(--space-5);
+  }
+  body main .contact-wrapper .contact-content .submit-btn {
+    padding: var(--space-7h);
+    margin-top: var(--space-10);
   }
 }
 /*# sourceMappingURL=contact.css.map */
