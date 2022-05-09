@@ -6,93 +6,110 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Document</title>
         <link rel="stylesheet" href="contact.css" />
+        <link rel="stylesheet" href="../style/main/main.css">
     </head>
     <body>
         <div class="overlay hidden"></div>
-        <div>
-            <a href="#home" id="back-to-top" class="text">Top</a>
-        </div>
-        <!-- <div class="alert-success">
-            <span>Message Sent! Thank you for contacting me.</span>
-        </div>
-        <div class="alert-error">
-            <span>Something went wrong. please try again.</span>
-        </div> -->
-        <header class="global-header">
-            <nav class="navbar max-width-bander-xl">
+        <a class="back-to-top hidden" href="#home" id="back-to-top">Top</a>
+        <nav>
+            <div class="max-width-bander">
                 <a class="logo" href="https://www.erichoonshin.com">Hn.</a>
                 <ul class="nav-links-bander">
-                    <a class="page-btn link-text-s" href="https://www.erichoonshin.com/#about">About</a>
-                    <a class="page-btn link-text-s" href="https://www.erichoonshin.com/#service">Service</a>
-                    <a class="page-btn link-text-s" href="https://www.erichoonshin.com/#portfolio">Work</a>
-                    <a class="page-btn link-text-s" href="../contact/contact.html">Contact</a>
+                    <a class="title-xs" href="./#about">About</a>
+                    <a class="title-xs" href="./#service">Service</a>
+                    <a class="title-xs" href="./#work-wrapper">Work</a>
+                    <a class="title-xs" href="./#infomation">Info</a>
+                    <a class="title-xs" href="./contact/contact.html">Contact</a>
                 </ul>
-                <ul class="nav-btn-bander">
+                <ul class="nav-btn-bander query-visible">
                     <span class="btn-top"></span>
                     <span class="btn-middle"></span>
                     <span class="btn-bottom"></span>
                 </ul>
-            </nav>
-        </header>
+            </div>
+        </nav>
         <main>
-            <section class="contact-me max-width-bander-xl">
-                <div class="heading-xl">
-                    <p class="title-xl"><span>Ready to</span><span>work</span><span class="outline">with me?</span></p>
-                </div>
-                <form class="contact-form" action="https://formsubmit.co/4baedba34c5b14e6074e8f5cdfe3085e" method="post">
-                    <!-- honeypot -->
-                    <input type="text" name="_honey" style="display: none;">
-
-                    <!-- disable captcha -->
-                    <input type="hidden" name="_captcha" value="false">
-                    <!--  -->
-                    <input type="hidden" name="_next" value="https://www.erichoonshin.com/contact/contact-nextPage.html">
-
-                    <!-- contact form -->
-                    <div class="first-name">
-                        <label class="link-text-m" for="contact-firstName">First name *</label>
-                        <input class="form-control" type="text" name="First&nbsp;name" id="contact-firstName" required />
+            <section class="contact-wrapper">
+                <section class="contact-content max-width-bander grid-12">
+                    <div class="details">
+                        <p class="title-xl"><span>Ready to</span><span>work</span><span class="outline">with me?</span></p>
                     </div>
-
-                    <div class="last-name">
-                        <label class="link-text-m" for="contact-lastName">Last name *</label>
-                        <input class="form-control" type="text" name="Last&nbsp;name" id="contact-lastName" required />
-                    </div>
-
-                    <div class="email">
-                        <label class="link-text-m" for="contact-email">Email *</label>
-                        <input class="form-control" type="email" name="Email" id="contact-email" required />
-                    </div>
-
-                    <div class="mobile">
-                        <label class="link-text-m" for="contact-mobile" name="Mobile">Mobile</label>
-                        <input
-                            class="form-control"
-                            type="number"
-                            name="mobile"
-                            placeholder="+1 (000) 000 - 0000"
-                            id="contact-mobile"
-                            required
-                        />
-                    </div>
-
-                    <div class="comment">
-                        <label class="link-text-m" for="contact-comment">Comment *</label>
-                        <textarea class="form-control" name="Comment" id="contact-comment" rows="5" required></textarea>
-                    </div>
-                    <button class="submit-btn link-text-s" type="submit">Send</button>
-                    </div>
-                </form>
+                    <form class="contact-form" action="https://formsubmit.co/4baedba34c5b14e6074e8f5cdfe3085e" method="post">
+                        <!-- honeypot -->
+                        <input type="text" name="_honey" style="display: none;">
+    
+                        <!-- disable captcha -->
+                        <input type="hidden" name="_captcha" value="false">
+                        <!-- link to my web -->
+                        <input type="hidden" name="_next" value="https://www.erichoonshin.com/contact/contact-nextPage.html">
+                        <div class="first-name">
+                            <label class="title-s" for="contact-firstName">First name *</label>
+                            <input class="form-control" type="text" name="First&nbsp;name" id="contact-firstName" required />
+                        </div>
+                        <div class="last-name">
+                            <label class="title-s" for="contact-lastName">Last name *</label>
+                            <input class="form-control" type="text" name="Last&nbsp;name" id="contact-lastName" required />
+                        </div>
+                        <div class="email">
+                            <label class="title-s" for="contact-email">Email *</label>
+                            <input class="form-control" type="email" name="Email" id="contact-email" required />
+                        </div>
+                        <div class="mobile">
+                            <label class="title-s" for="contact-mobile" name="Mobile">Mobile</label>
+                            <input
+                                class="form-control"
+                                type="number"
+                                name="mobile"
+                                placeholder="+1 (000) 000 - 0000"
+                                id="contact-mobile"
+                            />
+                        </div>
+    
+                        <div class="comment">
+                            <label class="title-s" for="contact-comment">Comment *</label>
+                            <textarea class="form-control" name="Comment" id="contact-comment" rows="5" required></textarea>
+                        </div>
+                        <button class="submit-btn title-s" type="submit">Send</button>
+                        </div>
+                    </form>
+                </section>
             </section>
         </main>
-        <footer class="global-footer" id="contact">
-            <section class="footer max-width-bander-xl">
-                <div class="media-container link-text-s">
-                    <a href="">facebook</a>
-                    <a href="">instagram</a>
-                    <a href="https://github.com/ericshin7824/EricPortfolio">github</a>
+
+        <footer class="global-footer">
+            <section class="information-wrapper" id="infomation">
+                <div class="information-content max-width-bander grid-12 reveal">
+                    <article class="details">
+                        <h3 class="title-l">information</h3>
+                        <div class="location">
+                            <h4 class="title-s">location</h4>
+                            <span>Los angeles, California</span>
+                        </div>
+                        <div class="email">
+                            <h4 class="title-s">Email</h4>
+                            <span>dvlperichoonshin@gmail.com</span>
+                        </div>
+                        <div class="media">
+                            <h4 class="title-s">Media</h4>
+                            <div class="icons-bander">
+                                <a href="#"><i class="fab fa-facebook-square"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                                <a href="https://github.com/ericshin7824/EricPortfolio"
+                                    ><i class="fab fa-github-square"></i
+                                ></a>
+                            </div>
+                        </div>
+                    </article>
                 </div>
-                <span class="footer-email link-text-s">dvlperichoonshin@gmail.com</span>
+            </section>
+            <section class="legal-wrapper">
+                <div class="legal-content max-width-bander">
+                    <div class="lega-links">
+                        <span class="legal-left title-xs">© 2022 - Hn.</span>
+                        <span class="legal-mid title-xs">Eric Hoon Shin</span>
+                        <span class="legal-right title-xs">United States</span>
+                    </div>
+                </div>
             </section>
         </footer>
         <script src="../script/main/main.js"></script>
