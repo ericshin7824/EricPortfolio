@@ -13,8 +13,8 @@
             content="Developer,Development,Web Portfolio,Developer Dortfolio,html,css,javascript,Front-End,software engineer"
         />
         <title>Erichoonshin.com</title>
-        <link rel="stylesheet" href="./style/mainPage/indexPage.css" />
-        <link rel="stylesheet" href="./style/main/main.css" />
+        <link rel="stylesheet" href="./styles/mainStyles/main.css" />
+        <link rel="stylesheet" href="./styles/home-pg-styles/home.css" />
         <script src="https://kit.fontawesome.com/2310046e07.js" crossorigin="anonymous"></script>
     </head>
     <body>
@@ -28,7 +28,7 @@
                     <a class="title-xs" href="./#service">Service</a>
                     <a class="title-xs" href="./#work-wrapper">Work</a>
                     <a class="title-xs" href="./#infomation">Info</a>
-                    <a class="title-xs" href="./doc/contact/contact.html">Contact</a>
+                    <a class="title-xs" href="./docs/contact/contact.html">Contact</a>
                 </ul>
                 <ul class="nav-btn-bander query-visible">
                     <span class="btn-top"></span>
@@ -63,9 +63,11 @@
                             to programmatically implement many of the things I want or need.
                         </p>
                     </article>
-                    <article class="image">
-                        <img src="./image/mainPage-imgs/about_img.jpg" alt="" width="750" />
-                    </article>
+                    <picture class="image-wrapper">
+                        <article class="image">
+                            <img src="./images/home-imgs/about_img.jpg" alt="" width="750" />
+                        </article>
+                    </picture>
                     <div class="section-link-wrapper">
                         <a href="#contact" class="section-link-btn">Let's talk</a>
                     </div>
@@ -119,18 +121,18 @@
 
                     <ul class="projects-container">
                         <a class="project" href="./doc/diceGame2P.HTML">
-                            <img src="./image/mainPage-imgs/diceGame_thumb.jpg" alt="" width="600" />
+                            <img src="./images/home-imgs/diceGame_thumb.jpg" alt="" width="600" />
                         </a>
 
                         <a class="project" href="./doc/todoList.html">
-                            <img src="./image/mainPage-imgs/todoList-thum.png" alt="" width="600" />
+                            <img src="./images/home-imgs/todoList-thum.png" alt="" width="600" />
                         </a>
 
                         <a class="project" href="./doc/digitalClock.html">
-                            <img src="./image/mainPage-imgs/digitalClock-thum.png" alt="" width="600" />
+                            <img src="./images/home-imgs/digitalClock-thum.png" alt="" width="600" />
                         </a>
                         <a class="project" href="./doc/guessMyNumber.html">
-                            <img src="./image/mainPage-imgs/guessMyNumber-thum.png" alt="" width="600" />
+                            <img src="./images/home-imgs/guessMyNumber-thum.png" alt="" width="600" />
                         </a>
                     </ul>
 
@@ -170,14 +172,16 @@
             <section class="legal-wrapper">
                 <div class="legal-content max-width-bander">
                     <div class="lega-links">
-                        <span class="legal-left title-xs">© 2022 - Hn.</span>
-                        <span class="legal-mid title-xs">Eric Hoon Shin</span>
-                        <span class="legal-right title-xs">United States</span>
+                        <span class="legal-left title-xs">Eric Hoon Shin</span>
+                        <div class="legal-right">
+                            <span class="title-xs">© 2022 - Hn.</span>
+                            <span class="title-xs">United States</span>
+                        </div>
                     </div>
                 </div>
             </section>
         </footer>
 
-        <script src="./script/main/main.js"></script>
+        <script src="./scripts/mainScript/main.js"></script>
     </body>
 </html>

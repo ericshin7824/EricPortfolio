@@ -25,7 +25,7 @@
     }
 }
 body {
-    background: url(../../image/mainPage-imgs/gray_wall.jpg);
+    background: url(../../images/home-imgs/gray_wall.jpg);
     background-color: rgba(0, 0, 0, 0.6);
     background-size: cover;
     background-position: center;
@@ -80,7 +80,8 @@ body {
                 align-items: center;
                 .details,
                 .section-link-wrapper {
-                    grid-column: 8 / span 4;
+                    grid-column: 7 / span 6;
+                    padding: 0 var(--space-40);
                 }
                 .details {
                     margin-bottom: var(--space-20);
@@ -92,21 +93,23 @@ body {
                         color: var(--primary-color-light);
                     }
                 }
-                .image {
+                .image-wrapper {
                     grid-column: 1 / span 6;
                     grid-row: 1 / span 2;
-
-                    border-radius: var(--radius-8);
-                    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.6);
-                    overflow: hidden;
-
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    img {
-                        width: 100%;
+                    .image {
                         max-height: 460px;
-                        object-fit: cover;
+                        border-radius: var(--radius-8);
+                        box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.6);
+                        overflow: hidden;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                        }
                     }
                 }
             }
@@ -143,21 +146,24 @@ body {
                 text-align: var(--default-text-align);
                 align-items: center;
                 .details {
-                    grid-column: 2 / span 3;
+                    grid-column: 1 / span 5;
+                    padding: 0 var(--space-40);
                     color: var(--primary-color-light);
                     margin-bottom: var(--space-20);
                 }
                 .cards-container {
+                    padding: 0 var(--space-40);
                     grid-column: 6 / span 7;
                     display: flex;
+                    justify-content: space-between;
                     flex-wrap: wrap;
                     gap: var(--space-20);
                     .card {
-                        background: var(--primary-color-yellow);
-                        min-width: 120px;
+                        border: 1px solid var(--primary-color-yellow);
                         padding: var(--space-20) 0;
                         border-radius: var(--radius-8);
                         color: var(--primary-color-light);
+                        min-width: 120px;
 
                         flex: 1;
                         flex-grow: 1;
@@ -166,15 +172,13 @@ body {
                         align-items: center;
                         flex-direction: column;
                         i {
+                            background: var(--primary-color-yellow);
                             padding: var(--space-20);
-                            background: var(--primary-color-light);
                             border-radius: 50%;
-                            color: var(--primary-color-dark);
                             font-size: 2rem;
                         }
                         h2 {
                             margin-top: var(--space-10);
-                            color: var(--primary-color-dark);
                             font-size: var(--font-size-14);
                             font-weight: var(--font-weight-500);
                             text-transform: uppercase;
@@ -190,11 +194,11 @@ body {
             width: inherit;
             padding: var(--space-120) 0;
             .work-content {
-                text-align: var(--default-text-align);
                 align-items: center;
                 .details,
                 .section-link-wrapper {
-                    grid-column: 8 / span 4;
+                    grid-column: 7 / span 6;
+                    padding: 0 var(--space-40);
                 }
                 .details {
                     margin-bottom: var(--space-20);
@@ -225,6 +229,29 @@ body {
             }
         }
     }
+    footer {
+        position: relative;
+        background-color: var(--primary-color-dark);
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            z-index: -1;
+            background: inherit;
+            width: calc(100% + 2px);
+            height: 60px;
+            top: -21px;
+            transform: rotate(-1.4deg);
+            box-shadow: 0 -1px 1px 0 rgba(160, 160, 160, 0.1), 0 -2px 2px 0 rgba(0, 0, 0, 0.1);
+        }
+        .legal-wrapper {
+            .legal-content {
+                .lega-links {
+                    border-top: 1px solid var(--primary-color-light);
+                }
+            }
+        }
+    }
 }
 
 @media only screen and (max-width: 960px) {
@@ -246,17 +273,19 @@ body {
                 padding: var(--space-60) 0 var(--space-90);
                 .about-content {
                     .details,
-                    .image,
+                    .image-wrapper,
                     .btn-wrapper {
-                        grid-column: 2 / span 10;
+                        grid-column: 1 / span 12;
+                        padding: 0 var(--space-30);
                     }
                     .details {
                         grid-row: 1;
                         margin-bottom: var(--space-15);
                     }
-                    .image {
+                    .image-wrapper {
                         grid-row: 2;
                     }
+
                     .section-link-wrapper {
                         grid-column: 1 / span 12;
                         grid-row: 3;
@@ -272,7 +301,8 @@ body {
                     text-align: center;
                     .details,
                     .cards-container {
-                        grid-column: 3 / span 8;
+                        grid-column: 1 / span 12;
+                        padding: 0 var(--space-30);
                     }
                     .details {
                         margin-bottom: var(--space-15);
@@ -301,7 +331,8 @@ body {
                     .details,
                     .projects-container,
                     .section-link-wrapper {
-                        grid-column: 2 / span 10;
+                        grid-column: 1 / span 12;
+                        padding: 0 var(--space-30);
                     }
                     .details {
                         grid-row: 1;
@@ -335,14 +366,15 @@ body {
                     text-align: center;
 
                     .details,
-                    .image,
+                    .image-wrapper,
                     .btn-wrapper {
                         grid-column: 1 / span 12;
+                        padding: 0 var(--space-20);
                     }
                     .details {
                         margin-bottom: var(--space-10);
                     }
-                    .image {
+                    .image-wrapper {
                         display: none;
                         height: 340px;
                     }
@@ -362,11 +394,12 @@ body {
                     text-align: center;
                     .details,
                     .cards-container {
-                        grid-column: 2 / span 10;
+                        grid-column: 1 / span 12;
+                        padding: 0 var(--space-20);
                         gap: var(--space-10);
                     }
                     .details {
-                        margin-bottom: var(--space-10);
+                        margin-bottom: var(--space-20);
                     }
                     .cards-container {
                         gap: var(--space-10);
@@ -392,16 +425,16 @@ body {
                     .details,
                     .projects-container,
                     .section-link-wrapper {
-                        grid-column: 1 / span 12;
+                        padding: 0 var(--space-20);
                     }
                     .details {
-                        grid-row: 1;
+                        margin-bottom: var(--space-10);
                     }
                     .projects-container {
-                        grid-row: span 2;
+                        gap: var(--space-5);
                     }
                     .section-link-wrapper {
-                        justify-content: center;
+                        margin-top: var(--space-20);
                     }
                 }
             }

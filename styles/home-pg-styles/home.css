@@ -49,7 +49,7 @@
 }
 
 body {
-  background: url(../../image/mainPage-imgs/gray_wall.jpg);
+  background: url(../../images/home-imgs/gray_wall.jpg);
   background-color: rgba(0, 0, 0, 0.6);
   background-size: cover;
   background-position: center;
@@ -133,9 +133,10 @@ body main .about-wrapper .about-content {
 
 body main .about-wrapper .about-content .details,
 body main .about-wrapper .about-content .section-link-wrapper {
-  -ms-grid-column: 8;
-  -ms-grid-column-span: 4;
-  grid-column: 8 / span 4;
+  -ms-grid-column: 7;
+  -ms-grid-column-span: 6;
+  grid-column: 7 / span 6;
+  padding: 0 var(--space-40);
 }
 
 body main .about-wrapper .about-content .details {
@@ -153,13 +154,17 @@ body main .about-wrapper .about-content .section-link-wrapper .section-link-btn 
   color: var(--primary-color-light);
 }
 
-body main .about-wrapper .about-content .image {
+body main .about-wrapper .about-content .image-wrapper {
   -ms-grid-column: 1;
   -ms-grid-column-span: 6;
   grid-column: 1 / span 6;
   -ms-grid-row: 1;
   -ms-grid-row-span: 2;
   grid-row: 1 / span 2;
+}
+
+body main .about-wrapper .about-content .image-wrapper .image {
+  max-height: 460px;
   border-radius: var(--radius-8);
   -webkit-box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.6);
           box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.6);
@@ -175,9 +180,9 @@ body main .about-wrapper .about-content .image {
           align-items: center;
 }
 
-body main .about-wrapper .about-content .image img {
+body main .about-wrapper .about-content .image-wrapper .image img {
   width: 100%;
-  max-height: 460px;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -224,31 +229,36 @@ body main .service-wrapper .service-content {
 }
 
 body main .service-wrapper .service-content .details {
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 3;
-  grid-column: 2 / span 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 5;
+  grid-column: 1 / span 5;
+  padding: 0 var(--space-40);
   color: var(--primary-color-light);
   margin-bottom: var(--space-20);
 }
 
 body main .service-wrapper .service-content .cards-container {
+  padding: 0 var(--space-40);
   -ms-grid-column: 6;
   -ms-grid-column-span: 7;
   grid-column: 6 / span 7;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   gap: var(--space-20);
 }
 
 body main .service-wrapper .service-content .cards-container .card {
-  background: var(--primary-color-yellow);
-  min-width: 120px;
+  border: 1px solid var(--primary-color-yellow);
   padding: var(--space-20) 0;
   border-radius: var(--radius-8);
   color: var(--primary-color-light);
+  min-width: 120px;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
@@ -270,16 +280,14 @@ body main .service-wrapper .service-content .cards-container .card {
 }
 
 body main .service-wrapper .service-content .cards-container .card i {
+  background: var(--primary-color-yellow);
   padding: var(--space-20);
-  background: var(--primary-color-light);
   border-radius: 50%;
-  color: var(--primary-color-dark);
   font-size: 2rem;
 }
 
 body main .service-wrapper .service-content .cards-container .card h2 {
   margin-top: var(--space-10);
-  color: var(--primary-color-dark);
   font-size: var(--font-size-14);
   font-weight: var(--font-weight-500);
   text-transform: uppercase;
@@ -293,7 +301,6 @@ body main .work-wrapper {
 }
 
 body main .work-wrapper .work-content {
-  text-align: var(--default-text-align);
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -301,9 +308,10 @@ body main .work-wrapper .work-content {
 
 body main .work-wrapper .work-content .details,
 body main .work-wrapper .work-content .section-link-wrapper {
-  -ms-grid-column: 8;
-  -ms-grid-column-span: 4;
-  grid-column: 8 / span 4;
+  -ms-grid-column: 7;
+  -ms-grid-column-span: 6;
+  grid-column: 7 / span 6;
+  padding: 0 var(--space-40);
 }
 
 body main .work-wrapper .work-content .details {
@@ -347,6 +355,30 @@ body main .work-wrapper .work-content .section-link-wrapper .section-link-btn {
   color: var(--primary-color-light);
 }
 
+body footer {
+  position: relative;
+  background-color: var(--primary-color-dark);
+}
+
+body footer::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  z-index: -1;
+  background: inherit;
+  width: calc(100% + 2px);
+  height: 60px;
+  top: -21px;
+  -webkit-transform: rotate(-1.4deg);
+          transform: rotate(-1.4deg);
+  -webkit-box-shadow: 0 -1px 1px 0 rgba(160, 160, 160, 0.1), 0 -2px 2px 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 0 -1px 1px 0 rgba(160, 160, 160, 0.1), 0 -2px 2px 0 rgba(0, 0, 0, 0.1);
+}
+
+body footer .legal-wrapper .legal-content .lega-links {
+  border-top: 1px solid var(--primary-color-light);
+}
+
 @media only screen and (max-width: 960px) {
   .title-l,
   .subtitle {
@@ -359,18 +391,19 @@ body main .work-wrapper .work-content .section-link-wrapper .section-link-btn {
     padding: var(--space-60) 0 var(--space-90);
   }
   body main .about-wrapper .about-content .details,
-  body main .about-wrapper .about-content .image,
+  body main .about-wrapper .about-content .image-wrapper,
   body main .about-wrapper .about-content .btn-wrapper {
-    -ms-grid-column: 2;
-    -ms-grid-column-span: 10;
-    grid-column: 2 / span 10;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 12;
+    grid-column: 1 / span 12;
+    padding: 0 var(--space-30);
   }
   body main .about-wrapper .about-content .details {
     -ms-grid-row: 1;
     grid-row: 1;
     margin-bottom: var(--space-15);
   }
-  body main .about-wrapper .about-content .image {
+  body main .about-wrapper .about-content .image-wrapper {
     -ms-grid-row: 2;
     grid-row: 2;
   }
@@ -393,9 +426,10 @@ body main .work-wrapper .work-content .section-link-wrapper .section-link-btn {
   }
   body main .service-wrapper .service-content .details,
   body main .service-wrapper .service-content .cards-container {
-    -ms-grid-column: 3;
-    -ms-grid-column-span: 8;
-    grid-column: 3 / span 8;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 12;
+    grid-column: 1 / span 12;
+    padding: 0 var(--space-30);
   }
   body main .service-wrapper .service-content .details {
     margin-bottom: var(--space-15);
@@ -422,9 +456,10 @@ body main .work-wrapper .work-content .section-link-wrapper .section-link-btn {
   body main .work-wrapper .work-content .details,
   body main .work-wrapper .work-content .projects-container,
   body main .work-wrapper .work-content .section-link-wrapper {
-    -ms-grid-column: 2;
-    -ms-grid-column-span: 10;
-    grid-column: 2 / span 10;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 12;
+    grid-column: 1 / span 12;
+    padding: 0 var(--space-30);
   }
   body main .work-wrapper .work-content .details {
     -ms-grid-row: 1;
@@ -455,16 +490,17 @@ body main .work-wrapper .work-content .section-link-wrapper .section-link-btn {
     text-align: center;
   }
   body main .about-wrapper .about-content .details,
-  body main .about-wrapper .about-content .image,
+  body main .about-wrapper .about-content .image-wrapper,
   body main .about-wrapper .about-content .btn-wrapper {
     -ms-grid-column: 1;
     -ms-grid-column-span: 12;
     grid-column: 1 / span 12;
+    padding: 0 var(--space-20);
   }
   body main .about-wrapper .about-content .details {
     margin-bottom: var(--space-10);
   }
-  body main .about-wrapper .about-content .image {
+  body main .about-wrapper .about-content .image-wrapper {
     display: none;
     height: 340px;
   }
@@ -479,13 +515,14 @@ body main .work-wrapper .work-content .section-link-wrapper .section-link-btn {
   }
   body main .service-wrapper .service-content .details,
   body main .service-wrapper .service-content .cards-container {
-    -ms-grid-column: 2;
-    -ms-grid-column-span: 10;
-    grid-column: 2 / span 10;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 12;
+    grid-column: 1 / span 12;
+    padding: 0 var(--space-20);
     gap: var(--space-10);
   }
   body main .service-wrapper .service-content .details {
-    margin-bottom: var(--space-10);
+    margin-bottom: var(--space-20);
   }
   body main .service-wrapper .service-content .cards-container {
     gap: var(--space-10);
@@ -509,21 +546,16 @@ body main .work-wrapper .work-content .section-link-wrapper .section-link-btn {
   body main .work-wrapper .work-content .details,
   body main .work-wrapper .work-content .projects-container,
   body main .work-wrapper .work-content .section-link-wrapper {
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 12;
-    grid-column: 1 / span 12;
+    padding: 0 var(--space-20);
   }
   body main .work-wrapper .work-content .details {
-    -ms-grid-row: 1;
-    grid-row: 1;
+    margin-bottom: var(--space-10);
   }
   body main .work-wrapper .work-content .projects-container {
-    grid-row: span 2;
+    gap: var(--space-5);
   }
   body main .work-wrapper .work-content .section-link-wrapper {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    margin-top: var(--space-20);
   }
 }
-/*# sourceMappingURL=indexPage.css.map */
+/*# sourceMappingURL=home.css.map */

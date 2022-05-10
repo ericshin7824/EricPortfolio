@@ -10,6 +10,7 @@
     --primary-color-light: rgba(255, 255, 255, 1);
     --primary-color-yellow: rgba(255, 194, 41, 1);
     --primary-color-gray: rgba(160, 160, 160, 1);
+    --success-color-green: rgb(104, 241, 99);
 
     --logo-size: 1.4rem;
     --nav-height-l: 3.125rem;
@@ -325,28 +326,29 @@ body {
         position: relative;
         z-index: 8888;
         width: inherit;
+        // &::before {
+        //     content: "";
+        //     position: absolute;
+        //     left: 0;
+        //     z-index: -1;
+        //     background: inherit;
+        //     width: calc(100% + 2px);
+        //     height: 60px;
+        //     top: -21px;
+        //     transform: rotate(-1.4deg);
+        //     box-shadow: 0 -1px 1px 0 rgba(160, 160, 160, 0.1), 0 -2px 2px 0 rgba(0, 0, 0, 0.1);
+        // }
 
         .information-wrapper {
             background: var(--primary-color-dark);
             width: inherit;
             padding: var(--space-120) 0 var(--space-160);
-            &::before {
-                content: "";
-                position: absolute;
-                left: 0;
-                z-index: -1;
-                background: inherit;
-                width: calc(100% + 2px);
-                height: 60px;
-                top: -21px;
-                transform: rotate(-1.4deg);
-                box-shadow: 0 -1px 1px 0 rgba(160, 160, 160, 0.1), 0 -2px 2px 0 rgba(0, 0, 0, 0.1);
-            }
 
             .information-content {
                 color: var(--primary-color-light);
                 .details {
-                    grid-column: 2 / span 5;
+                    padding: 0 var(--space-40);
+                    grid-column: 1 / span 6;
                     display: flex;
                     flex-direction: column;
                     align-items: flex-start;
@@ -395,20 +397,19 @@ body {
                 padding-bottom: var(--space-5);
                 .lega-links {
                     height: var(--footer-height-l);
-                    border-top: 1px solid var(--primary-color-light);
-
                     color: var(--primary-color-light);
                     font-weight: var(--font-weight-300);
+                    // border-top: 1px solid var(--primary-color-light);
 
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
                     .legal-left {
-                        display: flex;
-                        column-gap: var(--space-40);
+                        display: block;
                     }
                     .legal-right {
-                        display: block;
+                        display: flex;
+                        column-gap: var(--space-40);
                     }
                 }
             }
@@ -427,6 +428,7 @@ body {
         z-index: 1;
     }
     .max-width-bander {
+        max-width: var(--max-w-960);
         padding-left: var(--space-15);
         padding-right: var(--space-15);
     }

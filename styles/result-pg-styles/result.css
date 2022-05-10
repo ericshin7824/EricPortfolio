@@ -1,0 +1,79 @@
+@use "foundation/main";
+body {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body .contact-success {
+  width: 100%;
+  height: 100%;
+}
+
+body .contact-success .details {
+  background: var(--primary-color-light);
+  width: 100%;
+  height: 60%;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body .contact-success .details .title-l {
+  margin-bottom: var(--space-10);
+}
+
+body .contact-success .details p {
+  margin-bottom: var(--space-0);
+}
+
+body .contact-success .details .success-icon {
+  padding: var(--space-40);
+  margin-bottom: var(--space-40);
+  border-radius: 50%;
+  border: 2px solid var(--success-color-green);
+}
+
+body .contact-success .details .success-icon i {
+  display: block;
+  color: var(--success-color-green);
+  font-size: 5rem;
+}
+
+body .contact-success .section-link-wrapper {
+  background: var(--primary-color-yellow);
+  width: 100%;
+  height: 40%;
+  position: relative;
+  padding-top: var(--space-20);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body .contact-success .section-link-wrapper .section-link-btn {
+  position: relative;
+  background: var(--primary-color-dark);
+  color: var(--primary-color-light);
+  text-transform: uppercase;
+}
+/*# sourceMappingURL=result.css.map */
