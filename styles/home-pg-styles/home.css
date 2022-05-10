@@ -133,14 +133,14 @@ body main .about-wrapper .about-content {
 
 body main .about-wrapper .about-content .details,
 body main .about-wrapper .about-content .section-link-wrapper {
-  -ms-grid-column: 7;
-  -ms-grid-column-span: 6;
-  grid-column: 7 / span 6;
-  padding: 0 var(--space-40);
+  -ms-grid-column: 8;
+  -ms-grid-column-span: 5;
+  grid-column: 8 / span 5;
 }
 
 body main .about-wrapper .about-content .details {
   margin-bottom: var(--space-20);
+  inline-size: 80%;
 }
 
 body main .about-wrapper .about-content .section-link-wrapper {
@@ -308,14 +308,14 @@ body main .work-wrapper .work-content {
 
 body main .work-wrapper .work-content .details,
 body main .work-wrapper .work-content .section-link-wrapper {
-  -ms-grid-column: 7;
-  -ms-grid-column-span: 6;
-  grid-column: 7 / span 6;
-  padding: 0 var(--space-40);
+  -ms-grid-column: 8;
+  -ms-grid-column-span: 5;
+  grid-column: 8 / span 5;
 }
 
 body main .work-wrapper .work-content .details {
   margin-bottom: var(--space-20);
+  inline-size: 80%;
 }
 
 body main .work-wrapper .work-content .projects-container {
@@ -461,14 +461,15 @@ body footer .legal-wrapper .legal-content .lega-links {
   body main .about-wrapper .about-content .details,
   body main .about-wrapper .about-content .image-wrapper,
   body main .about-wrapper .about-content .btn-wrapper {
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 12;
-    grid-column: 1 / span 12;
-    padding: 0 var(--space-30);
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 10;
+    grid-column: 2 / span 10;
   }
   body main .about-wrapper .about-content .details {
     -ms-grid-row: 1;
     grid-row: 1;
+    inline-size: 100%;
+    padding: 0 var(--space-40);
     margin-bottom: var(--space-15);
   }
   body main .about-wrapper .about-content .image-wrapper {
@@ -497,12 +498,13 @@ body footer .legal-wrapper .legal-content .lega-links {
   }
   body main .service-wrapper .service-content .details,
   body main .service-wrapper .service-content .cards-container {
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 12;
-    grid-column: 1 / span 12;
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 8;
+    grid-column: 3 / span 8;
     padding: 0 var(--space-30);
   }
   body main .service-wrapper .service-content .details {
+    padding: 0 var(--space-40);
     margin-bottom: var(--space-15);
   }
   body main .service-wrapper .service-content .cards-container {
@@ -527,14 +529,15 @@ body footer .legal-wrapper .legal-content .lega-links {
   body main .work-wrapper .work-content .details,
   body main .work-wrapper .work-content .projects-container,
   body main .work-wrapper .work-content .section-link-wrapper {
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 12;
-    grid-column: 1 / span 12;
-    padding: 0 var(--space-30);
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 10;
+    grid-column: 2 / span 10;
   }
   body main .work-wrapper .work-content .details {
     -ms-grid-row: 1;
     grid-row: 1;
+    inline-size: 100%;
+    padding: 0 var(--space-40);
     margin-bottom: var(--space-15);
   }
   body main .work-wrapper .work-content .projects-container {
@@ -646,6 +649,9 @@ body footer .legal-wrapper .legal-content .lega-links {
   body main .work-wrapper .work-content .details,
   body main .work-wrapper .work-content .projects-container,
   body main .work-wrapper .work-content .section-link-wrapper {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 12;
+    grid-column: 1 / span 12;
     padding: 0 var(--space-20);
   }
   body main .work-wrapper .work-content .details {
