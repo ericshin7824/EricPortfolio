@@ -96,6 +96,10 @@ body main .contact-wrapper .contact-content .contact-form .submit-btn {
   cursor: pointer;
 }
 
+body footer .legal-wrapper .legal-content .lega-links {
+  border-top: 1px solid var(--primary-color-light);
+}
+
 @media only screen and (max-width: 960px) {
   body main .contact-wrapper {
     padding: var(--space-120) 0 var(--space-120);

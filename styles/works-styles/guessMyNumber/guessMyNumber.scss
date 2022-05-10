@@ -1,5 +1,5 @@
+@use "foundation/main";
 @import url("https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 $primary-black: rgba(25, 25, 25, 1);
 $primary-white: rgba(248, 248, 248, 1);
@@ -10,188 +10,10 @@ $yellow-color: linear-gradient(180deg, rgba(255, 190, 40, 1) 0%, rgba(255, 200, 
 $invalid-color: crimson;
 $winner-color: #5bbe19;
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    font-family: "Poppins", sans-serif;
-}
-
 body {
-    .overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 8888;
-
-        background-color: rgba(0, 0, 0, 0.6);
-        width: 100%;
-        height: 100%;
-        backdrop-filter: blur(3px);
-
-        opacity: 90%;
-        transition: 0.4s all ease-in-out;
-
-        &.hidden {
-            display: none;
-            visibility: hidden;
-            opacity: 0;
-        }
-    }
-    header {
-        @keyframes header_in {
-            from {
-                /* top: -60px; */
-            }
-            to {
-                /* top: 0px; */
-                opacity: 1;
-                visibility: visible;
-            }
-        }
-
-        .nav-bar-wraper {
-            position: fixed;
-            top: 0;
-            left: 0;
-            z-index: 9999;
-
-            background: $primary-black;
-            width: 100%;
-
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            transition: all 0.3s ease-in-out;
-            opacity: 0;
-
-            visibility: hidden;
-            animation-name: header_in;
-            animation-duration: 0.7s;
-            animation-timing-function: ease-in;
-            animation-fill-mode: forwards;
-
-            .nav-bar {
-                position: relative;
-                width: 100%;
-                height: 48px;
-                padding: 0 40px;
-                max-width: 1280px;
-                color: #fff;
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-
-                .logo {
-                    color: $primary-white;
-                    font-size: 1.2em;
-                    font-weight: 900;
-                    // text-transform: uppercase;
-                }
-
-                .middle-container {
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
-                    column-gap: 20px;
-                    transition: 0.4s ease-in-out;
-
-                    a {
-                        padding: 8px 6px 6px;
-                        // padding: 8px 6px;
-
-                        color: $primary-white;
-                        font-size: 0.8em;
-                        font-weight: 500;
-
-                        text-transform: uppercase;
-                        transition: 0.3s ease-in-out;
-                        &:hover {
-                            color: crimson;
-                        }
-                    }
-                }
-                .menu-btn {
-                    position: absolute;
-                    top: 50%;
-                    right: 20px;
-                    transform: translateY(-50%);
-                    z-index: 999;
-
-                    width: 30px;
-                    height: 30px;
-
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-
-                    cursor: pointer;
-                    transition: 0.5s ease-in-out;
-                    visibility: hidden;
-                    opacity: 0;
-
-                    .btn-top,
-                    .btn-bottom,
-                    .btn-middle {
-                        position: absolute;
-                        background: $primary-white;
-                        width: 70%;
-                        height: 2px;
-                        border-radius: 4px;
-                        transition: 0.3s ease-in-out;
-                    }
-                    .btn-top {
-                        left: 15%;
-                        transform: translateY(6px);
-                        &.open {
-                            transform: translateX(0) rotate(-45deg);
-                        }
-                    }
-                    .btn-middle {
-                        top: 50%;
-                        transform: translateY(-50%);
-                        &.open {
-                            transform: scale(0);
-                        }
-                    }
-                    .btn-bottom {
-                        right: 15%;
-                        transform: translateY(-6px);
-                        &.open {
-                            transform: translateX(0) rotate(45deg);
-                        }
-                    }
-                }
-                .right-container {
-                    .media-icons {
-                        display: flex;
-                        transition: 0.5s ease-in-out;
-                        z-index: 888;
-
-                        a {
-                            color: #fff;
-                            font-size: 1.3em;
-                            transition: 0.3s ease-in-out;
-
-                            &:not(:last-child) {
-                                margin: 0 20px 0 0;
-                            }
-
-                            &:hover {
-                                transform: scale(1.1);
-                                color: crimson;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-
+    height: 100%;
     main {
-        background: #333;
+        background: var(--primary-color-dark);
         width: 100%;
         height: 100vh;
 
@@ -519,6 +341,35 @@ body {
             }
             .controls {
                 opacity: 0.1;
+            }
+        }
+    }
+    footer {
+        .legal-wrapper {
+            .legal-content {
+                .lega-links {
+                    border-top: 1px solid var(--primary-color-light);
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 960px) {
+    body {
+        main {
+            .guess-my-number {
+                transform: scale(0.8);
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 560px) {
+    body {
+        main {
+            .guess-my-number {
+                transform: scale(0.6);
             }
         }
     }

@@ -228,22 +228,72 @@ body {
                 }
             }
         }
+        .information-wrapper {
+            position: relative;
+            background: var(--primary-color-dark);
+            width: inherit;
+            padding: var(--space-120) 0 var(--space-160);
+            &::before {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: -21px;
+                transform: rotate(-1.4deg);
+
+                background: inherit;
+                width: calc(100% + 2px);
+                height: 60px;
+                box-shadow: 0 -1px 1px 0 rgba(160, 160, 160, 0.1), 0 -2px 2px 0 rgba(0, 0, 0, 0.1);
+            }
+
+            .information-content {
+                color: var(--primary-color-light);
+                .details {
+                    padding: 0 var(--space-40);
+                    grid-column: 1 / span 6;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    gap: var(--space-60);
+                    h3 {
+                        margin-bottom: var(--space-20);
+                        text-transform: uppercase;
+                    }
+                    .email,
+                    .location,
+                    .media {
+                        h3,
+                        span {
+                            white-space: nowrap;
+                        }
+                        h4 {
+                            margin-bottom: var(--space-10);
+                            // font-size: var(--font-size-18);
+                            font-weight: var(--font-weight-500);
+                            text-transform: uppercase;
+                            // white-space: nowrap;
+                        }
+                        span {
+                            font-size: var(--font-size-14);
+                            font-weight: var(--font-weight-300);
+                        }
+                    }
+                    .media {
+                        .icons-bander {
+                            display: flex;
+                            justify-content: center;
+                            column-gap: var(--space-40);
+                            margin-left: 1px;
+                            i {
+                                font-size: 1.5rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
     footer {
-        position: relative;
-        background-color: var(--primary-color-dark);
-        &::before {
-            content: "";
-            position: absolute;
-            left: 0;
-            z-index: -1;
-            background: inherit;
-            width: calc(100% + 2px);
-            height: 60px;
-            top: -21px;
-            transform: rotate(-1.4deg);
-            box-shadow: 0 -1px 1px 0 rgba(160, 160, 160, 0.1), 0 -2px 2px 0 rgba(0, 0, 0, 0.1);
-        }
         .legal-wrapper {
             .legal-content {
                 .lega-links {
@@ -297,6 +347,10 @@ body {
 
             .service-wrapper {
                 padding: var(--space-30) 0 var(--space-40);
+                &::before,
+                &::after {
+                    display: none;
+                }
                 .service-content {
                     text-align: center;
                     .details,
@@ -345,6 +399,27 @@ body {
                     .section-link-wrapper {
                         justify-content: center;
                         margin-top: var(--space-30);
+                    }
+                }
+            }
+
+            .information-wrapper {
+                padding: var(--space-80) 0 var(--space-120);
+                &::before {
+                    display: none;
+                }
+                .information-content {
+                    .details {
+                        grid-column: 1 / span 12;
+                        gap: var(--space-30);
+                        align-items: center;
+                        .email,
+                        .location,
+                        .media {
+                            display: flex;
+                            align-items: center;
+                            flex-direction: column;
+                        }
                     }
                 }
             }
@@ -435,6 +510,14 @@ body {
                     }
                     .section-link-wrapper {
                         margin-top: var(--space-20);
+                    }
+                }
+            }
+            .information-wrapper {
+                padding: var(--space-60) 0 var(--space-80);
+                .information-content {
+                    .details {
+                        gap: var(--space-30);
                     }
                 }
             }

@@ -5,37 +5,33 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Digital clock switch hours format with Javascript</title>
-        <link rel="stylesheet" href="../style/digitalClock/digitalClock.css" />
+        <link rel="stylesheet" href="../../styles/works-styles/digitalClock/digitalClock.css" />
+        <link rel="stylesheet" href="../../styles/main-styles/main.css" />
         <script src="https://kit.fontawesome.com/2310046e07.js" crossorigin="anonymous"></script>
     </head>
     <body>
         <div class="overlay hidden"></div>
-        <div>
-            <a href="#home" id="back-to-top" class="text">Top</a>
-        </div>
-        <header>
-            <section class="nav-bar-wraper">
-                <nav class="nav-bar">
-                    <a href="https://www.erichoonshin.com" class="logo">
-                        <h1>Hn.</h1>
-                    </a>
-                    <ul class="middle-container">
-                        <a href="https://www.erichoonshin.com/#about" class="page-btn">About</a>
-                        <a href="https://www.erichoonshin.com/#service" class="page-btn">Services</a>
-                        <a href="https://www.erichoonshin.com/#portfolio" class="page-btn">Portfolio</a>
-                        <a href="https://www.erichoonshin.com/#contact" class="page-btn">Contact</a>
-                    </ul>
-                    <ul class="menu-btn">
-                        <span class="btn-top"></span>
-                        <span class="btn-middle"></span>
-                        <span class="btn-bottom"></span>
-                    </ul>
-                </nav>
-            </section>
-        </header>
+        <a class="back-to-top hidden" href="#home" id="back-to-top">Top</a>
+        <nav>
+            <div class="max-width-bander">
+                <a class="logo" href="https://www.erichoonshin.com">Hn.</a>
+                <ul class="nav-links-bander">
+                    <a class="title-xs" href="https://www.erichoonshin.com/#about">About</a>
+                    <a class="title-xs" href="https://www.erichoonshin.com/#service">Service</a>
+                    <a class="title-xs" href="https://www.erichoonshin.com/#work-wrapper">Work</a>
+                    <a class="title-xs" href="https://www.erichoonshin.com/#infomation">Info</a>
+                    <a class="title-xs" href="https://www.erichoonshin.com/docs/contact/contact.html">Contact</a>
+                </ul>
+                <ul class="nav-btn-bander query-visible">
+                    <span class="btn-top"></span>
+                    <span class="btn-middle"></span>
+                    <span class="btn-bottom"></span>
+                </ul>
+            </div>
+        </nav>
 
         <main>
-            <section class="content-BG">
+            <section class="digital-clock-wrapper">
                 <div class="digital-clock">
                     <div class="menu-box">
                         <i onclick="showMenu(this)" class="fas fa-cog dot-menu-btn" id="active-menu"></i>
@@ -76,8 +72,21 @@
                 </div>
             </section>
         </main>
+        <footer class="global-footer">
+            <section class="legal-wrapper">
+                <div class="legal-content max-width-bander">
+                    <div class="lega-links">
+                        <span class="legal-left title-xs">Eric Hoon Shin</span>
+                        <div class="legal-right">
+                            <span class="title-xs">© 2022 - Hn.</span>
+                            <span class="title-xs">United States</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </footer>
 
-        <script src="../script/digitalClock/digitalClock.js"></script>
-        <script src="../script/main/main.js"></script>
+        <script src="../../scripts/works-scripts/digitalClock/digitalClock.js"></script>
+        <script src="../../scripts/main-script/main.js"></script>
     </body>
 </html>

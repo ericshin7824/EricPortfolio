@@ -118,7 +118,7 @@ function btnRoll(e) {
     if (playing && e.id.slice(-1) == activePlayer) {
         // generating radom dice roll & display the dice
         const dice = Math.trunc(Math.random() * 6) + 1;
-        document.querySelector(`.dice-${activePlayer}`).src = `../../image/diceGame2P-imgs/dice-${dice}.png`;
+        document.querySelector(`.dice-${activePlayer}`).src = `../../images/diceGame2P-imgs/dice-${dice}.png`;
 
         // check for rolled 1, if true to next the player
         if (dice !== 1 && dice !== 3) {

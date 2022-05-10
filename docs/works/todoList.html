@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Todo list with Javascript</title>
+        <link rel="stylesheet" href="../../styles/works-styles/todoList/todoList.css" />
+        <link rel="stylesheet" href="../../styles/main-styles/main.css" />
+        <script src="https://kit.fontawesome.com/2310046e07.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div class="overlay hidden"></div>
+        <a class="back-to-top hidden" href="#home" id="back-to-top">Top</a>
+        <nav>
+            <div class="max-width-bander">
+                <a class="logo" href="https://www.erichoonshin.com">Hn.</a>
+                <ul class="nav-links-bander">
+                    <a class="title-xs" href="https://www.erichoonshin.com/#about">About</a>
+                    <a class="title-xs" href="https://www.erichoonshin.com/#service">Service</a>
+                    <a class="title-xs" href="https://www.erichoonshin.com/#work-wrapper">Work</a>
+                    <a class="title-xs" href="https://www.erichoonshin.com/#infomation">Info</a>
+                    <a class="title-xs" href="https://www.erichoonshin.com/docs/contact/contact.html">Contact</a>
+                </ul>
+                <ul class="nav-btn-bander query-visible">
+                    <span class="btn-top"></span>
+                    <span class="btn-middle"></span>
+                    <span class="btn-bottom"></span>
+                </ul>
+            </div>
+        </nav>
+        <main>
+            <div class="todo-list">
+                <div class="el-container">
+                    <div class="tittle">
+                        <div class="project-name">
+                            <span>Javascript project</span>
+                        </div>
+                        <div class="tittle-name">
+                            <h1>TODO LIST</h1>
+                            <span>Stored in LocalStorage</span>
+                        </div>
+                    </div>
+                    <div class="task-nav">
+                        <div class="task-input">
+                            <i class="fas fa-align-left"></i>
+                            <input id="focus" type="text" placeholder="Add a new task" />
+                        </div>
+                        <div class="controls">
+                            <div class="fillters">
+                                <span id="all" class="active">All</span>
+                                <span id="pending">Pending</span>
+                                <span id="completed">Completed</span>
+                            </div>
+                            <button class="clear-btn">Clear All</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="lists-container">
+                    <ul class="task-box"></ul>
+                </div>
+                <span class="list-bottom-end"></span>
+            </div>
+        </main>
+        <footer class="global-footer">
+            <section class="legal-wrapper">
+                <div class="legal-content max-width-bander">
+                    <div class="lega-links">
+                        <span class="legal-left title-xs">Eric Hoon Shin</span>
+                        <div class="legal-right">
+                            <span class="title-xs">© 2022 - Hn.</span>
+                            <span class="title-xs">United States</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </footer>
+
+        <script src="../../scripts/works-scripts/todoList/todoList.js"></script>
+        <script src="../../scripts/main-script/main.js"></script>
+    </body>
+</html>
