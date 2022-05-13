@@ -13,8 +13,8 @@
             content="Developer,Development,Web Portfolio,Developer Dortfolio,html,css,javascript,Front-End,software engineer"
         />
         <title>Erichoonshin.com</title>
-        <link rel="stylesheet" href="./styles/main-styles/main.css" />
         <link rel="stylesheet" href="./styles/home-pg-styles/home.css" />
+        <link rel="stylesheet" href="./styles/main-styles/main.css" />
         <script src="https://kit.fontawesome.com/2310046e07.js" crossorigin="anonymous"></script>
     </head>
     <body>
@@ -25,9 +25,10 @@
                 <a class="logo" href="https://www.erichoonshin.com">Hn.</a>
                 <ul class="nav-links-bander">
                     <a class="title-xs" href="https://www.erichoonshin.com/#about">About</a>
-                    <a class="title-xs" href="https://www.erichoonshin.com/#service">Service</a>
+                    <a class="title-xs" href="https://www.erichoonshin.com/#service">Tech</a>
                     <a class="title-xs" href="https://www.erichoonshin.com/#work-wrapper">Work</a>
-                    <a class="title-xs" href="https://www.erichoonshin.com/#infomation">Info</a>
+                    <a class="title-xs" href="https://www.erichoonshin.com/#service">Service</a>
+                    <!-- <a class="title-xs" href="https://www.erichoonshin.com/#infomation">Info</a> -->
                     <a class="title-xs" href="https://www.erichoonshin.com/docs/contact/contact.html">Contact</a>
                 </ul>
                 <ul class="nav-btn-bander query-visible">
@@ -41,20 +42,20 @@
             <section class="home-wrapper" id="home">
                 <div class="home-content max-width-bander grid-12">
                     <h1 class="title-xl">
-                        Front-End<br />
+                        Front - End<br />
                         Developer
                     </h1>
-                    <div class="section-link-wrapper">
+                    <!-- <div class="section-link-wrapper">
                         <a href="https://www.erichoonshin.com/#work" class="section-link-btn">See projects</a>
-                    </div>
+                    </div> -->
                 </div>
             </section>
         </header>
         <main>
             <section class="about-wrapper" id="about">
-                <div class="about-content max-width-bander grid-12 reveal">
+                <div class="about-content max-width-bander grid-12 col-gap-40 reveal">
+                    <h3 class="title-l">About</h3>
                     <article class="details">
-                        <h3 class="title-l">About<span class="emph-color">.</span></h3>
                         <p class="subtitle">Hi, I'm Eric and I'm based in Los Angeles, California.</p>
                         <p>
                             I am very curious and love to be creative. And I enjoy learning about questions. I am
@@ -68,25 +69,107 @@
                             <img src="./images/home-imgs/about_img.jpg" alt="" width="750" />
                         </article>
                     </picture>
-                    <div class="section-link-wrapper">
-                        <a href="./docs/contact/contact.html" class="section-link-btn">Let's talk</a>
-                    </div>
                 </div>
             </section>
+            <div class="link-wrapper max-width-bander grid-12 col-gap-20">
+                <div class="link-btn section-link-btn">
+                    <span>Any Questions?</span>
+                    <a href="./docs/contact/contact.html">Let's talk ></a>
+                </div>
+            </div>
 
-            <section class="service-wrapper" id="service">
-                <div class="service-content max-width-bander grid-12 reveal">
+            <section class="tech-wrapper" id="tech">
+                <div class="tech-content max-width-bander grid-12 col-gap-40">
+                    <!-- <h3 class="title-l">Tech Stack</h3> -->
+                    <h3 class="title-l">Language</h3>
                     <article class="details">
-                        <h3 class="title-l">Service<span class="emph-color">.</span></h3>
                         <p class="subtitle">Check out the services I can help for your website.</p>
                         <p>Cupiditate nulla similique omnis beatae ipsa sit dolor explicabo laborum fugiat.</p>
                     </article>
+                    <ul class="techs-container">
+                        <li>
+                            <i class="fab fa-html5"></i>
+                            <h2>HTML</h2>
+                        </li>
+                        <li>
+                            <i class="fab fa-css3"></i>
+                            <h2>SCSS</h2>
+                        </li>
+                        <li>
+                            <i class="fab fa-js"></i>
+                            <h2>JavaScript</h2>
+                        </li>
+                        <li>
+                            <i class="fas fa-database"></i>
+                            <h2>MySQL</h2>
+                        </li>
+                        <li>
+                            <i class="fab fa-github"></i>
+                            <h2>Github</h2>
+                        </li>
+                    </ul>
+                    <div class="link-wrapper">
+                        <div class="link-btn section-link-btn">
+                            <span>Any Questions?</span>
+                            <a href="./docs/contact/contact.html">Let's talk ></Let></a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="work-wrapper" id="work">
+                <div class="work-content max-width-bander grid-12 col-gap-40 reveal">
+                    <h3 class="title-l">Work</h3>
+                    <article class="details">
+                        <p class="subtitle">Check out my latest development study cases.</p>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit voluptatibus praesentium
+                            officia doloremque earum. Quidem earum suscipit iusto repellat maxime
+                        </p>
+                        <!-- <a href="./docs/contact/contact.html" class="section-link-btn">Let's talk</a> -->
+                    </article>
+                    <ul class="projects-container">
+                        <a href="" class="project"></a>
+                        <a class="project" href="./docs/works/diceGame2P.HTML">
+                            <img src="./images/home-imgs/diceGame_thumb.jpg" alt="" width="600" />
+                        </a>
+                        <div href="" class="project"></div>
+                        <a class="project" href="./docs/works/todoList.html">
+                            <img src="./images/home-imgs/todoList-thum.png" alt="" width="600" />
+                        </a>
+                        <div href="" class="project"></div>
+                        <a class="project" href="./docs/works/digitalClock.html">
+                            <img src="./images/home-imgs/digitalClock-thum.png" alt="" width="600" />
+                        </a>
+                        <div href="" class="project"></div>
+                        <a class="project" href="./docs/works/guessMyNumber.html">
+                            <img src="./images/home-imgs/guessMyNumber-thum.png" alt="" width="600" />
+                        </a>
+                        <div href="" class="project"></div>
+                    </ul>
+                </div>
+            </section>
+            <div class="link-wrapper max-width-bander grid-12 col-gap-20">
+                <div class="link-btn section-link-btn">
+                    <span>Any Questions?</span>
+                    <a href="./docs/contact/contact.html">Let's talk ></a>
+                </div>
+            </div>
+        
+
+            <section class="service-wrapper" id="service">
+                <div class="service-content max-width-bander grid-12 col-gap-40 reveal">
+                    <h3 class="title-l">Service</h3>
+                    <article class="details">
+                        <p class="subtitle">Check out the services I can help for your website.</p>
+                        <p>Cupiditate nulla similique omnis beatae ipsa sit dolor explicabo laborum fugiat consectetur beatae adipisicing elit.</p>
+                    </article>
                     <ul class="cards-container">
                         <li class="card">
-                            <i class="fas fa-volume-up"></i>
-                            <h2>Marketing</h2>
+                            <i class="fab fa-connectdevelop"></i>
+                            <h2>Development</h2>
                         </li>
                         <li class="card">
+                            <!-- <i class="fas fa-wrench"></i> -->
                             <i class="fas fa-tools"></i>
                             <h2>Maintenance</h2>
                         </li>
@@ -95,55 +178,23 @@
                             <h2>Renewal</h2>
                         </li>
                         <li class="card">
-                            <i class="fab fa-connectdevelop"></i>
-                            <h2>Development</h2>
-                        </li>
-                        <li class="card">
                             <i class="fas fa-hard-hat"></i>
                             <h2>Hard Work</h2>
                         </li>
                     </ul>
-                </div>
-            </section>
-
-            <section class="work-wrapper" id="work">
-                <div class="work-content max-width-bander grid-12 reveal">
-                    <article class="details">
-                        <h3 class="title-l">Work<span class="emph-color">.</span></h3>
-                        <p class="subtitle">Check out my latest development study cases.</p>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit voluptatibus praesentium
-                            officia doloremque earum. Quidem earum suscipit iusto repellat maxime, vitae in ratione eos
-                            quae aspernatur ducimus ipsum autem hic exercitationem amet nemo sapiente excepturi?
-                        </p>
-                    </article>
-
-                    <ul class="projects-container">
-                        <a class="project" href="./docs/works/diceGame2P.HTML">
-                            <img src="./images/home-imgs/diceGame_thumb.jpg" alt="" width="600" />
-                        </a>
-
-                        <a class="project" href="./docs/works/todoList.html">
-                            <img src="./images/home-imgs/todoList-thum.png" alt="" width="600" />
-                        </a>
-
-                        <a class="project" href="./docs/works/digitalClock.html">
-                            <img src="./images/home-imgs/digitalClock-thum.png" alt="" width="600" />
-                        </a>
-                        <a class="project" href="./docs/works/guessMyNumber.html">
-                            <img src="./images/home-imgs/guessMyNumber-thum.png" alt="" width="600" />
-                        </a>
-                    </ul>
-
-                    <div class="section-link-wrapper">
-                        <a href="./docs/contact/contact.html" class="section-link-btn">Let's talk</a>
+                    <div class="link-wrapper">
+                        <div class="link-btn section-link-btn">
+                            <span>Any Questions?</span>
+                            <a href="./docs/contact/contact.html" class="">Let's talk ></Let></a>
+                        </div>
                     </div>
                 </div>
             </section>
+
             <section class="information-wrapper" id="infomation">
-                <div class="information-content max-width-bander grid-12 reveal">
+                <div class="information-content max-width-bander grid-12 col-gap-40 reveal">
+                    <h3 class="title-l">information</h3>
                     <article class="details">
-                        <h3 class="title-l">information</h3>
                         <div class="location">
                             <h4 class="title-s">location</h4>
                             <span>Los angeles, California</span>
@@ -163,6 +214,7 @@
                             </div>
                         </div>
                     </article>
+                    <!-- <a href="./docs/contact/contact.html" class="section-link-btn">- Let's talk ></a> -->
                 </div>
             </section>
         </main>
