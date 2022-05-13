@@ -137,26 +137,26 @@ body main .about-wrapper .about-content {
 }
 
 body main .about-wrapper .about-content .title-l {
-  -ms-grid-column: 1;
+  -ms-grid-column: 2;
   -ms-grid-column-span: 10;
-  grid-column: 1 / span 10;
+  grid-column: 2 / span 10;
   -ms-grid-row: 1;
   grid-row: 1;
 }
 
 body main .about-wrapper .about-content .details {
   margin-bottom: var(--space-20);
-  -ms-grid-column: 1;
+  -ms-grid-column: 2;
   -ms-grid-column-span: 4;
-  grid-column: 1 / span 4;
+  grid-column: 2 / span 4;
   -ms-grid-row: 2;
   grid-row: 2;
 }
 
 body main .about-wrapper .about-content .image-wrapper {
-  -ms-grid-column: 5;
-  -ms-grid-column-span: 8;
-  grid-column: 5 / span 8;
+  -ms-grid-column: 6;
+  -ms-grid-column-span: 7;
+  grid-column: 6 / span 7;
   -ms-grid-row: 2;
   -ms-grid-row-span: 2;
   grid-row: 2 / span 2;
@@ -289,9 +289,9 @@ body main .work-wrapper .work-content {
 
 body main .work-wrapper .work-content .title-l,
 body main .work-wrapper .work-content .details {
-  -ms-grid-column: 1;
+  -ms-grid-column: 2;
   -ms-grid-column-span: 4;
-  grid-column: 1 / span 4;
+  grid-column: 2 / span 4;
 }
 
 body main .work-wrapper .work-content .title-l {
@@ -302,15 +302,15 @@ body main .work-wrapper .work-content .title-l {
 body main .work-wrapper .work-content .details {
   -ms-grid-row: 2;
   grid-row: 2;
+  margin-bottom: var(--space-40);
 }
 
 body main .work-wrapper .work-content .projects-container {
-  -ms-grid-column: 6;
-  -ms-grid-column-span: 5;
-  grid-column: 6 / span 5;
-  -ms-grid-row: 2;
-  -ms-grid-row-span: 2;
-  grid-row: 2 / span 2;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 6;
+  grid-column: 2 / span 6;
+  -ms-grid-row: 3;
+  grid-row: 3;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (minmax(180px, 1fr))[auto-fit];
@@ -423,9 +423,9 @@ body main .information-wrapper .information-content {
 
 body main .information-wrapper .information-content .title-l,
 body main .information-wrapper .information-content .details {
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 8;
-  grid-column: 1 / span 8;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 10;
+  grid-column: 2 / span 10;
 }
 
 body main .information-wrapper .information-content .title-l {
