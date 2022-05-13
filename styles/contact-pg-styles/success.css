@@ -71,9 +71,15 @@ body .contact-success .section-link-wrapper {
 }
 
 body .contact-success .section-link-wrapper .section-link-btn {
-  position: relative;
-  background: var(--primary-color-dark);
-  color: var(--primary-color-light);
-  text-transform: uppercase;
+  color: var(--primary-color-dark);
+  text-align: center;
+}
+
+body .contact-success .section-link-wrapper .section-link-btn a {
+  margin-left: var(--space-10);
+}
+
+body .global-footer .legal-contents .lega-links {
+  border-top: none;
 }
 /*# sourceMappingURL=success.css.map */

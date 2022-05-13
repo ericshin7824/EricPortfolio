@@ -46,10 +46,18 @@ body {
             justify-content: center;
 
             .section-link-btn {
-                position: relative;
-                background: var(--primary-color-dark);
-                color: var(--primary-color-light);
-                text-transform: uppercase;
+                color: var(--primary-color-dark);
+                text-align: center;
+                a {
+                    margin-left: var(--space-10);
+                }
+            }
+        }
+    }
+    .global-footer {
+        .legal-contents {
+            .lega-links {
+                border-top: none;
             }
         }
     }

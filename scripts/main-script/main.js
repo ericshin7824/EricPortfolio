@@ -1,8 +1,8 @@
 "use strict";
 
-const navMenu = document.querySelector(".nav-links-bander");
+const navMenu = document.querySelector(".nav-links");
 const overlay = document.querySelector(".overlay");
-const navMenuBtn = document.querySelector(".nav-btn-bander");
+const navMenuBtn = document.querySelector(".nav-menu-btn");
 const body = document.body;
 
 const toggleNavMenu = function () {

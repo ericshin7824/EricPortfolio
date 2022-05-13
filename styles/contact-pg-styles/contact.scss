@@ -15,7 +15,7 @@ body {
                 }
                 .details {
                     margin-bottom: var(--space-40);
-                    .title-xl {
+                    p {
                         text-transform: uppercase;
                         display: flex;
                         justify-content: center;
@@ -74,17 +74,17 @@ body {
             }
         }
     }
-    footer {
-        .legal-wrapper {
-            .legal-content {
-                .lega-links {
-                    border-top: 1px solid var(--primary-color-light);
-                }
-            }
-        }
-    }
+    // footer {
+    //     .legal-wrapper {
+    //         .legal-content {
+    //             .lega-links {
+    //                 border-top: 1px solid var(--primary-color-light);
+    //             }
+    //         }
+    //     }
+    // }
 }
-@media only screen and (max-width: 960px) {
+@media only screen and (max-width: 60rem) {
     body {
         main {
             .contact-wrapper {
@@ -113,7 +113,7 @@ body {
         }
     }
 }
-@media only screen and (max-width: 560px) {
+@media only screen and (max-width: 35rem) {
     body {
         main {
             .contact-wrapper {
