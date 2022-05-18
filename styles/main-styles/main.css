@@ -2,8 +2,7 @@
 :root {
   font-family: "Poppins", sans-serif;
   font-size: 16px;
-  line-height: 1.75;
-  text-align: left;
+  line-height: 1.85;
   --primary-color-dark: rgba(25, 25, 25, 1);
   --primary-color-light: rgba(255, 255, 255, 1);
   --primary-color-yellow: rgba(255, 194, 41, 1);
@@ -14,9 +13,10 @@
   --nav-height-m: 2.5rem;
   --footer-height-l: 2.5rem;
   --footer-height-m: 1.875rem;
-  --max-w-1920: 1920px;
-  --max-w-960: 960px;
-  --max-w-540: 540px;
+  --max-w-1920: 120rem;
+  --max-w-1440: 90rem;
+  --max-w-960: 60rem;
+  --max-w-540: 35rem;
   --min-w-360: 360px;
   --space-5: 0.3125rem;
   --space-6: 0.375rem;
@@ -68,6 +68,7 @@
   --font-size-80: 5rem;
   --font-size-96: 7.875rem;
   --font-size-128: 8rem;
+  --font-size-144: 9rem;
 }
 
 html,
@@ -108,7 +109,7 @@ a {
 .max-width-bander {
   width: 100%;
   max-width: var(--max-w-1920);
-  max-width: 1440px;
+  max-width: var(--max-w-1440);
   padding-left: var(--space-80);
   padding-right: var(--space-80);
   margin: 0 auto;
@@ -140,12 +141,11 @@ a {
 .title-s,
 .title-l,
 .title-xl {
-  display: block;
   white-space: nowrap;
 }
 
 .title-xl {
-  font-size: var(--font-size-128);
+  font-size: var(--font-size-144);
   line-height: 0.85;
   font-weight: 800;
 }
@@ -153,7 +153,7 @@ a {
 .title-l {
   text-transform: uppercase;
   line-height: 0.85;
-  font-size: var(--font-size-80);
+  font-size: var(--font-size-72);
   font-weight: 700;
 }
 
@@ -250,19 +250,6 @@ a {
   visibility: visible;
   opacity: 1;
   z-index: 9999;
-}
-
-.details {
-  overflow-wrap: break-word;
-  -webkit-hyphens: auto;
-      -ms-hyphens: auto;
-          hyphens: auto;
-}
-
-.query-visible {
-  visibility: hidden;
-  opacity: 0;
-  z-index: -1;
 }
 
 .visible {
@@ -461,7 +448,6 @@ body .global-footer .legal-contents .lega-links {
   height: var(--footer-height-l);
   color: var(--primary-color-light);
   font-weight: var(--font-weight-300);
-  border-top: 1px solid var(--primary-color-light);
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -486,7 +472,6 @@ body .global-footer .legal-contents .lega-links .legal-right {
 @media only screen and (max-width: 60rem) {
   :root {
     font-size: 15px;
-    line-height: 1.5;
   }
   .max-width-bander {
     padding-left: var(--space-30);
@@ -507,6 +492,9 @@ body .global-footer .legal-contents .lega-links .legal-right {
   }
   .section-link-btn span {
     font-size: var(--font-size-12);
+  }
+  html .global-nav div ul:nth-of-type(2) {
+    display: block;
   }
   html .global-nav .nav-links {
     position: fixed;
@@ -542,7 +530,6 @@ body .global-footer .legal-contents .lega-links .legal-right {
 @media only screen and (max-width: 35rem) {
   :root {
     font-size: 14px;
-    line-height: 1.25;
   }
   .max-width-bander {
     padding-left: var(--space-20);
