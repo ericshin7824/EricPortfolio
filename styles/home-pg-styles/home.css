@@ -455,7 +455,7 @@ main .work-wrapper .work-content .projects-container {
 
 main .work-wrapper .work-content .projects-container .project {
   position: relative;
-  background: #505050;
+  background-color: #333;
 }
 
 main .work-wrapper .work-content .projects-container .project:hover .overlay {

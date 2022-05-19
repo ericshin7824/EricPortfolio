@@ -297,7 +297,8 @@ main {
                 gap: var(--space-20);
                 .project {
                     position: relative;
-                    background: rgba(80, 80, 80, 1);
+                    // background: rgba(80, 80, 80, 1);
+                    background-color: #333;
                     &:hover {
                         .overlay {
                             opacity: 1;

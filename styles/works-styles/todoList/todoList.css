@@ -1,12 +1,27 @@
 @import url("https://fonts.googleapis.com/css2?family=Handlee&family=Orbitron&family=Patrick+Hand&family=Roboto:wght@100;300;400;500;700;900&display=swap");
 @use "foundation/main";
 body {
-  height: 100%;
+  background: var(--primary-color-yellow);
+  background-color: #333;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 body main {
-  background: var(--primary-color-dark);
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -21,6 +36,8 @@ body main {
 body main .todo-list {
   position: relative;
   width: 480px;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
   -webkit-box-shadow: 16px 20px 12px -8px rgba(0, 0, 0, 0.6), 20px 24px 20px -6px rgba(160, 160, 160, 0.1);
           box-shadow: 16px 20px 12px -8px rgba(0, 0, 0, 0.6), 20px 24px 20px -6px rgba(160, 160, 160, 0.1);
 }
@@ -28,7 +45,7 @@ body main .todo-list {
 body main .todo-list .el-container {
   position: relative;
   z-index: 8888;
-  background-color: #525252;
+  background-color: #828282;
   background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
   width: 100%;
   padding: 50px 18px 18px;
@@ -40,23 +57,23 @@ body main .todo-list .el-container {
 
 body main .todo-list .el-container .tittle {
   margin-bottom: 18px;
-  color: gainsboro;
+  color: white;
   line-height: 1.3;
 }
 
 body main .todo-list .el-container .tittle .project-name span {
-  font-size: 0.7em;
-  font-weight: 300;
+  font-size: 0.7rem;
+  font-weight: 400;
 }
 
 body main .todo-list .el-container .tittle .tittle-name h1 {
   color: white;
-  font-size: 2.4em;
+  font-size: 2.4rem;
   font-weight: 700;
 }
 
 body main .todo-list .el-container .tittle .tittle-name span {
-  font-size: 0.9em;
+  font-size: 0.9rem;
   font-weight: 400;
 }
 
@@ -124,14 +141,14 @@ body main .todo-list .el-container .controls {
 }
 
 body main .todo-list .el-container .controls .fillters span {
-  color: #999999;
-  font-size: 1em;
+  color: #fff;
+  font-size: 1rem;
   font-weight: 400;
   padding: 4px 8px;
   margin: 0 8px;
   -webkit-transition: 0.4s ease-in-out;
   transition: 0.4s ease-in-out;
-  border: 1px dashed #999999;
+  border: 2px dashed #646464;
   border-radius: 4px;
   cursor: pointer;
 }
@@ -148,10 +165,10 @@ body main .todo-list .el-container .controls .fillters span.active {
 
 body main .todo-list .el-container .controls .clear-btn {
   background: transparent;
-  color: #999999;
-  font-size: 1em;
+  color: #fff;
+  font-size: 1rem;
   padding: 4px 8px;
-  border: 1px dashed #999999;
+  border: 2px dashed #6e6e6e;
   border-radius: 4px;
   outline: none;
   -webkit-transition: 0.4s ease-in-out;
@@ -212,7 +229,7 @@ body main .todo-list .lists-container .task-box {
 
 body main .todo-list .lists-container .task-box .task {
   height: 36px;
-  font-size: 1em;
+  font-size: 1rem;
   border-bottom: 2px solid rgba(97, 221, 255, 0.4);
   list-style: none;
   display: -webkit-box;
@@ -239,7 +256,7 @@ body main .todo-list .lists-container .task-box .task label input {
 body main .todo-list .lists-container .task-box .task label p {
   color: rgba(54, 54, 54, 0.8);
   font-family: "Handlee", cursive;
-  font-size: 1.2em;
+  font-size: 1.2rem;
 }
 
 body main .todo-list .lists-container .task-box .task label p.checked {
@@ -315,7 +332,7 @@ body main .todo-list .lists-container .task-box .task:last-child {
 body main .todo-list .lists-container .task-box .no-task {
   color: rgba(54, 54, 54, 0.8);
   font-family: "Handlee", cursive;
-  font-size: 1.2em;
+  font-size: 1.2rem;
   margin-left: 98px;
 }
 
@@ -340,7 +357,7 @@ body main .todo-list .lists-container .task-box:after {
 }
 
 body main .todo-list .list-bottom-end {
-  background-color: #525252;
+  background-color: #828282;
   background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
   width: 100%;
   height: 30px;
@@ -356,14 +373,14 @@ body footer .legal-wrapper .legal-content .lega-links {
   border-top: 1px solid var(--primary-color-light);
 }
 
-@media only screen and (max-width: 960px) {
+@media only screen and (max-width: 60rem) {
   body main .todo-list {
     -webkit-transform: scale(0.8);
             transform: scale(0.8);
   }
 }
 
-@media only screen and (max-width: 560px) {
+@media only screen and (max-width: 35rem) {
   body main .todo-list {
     -webkit-transform: scale(0.6);
             transform: scale(0.6);

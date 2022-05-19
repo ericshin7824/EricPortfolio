@@ -36,25 +36,21 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
 
-.shin-container .shin-navbar,
-.shin-container .shin-contents,
-.shin-container .shin-social-links {
-  padding-left: var(--space-80);
-  padding-right: var(--space-80);
-}
-
 .shin-container .shin-navbar {
   position: relative;
   background: inherit;
+  max-width: 90rem;
   width: 100%;
   height: var(--space-80);
-  padding-top: var(--space-20);
-  padding-bottom: var(--space-20);
+  padding: var(--space-20) var(--space-80);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -113,6 +109,9 @@ body {
 .shin-contents {
   position: relative;
   z-index: -3;
+  max-width: 90rem;
+  width: 100%;
+  padding: var(--space-20) var(--space-80);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -234,7 +233,7 @@ body {
 .shin-contents .shin-image .shin-color-box {
   position: absolute;
   top: 0;
-  right: 0;
+  right: var(--space-80);
   z-index: -1;
   background: #222;
   border-radius: var(--space-20) 0 0 var(--space-20);
@@ -255,7 +254,7 @@ body {
 .shin-contents .shin-image .shin-color-box .more-link {
   position: absolute;
   bottom: calc(var(--space-40) * -1);
-  right: calc(var(--space-80));
+  right: 0;
   color: #222;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -290,12 +289,15 @@ body {
 }
 
 footer {
+  max-width: 90rem;
+  width: 100%;
+  padding: var(--space-20) var(--space-80);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding-bottom: var(--space-20);
 }
 
@@ -324,8 +326,7 @@ footer .shin-social-links img:hover {
   .shin-container .shin-navbar,
   .shin-container .shin-contents,
   .shin-container .shin-social-links {
-    padding-left: var(--space-40);
-    padding-right: var(--space-40);
+    padding: var(--space-20) var(--space-40);
   }
   .shin-container .shin-navbar .shin-nav-links-container {
     position: absolute;
@@ -390,7 +391,6 @@ footer .shin-social-links img:hover {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
-    margin-bottom: var(--space-50);
   }
   .shin-contents .shin-image .shin-controller {
     width: 60%;
@@ -398,7 +398,8 @@ footer .shin-social-links img:hover {
   }
   .shin-contents .shin-image .shin-color-box {
     width: 75%;
-    height: 55%;
+    height: 58%;
+    right: var(--space-40);
   }
   .shin-contents .shin-image .shin-color-box .more-link {
     font-size: var(--font-size-13);
@@ -408,37 +409,36 @@ footer .shin-social-links img:hover {
 }
 
 @media only screen and (max-width: 35rem) {
-  .shin-navbar,
-  .shin-contents,
-  .shin-social-links {
-    padding-left: var(--space-20);
-    padding-right: var(--space-20);
+  .shin-container .shin-navbar,
+  .shin-container .shin-contents,
+  .shin-container .shin-social-links {
+    padding: var(--space-20) var(--space-20);
   }
-  .shin-contents {
+  .shin-container .shin-contents {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
   }
-  .shin-contents .shin-details {
+  .shin-container .shin-contents .shin-details {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
   }
-  .shin-contents .shin-details h2 {
+  .shin-container .shin-contents .shin-details h2 {
     font-size: var(--font-size-32);
     margin-bottom: var(--space-10);
   }
-  .shin-contents .shin-details h3 {
+  .shin-container .shin-contents .shin-details h3 {
     font-size: var(--font-size-16);
     margin-bottom: var(--space-8);
   }
-  .shin-contents .shin-details .shin-buttons {
+  .shin-container .shin-contents .shin-details .shin-buttons {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
   }
-  .shin-contents .shin-details .shin-buttons::after {
+  .shin-container .shin-contents .shin-details .shin-buttons::after {
     content: "";
     position: absolute;
     top: var(--space-8);
@@ -447,22 +447,23 @@ footer .shin-social-links img:hover {
     width: var(--space-8);
     height: 57%;
   }
-  .shin-contents .shin-image {
+  .shin-container .shin-contents .shin-image {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
     margin-bottom: var(--space-50);
   }
-  .shin-contents .shin-image .shin-controller {
+  .shin-container .shin-contents .shin-image .shin-controller {
     width: 60%;
     margin-top: 6%;
     margin-left: 0;
   }
-  .shin-contents .shin-image .shin-color-box {
+  .shin-container .shin-contents .shin-image .shin-color-box {
     width: 67%;
     height: 40%;
+    right: var(--space-20);
     z-index: -1;
   }
-  .shin-contents .shin-image .shin-color-box .more-link {
+  .shin-container .shin-contents .shin-image .shin-color-box .more-link {
     font-size: var(--font-size-12);
     bottom: calc(var(--space-20) * -1);
   }
