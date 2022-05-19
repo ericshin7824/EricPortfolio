@@ -121,7 +121,7 @@ function btnRoll(e) {
         document.querySelector(`.dice-${activePlayer}`).src = `../../images/diceGame2P-imgs/dice-${dice}.png`;
 
         // check for rolled 1, if true to next the player
-        if (dice !== 1 && dice !== 3) {
+        if (dice !== 3) {
             // add dice to the current score
             currentScore += dice;
             document.querySelector(`#current-${activePlayer}`).textContent = currentScore;
