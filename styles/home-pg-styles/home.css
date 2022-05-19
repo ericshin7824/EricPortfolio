@@ -605,9 +605,9 @@ main .information-wrapper .information-content .details .media .icons-bander i {
   .service-wrapper,
   .work-wrapper,
   .information-wrapper {
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 12;
-    grid-column: 1 / span 12;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 10;
+    grid-column: 2 / span 10;
   }
   .cards-container,
   .cards-container,

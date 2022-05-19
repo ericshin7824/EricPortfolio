@@ -31,8 +31,7 @@ body main .digital-clock-wrapper {
 
 body main .digital-clock-wrapper .digital-clock {
   background: -webkit-linear-gradient(-45deg, #a0a0a0 0%, #6e6e6e 60%, #4b4b4b 100%);
-  width: 600px;
-  height: 400px;
+  width: 620px;
   padding: 24px 60px;
   border-radius: 18px;
   position: relative;

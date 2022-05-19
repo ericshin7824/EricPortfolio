@@ -270,11 +270,11 @@ a {
 }
 // ==== OTHER CLASSES ====
 
-// .query-visible {
-//     visibility: hidden;
-//     opacity: 0;
-//     z-index: -1;
-// }
+.query-visible {
+    visibility: hidden;
+    opacity: 0;
+    z-index: -1;
+}
 .visible {
     display: block;
     visibility: visible;
@@ -425,7 +425,7 @@ body {
     background: var(--primary-color-dark);
     .legal-contents {
         padding-bottom: var(--space-5);
-        .lega-links {
+        .legal-links {
             height: var(--footer-height-l);
             color: var(--primary-color-light);
             font-weight: var(--font-weight-300);
@@ -449,6 +449,12 @@ body {
     :root {
         font-size: 15px;
         // line-height: 1.5;
+    }
+
+    .query-visible {
+        visibility: visible;
+        opacity: 1;
+        z-index: 1;
     }
     .max-width-bander {
         padding-left: var(--space-30);
