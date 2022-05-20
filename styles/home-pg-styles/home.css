@@ -7,6 +7,11 @@
   margin-bottom: var(--space-10);
 }
 
+.disabled-anchor {
+  pointer-events: none;
+  cursor: default;
+}
+
 @-webkit-keyframes header_in {
   from {
     /* top: -60px; */

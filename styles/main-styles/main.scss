@@ -207,6 +207,10 @@ a {
 .emph-color {
     color: var(--primary-color-yellow);
 }
+.disabled-anchor {
+    pointer-events: none;
+    cursor: default;
+}
 
 .contact-link {
     background-color: var(--primary-color-yellow);
