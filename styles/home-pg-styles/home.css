@@ -1,72 +1,10 @@
-@use "foundation/main";
+@use 'foundation/main';
 .title-l {
   margin-bottom: var(--space-20);
 }
 
 .subtitle {
   margin-bottom: var(--space-10);
-}
-
-.contact-link {
-  background-color: var(--primary-color-yellow);
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
-  height: var(--space-48);
-  padding: 0 1rem;
-  margin-top: var(--space-40);
-  border-radius: 4px;
-  -webkit-box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -4px, #cd9a1f 0 -4px 0 inset;
-          box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -4px, #cd9a1f 0 -4px 0 inset;
-  font-family: "Poppins", sans-serif;
-  color: var(--primary-color-dark);
-  font-size: var(--font-size-24);
-  font-weight: 600;
-  text-transform: uppercase;
-  cursor: pointer;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  position: relative;
-  -webkit-transition: -webkit-box-shadow 0.15s, -webkit-transform 0.15s;
-  transition: -webkit-box-shadow 0.15s, -webkit-transform 0.15s;
-  transition: box-shadow 0.15s, transform 0.15s;
-  transition: box-shadow 0.15s, transform 0.15s, -webkit-box-shadow 0.15s, -webkit-transform 0.15s;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  -ms-touch-action: manipulation;
-      touch-action: manipulation;
-  will-change: box-shadow, transform;
-}
-
-.contact-link:focus {
-  -webkit-box-shadow: #cd9a1f 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -4px, #cd9a1f 0 -4px 0 inset;
-          box-shadow: #cd9a1f 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -4px, #cd9a1f 0 -4px 0 inset;
-}
-
-.contact-link:hover {
-  -webkit-box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -4px, #cd9a1f 0 -4px 0 inset;
-          box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -4px, #cd9a1f 0 -4px 0 inset;
-  -webkit-transform: translateY(-2px);
-          transform: translateY(-2px);
-}
-
-.contact-link:active {
-  -webkit-box-shadow: #cd9a1f 0 4px 7px inset;
-          box-shadow: #cd9a1f 0 4px 7px inset;
-  -webkit-transform: translateY(2px);
-          transform: translateY(2px);
 }
 
 @-webkit-keyframes header_in {
@@ -469,7 +407,8 @@ main .work-wrapper .work-content .projects-container .project img {
      object-fit: cover;
 }
 
-main .work-wrapper .work-content .projects-container .project .overlay {
+main .work-wrapper .work-content .projects-container .project .overlay,
+main .work-wrapper .work-content .projects-container .project .repair-overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -494,12 +433,14 @@ main .work-wrapper .work-content .projects-container .project .overlay {
           align-items: center;
 }
 
-main .work-wrapper .work-content .projects-container .project .overlay h3 {
+main .work-wrapper .work-content .projects-container .project .overlay h3,
+main .work-wrapper .work-content .projects-container .project .repair-overlay h3 {
   font-size: var(--font-size-32);
   text-transform: uppercase;
 }
 
-main .work-wrapper .work-content .projects-container .project .overlay ul {
+main .work-wrapper .work-content .projects-container .project .overlay ul,
+main .work-wrapper .work-content .projects-container .project .repair-overlay ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -509,6 +450,11 @@ main .work-wrapper .work-content .projects-container .project .overlay ul {
           flex-direction: column;
   -webkit-column-gap: var(--space-20);
           column-gap: var(--space-20);
+}
+
+main .work-wrapper .work-content .projects-container .project .repair-overlay {
+  opacity: 1;
+  background: crimson;
 }
 
 main .information-wrapper {

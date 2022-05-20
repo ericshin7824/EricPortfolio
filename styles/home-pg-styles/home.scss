@@ -1,54 +1,10 @@
-@use "foundation/main";
+@use 'foundation/main';
 
 .title-l {
     margin-bottom: var(--space-20);
 }
 .subtitle {
     margin-bottom: var(--space-10);
-}
-
-.contact-link {
-    background-color: var(--primary-color-yellow);
-    width: max-content;
-    height: var(--space-48);
-    padding: 0 1rem;
-    margin-top: var(--space-40);
-    border-radius: 4px;
-    box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -4px,
-        rgba(205, 154, 31, 1) 0 -4px 0 inset;
-
-    font-family: "Poppins", sans-serif;
-    color: var(--primary-color-dark);
-    font-size: var(--font-size-24);
-    font-weight: 600;
-    text-transform: uppercase;
-    cursor: pointer;
-
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-
-    position: relative;
-    transition: box-shadow 0.15s, transform 0.15s;
-
-    // overflow: hidden;
-    user-select: none;
-    appearance: none;
-    touch-action: manipulation;
-    will-change: box-shadow, transform;
-    &:focus {
-        box-shadow: rgba(205, 154, 31, 1) 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px,
-            rgba(45, 35, 66, 0.3) 0 7px 13px -4px, rgba(205, 154, 31, 1) 0 -4px 0 inset;
-    }
-    &:hover {
-        box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -4px,
-            rgba(205, 154, 31, 1) 0 -4px 0 inset;
-        transform: translateY(-2px);
-    }
-    &:active {
-        box-shadow: rgba(205, 154, 31, 1) 0 4px 7px inset;
-        transform: translateY(2px);
-    }
 }
 
 @keyframes header_in {
@@ -297,8 +253,8 @@ main {
                 gap: var(--space-20);
                 .project {
                     position: relative;
-                    // background: rgba(80, 80, 80, 1);
                     background-color: #333;
+
                     &:hover {
                         .overlay {
                             opacity: 1;
@@ -309,7 +265,8 @@ main {
                         height: 100%;
                         object-fit: cover;
                     }
-                    .overlay {
+                    .overlay,
+                    .repair-overlay {
                         position: absolute;
                         top: 0;
                         left: 0;
@@ -333,6 +290,10 @@ main {
                             flex-direction: column;
                             column-gap: var(--space-20);
                         }
+                    }
+                    .repair-overlay {
+                        opacity: 1;
+                        background: crimson;
                     }
                 }
             }

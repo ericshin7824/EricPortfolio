@@ -11,6 +11,7 @@ window.addEventListener('load', () => {
     //     //message for location
     // }
 });
+console.log('aaa');
 
 // const timeEl = document.getElementById('time');
 // const dateEl = document.getElementById('date');

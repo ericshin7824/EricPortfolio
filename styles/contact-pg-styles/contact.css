@@ -1,30 +1,50 @@
-@use "foundation/main";
-body main {
+@use 'foundation/main';
+body {
+  background: var(--primary-color-dark);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  min-height: 100vh;
+}
+
+main {
   width: inherit;
 }
 
-body main .contact-wrapper {
+.contact-wrapper {
   width: 100%;
   padding: var(--space-140) 0 var(--space-140);
-  background: var(--primary-color-dark);
 }
 
-body main .contact-wrapper .contact-content {
+.contact-wrapper .contact-content {
   color: var(--primary-color-light);
 }
 
-body main .contact-wrapper .contact-content .details,
-body main .contact-wrapper .contact-content .contact-form {
-  -ms-grid-column: 4;
-  -ms-grid-column-span: 6;
-  grid-column: 4 / span 6;
+.contact-wrapper .contact-content .details {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 12;
+  grid-column: 1 / span 12;
 }
 
-body main .contact-wrapper .contact-content .details {
-  margin-bottom: var(--space-40);
+.contact-wrapper .contact-content .contact-form {
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 8;
+  grid-column: 3 / span 8;
+  padding: 0 var(--space-80);
 }
 
-body main .contact-wrapper .contact-content .details p {
+.contact-wrapper .contact-content .details {
+  margin-bottom: var(--space-120);
+}
+
+.contact-wrapper .contact-content .details p {
   text-transform: uppercase;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -32,20 +52,20 @@ body main .contact-wrapper .contact-content .details p {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
 }
 
-body main .contact-wrapper .contact-content .details p span {
+.contact-wrapper .contact-content .details p span {
   display: block;
 }
 
-body main .contact-wrapper .contact-content .contact-form {
+.contact-wrapper .contact-content .contact-form {
   text-align: left;
   display: -ms-grid;
   display: grid;
@@ -54,40 +74,40 @@ body main .contact-wrapper .contact-content .contact-form {
   gap: var(--space-20);
 }
 
-body main .contact-wrapper .contact-content .contact-form label,
-body main .contact-wrapper .contact-content .contact-form textarea,
-body main .contact-wrapper .contact-content .contact-form input,
-body main .contact-wrapper .contact-content .contact-form button {
+.contact-wrapper .contact-content .contact-form label,
+.contact-wrapper .contact-content .contact-form textarea,
+.contact-wrapper .contact-content .contact-form input,
+.contact-wrapper .contact-content .contact-form button {
   width: 100%;
   display: block;
 }
 
-body main .contact-wrapper .contact-content .contact-form label {
+.contact-wrapper .contact-content .contact-form label {
   margin-bottom: var(--space-5);
   font-weight: 300;
   text-transform: uppercase;
 }
 
-body main .contact-wrapper .contact-content .contact-form textarea,
-body main .contact-wrapper .contact-content .contact-form input {
+.contact-wrapper .contact-content .contact-form textarea,
+.contact-wrapper .contact-content .contact-form input {
   border: none;
   outline: none;
   padding: var(--space-10);
 }
 
-body main .contact-wrapper .contact-content .contact-form .first-name,
-body main .contact-wrapper .contact-content .contact-form .last-name {
+.contact-wrapper .contact-content .contact-form .first-name,
+.contact-wrapper .contact-content .contact-form .last-name {
   grid-column: span 1;
 }
 
-body main .contact-wrapper .contact-content .contact-form .email,
-body main .contact-wrapper .contact-content .contact-form .mobile,
-body main .contact-wrapper .contact-content .contact-form .comment,
-body main .contact-wrapper .contact-content .contact-form .submit-btn {
+.contact-wrapper .contact-content .contact-form .email,
+.contact-wrapper .contact-content .contact-form .mobile,
+.contact-wrapper .contact-content .contact-form .comment,
+.contact-wrapper .contact-content .contact-form .submit-btn {
   grid-column: span 2;
 }
 
-body main .contact-wrapper .contact-content .contact-form .submit-btn {
+.contact-wrapper .contact-content .contact-form .submit-btn {
   border: none;
   background: var(--primary-color-yellow);
   padding: var(--space-15);
@@ -97,52 +117,52 @@ body main .contact-wrapper .contact-content .contact-form .submit-btn {
 }
 
 @media only screen and (max-width: 60rem) {
-  body main .contact-wrapper {
+  main .contact-wrapper {
     padding: var(--space-120) 0 var(--space-120);
   }
-  body main .contact-wrapper .contact-content .details,
-  body main .contact-wrapper .contact-content .contact-form {
+  main .contact-wrapper .contact-content .details,
+  main .contact-wrapper .contact-content .contact-form {
     -ms-grid-column: 3;
     -ms-grid-column-span: 8;
     grid-column: 3 / span 8;
   }
-  body main .contact-wrapper .contact-content .details {
+  main .contact-wrapper .contact-content .details {
     margin-bottom: var(--space-30);
   }
-  body main .contact-wrapper .contact-content .contact-form {
+  main .contact-wrapper .contact-content .contact-form {
     gap: var(--space-15);
   }
-  body main .contact-wrapper .contact-content .contact-form textarea,
-  body main .contact-wrapper .contact-content .contact-form input {
+  main .contact-wrapper .contact-content .contact-form textarea,
+  main .contact-wrapper .contact-content .contact-form input {
     padding: var(--space-7h);
   }
-  body main .contact-wrapper .contact-content .submit-btn {
+  main .contact-wrapper .contact-content .submit-btn {
     padding: var(--space-10);
     margin-top: var(--space-15);
   }
 }
 
 @media only screen and (max-width: 35rem) {
-  body main .contact-wrapper {
+  main .contact-wrapper {
     padding: var(--space-100) 0 var(--space-100);
   }
-  body main .contact-wrapper .contact-content .details,
-  body main .contact-wrapper .contact-content .contact-form {
+  main .contact-wrapper .contact-content .details,
+  main .contact-wrapper .contact-content .contact-form {
     -ms-grid-column: 2;
     -ms-grid-column-span: 10;
     grid-column: 2 / span 10;
   }
-  body main .contact-wrapper .contact-content .details {
+  main .contact-wrapper .contact-content .details {
     margin-bottom: var(--space-20);
   }
-  body main .contact-wrapper .contact-content .contact-form {
+  main .contact-wrapper .contact-content .contact-form {
     gap: var(--space-10);
   }
-  body main .contact-wrapper .contact-content .contact-form textarea,
-  body main .contact-wrapper .contact-content .contact-form input {
+  main .contact-wrapper .contact-content .contact-form textarea,
+  main .contact-wrapper .contact-content .contact-form input {
     padding: var(--space-5);
   }
-  body main .contact-wrapper .contact-content .submit-btn {
+  main .contact-wrapper .contact-content .submit-btn {
     padding: var(--space-7h);
     margin-top: var(--space-10);
   }

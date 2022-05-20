@@ -1,24 +1,24 @@
-"use strict";
+'use strict';
 
-const navMenu = document.querySelector(".nav-links");
-const overlay = document.querySelector(".menu-overlay");
-const navMenuBtn = document.querySelector(".nav-menu-btn");
+const navMenu = document.querySelector('.nav-links');
+const overlay = document.querySelector('.menu-overlay');
+const navMenuBtn = document.querySelector('.nav-menu-btn');
 const body = document.body;
 
 const toggleNavMenu = function () {
-    navMenuBtn.classList.toggle("open");
-    navMenu.classList.toggle("open");
-    overlay.classList.toggle("hidden");
-    navMenuBtn.querySelectorAll("span").forEach(span => span.classList.toggle("open"));
+    navMenuBtn.classList.toggle('open');
+    navMenu.classList.toggle('open');
+    overlay.classList.toggle('hidden');
+    navMenuBtn.querySelectorAll('span').forEach((span) => span.classList.toggle('open'));
     // body.classList.toggle("disabled");
 };
 
-navMenuBtn.addEventListener("click", toggleNavMenu);
+navMenuBtn.addEventListener('click', toggleNavMenu);
 
-overlay.addEventListener("click", toggleNavMenu);
+overlay.addEventListener('click', toggleNavMenu);
 
-document.addEventListener("keydown", function (e) {
-    if (e.key === "Escape" && navMenuBtn.classList.contains("open")) {
+document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && navMenuBtn.classList.contains('open')) {
         toggleNavMenu();
     }
 });
@@ -52,10 +52,10 @@ document.addEventListener("keydown", function (e) {
 
 // ------------------ scroll animation ------------------
 
-window.addEventListener("scroll", reveal);
+window.addEventListener('scroll', reveal);
 
 function reveal() {
-    let reveals = document.querySelectorAll(".reveal");
+    let reveals = document.querySelectorAll('.reveal');
 
     for (let i = 0; i < reveals.length; i++) {
         let windowHeight = window.innerHeight;
@@ -63,16 +63,16 @@ function reveal() {
         let revealPoint = 120;
 
         if (revealTop < windowHeight - revealPoint) {
-            reveals[i].classList.add("active");
+            reveals[i].classList.add('active');
         } else {
-            reveals[i].classList.remove("active");
+            reveals[i].classList.remove('active');
         }
     }
 }
 
 // --------------- scroll down & up event ---------------
 
-let backToTop = document.getElementById("back-to-top"),
+let backToTop = document.getElementById('back-to-top'),
     docElem = document.documentElement,
     offset,
     scrollPos,
@@ -86,14 +86,14 @@ if (docHeight !== undefined) {
 }
 
 //스크롤 이벤트 추가
-window.addEventListener("scroll", function () {
+window.addEventListener('scroll', function () {
     scrollPos = docElem.scrollTop;
     // console.log(scrollPos);
 
-    backToTop.className = scrollPos > offset ? "visible" : "hidden";
+    backToTop.className = scrollPos > offset ? 'visible' : 'hidden';
 });
 
-backToTop.addEventListener("click", function (ev) {
+backToTop.addEventListener('click', function (ev) {
     ev.preventDefault(); //a 의 기능 막음.
     //docElem.scrollTop = 0;
     scrollToTop();
