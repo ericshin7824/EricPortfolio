@@ -7,7 +7,6 @@
     margin-bottom: var(--space-10);
 }
 
-
 @keyframes header_in {
     from {
         /* top: -60px; */
@@ -41,11 +40,39 @@
 .link-btn {
     margin-top: var(--space-30);
 }
-
+html,
+body {
+    overflow-x: hidden;
+}
+html {
+    width: 100%;
+    min-height: 100%;
+    // scroll-behavior: smooth;
+    // -webkit-font-smoothing: antialiased;
+}
 body {
     width: inherit;
     padding-top: var(--nav-height-l);
     background: var(--primary-color-dark);
+    display: flex;
+    // justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    transition: 0.4s ease-in-out;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+    white-space: nowrap;
+    cursor: pointer;
 }
 header {
     width: inherit;
@@ -158,7 +185,7 @@ main {
             gap: var(--space-80);
 
             .details {
-                flex-basis: 35%;
+                flex-basis: 40%;
                 .techs-container {
                     gap: var(--space-40);
                     display: flex;
@@ -199,7 +226,7 @@ main {
             gap: var(--space-40);
 
             .details {
-                flex-basis: 35%;
+                flex-basis: 40%;
                 gap: var(--space-80);
                 .cards-container {
                     gap: var(--space-40);
@@ -266,6 +293,9 @@ main {
                         height: 100%;
                         object-fit: cover;
                     }
+                    // .overlay {
+                    //     display: flex;
+                    // }
                     .overlay,
                     .repair-overlay {
                         position: absolute;
@@ -274,22 +304,46 @@ main {
                         background: rgba(0, 0, 0, 0.6);
                         width: 100%;
                         height: 100%;
+                        padding: var(--space-20);
                         backdrop-filter: blur(3px);
                         opacity: 0;
+                        text-align: center;
 
                         display: flex;
                         flex-direction: column;
                         justify-content: center;
                         align-items: center;
 
-                        h3 {
-                            font-size: var(--font-size-32);
-                            text-transform: uppercase;
+                        .title {
+                            h3 {
+                                font-size: var(--font-size-32);
+                                text-transform: uppercase;
+                                line-height: 0.85;
+                                span {
+                                    display: block;
+                                }
+                            }
+                            span {
+                                text-transform: uppercase;
+                            }
                         }
                         ul {
+                            // margin-top: var(--space-20);
                             display: flex;
-                            flex-direction: column;
-                            column-gap: var(--space-20);
+                            align-items: center;
+                            column-gap: var(--space-10);
+
+                            li {
+                                // list-style: circle;
+                                flex: 1;
+                                font-size: var(--font-size-12);
+                            }
+                            span {
+                                flex: 1;
+                                background: var(--primary-color-gray);
+                                width: 1px;
+                                height: var(--space-8);
+                            }
                         }
                     }
                     .repair-overlay {

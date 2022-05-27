@@ -25,8 +25,8 @@ document.addEventListener('keydown', function (e) {
 
 // --------------- scroll down & up event ---------------
 
-// var lastScroll = 0;
-// var windowWidth = window.innerWidth;
+// let lastScroll = 0;
+// let windowWidth = window.innerWidth;
 
 // console.log(windowWidth);
 
@@ -99,7 +99,7 @@ backToTop.addEventListener('click', function (ev) {
     scrollToTop();
 });
 function scrollToTop() {
-    var scrollInterval = setInterval(function () {
+    let scrollInterval = setInterval(function () {
         if (scrollPos !== 0) {
             window, scrollBy(0, -100);
         } else {

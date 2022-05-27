@@ -7,11 +7,6 @@
   margin-bottom: var(--space-10);
 }
 
-.disabled-anchor {
-  pointer-events: none;
-  cursor: default;
-}
-
 @-webkit-keyframes header_in {
   from {
     /* top: -60px; */
@@ -76,10 +71,50 @@
   margin-top: var(--space-30);
 }
 
+html,
+body {
+  overflow-x: hidden;
+}
+
+html {
+  width: 100%;
+  min-height: 100%;
+}
+
 body {
   width: inherit;
   padding-top: var(--nav-height-l);
   background: var(--primary-color-dark);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transition: 0.4s ease-in-out;
+  transition: 0.4s ease-in-out;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  white-space: nowrap;
+  cursor: pointer;
 }
 
 header {
@@ -247,8 +282,8 @@ main .tech-wrapper .tech-content {
 }
 
 main .tech-wrapper .tech-content .details {
-  -ms-flex-preferred-size: 35%;
-      flex-basis: 35%;
+  -ms-flex-preferred-size: 40%;
+      flex-basis: 40%;
 }
 
 main .tech-wrapper .tech-content .details .techs-container {
@@ -309,8 +344,8 @@ main .service-wrapper .service-content {
 }
 
 main .service-wrapper .service-content .details {
-  -ms-flex-preferred-size: 35%;
-      flex-basis: 35%;
+  -ms-flex-preferred-size: 40%;
+      flex-basis: 40%;
   gap: var(--space-80);
 }
 
@@ -420,9 +455,11 @@ main .work-wrapper .work-content .projects-container .project .repair-overlay {
   background: rgba(0, 0, 0, 0.6);
   width: 100%;
   height: 100%;
+  padding: var(--space-20);
   -webkit-backdrop-filter: blur(3px);
           backdrop-filter: blur(3px);
   opacity: 0;
+  text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -438,9 +475,20 @@ main .work-wrapper .work-content .projects-container .project .repair-overlay {
           align-items: center;
 }
 
-main .work-wrapper .work-content .projects-container .project .overlay h3,
-main .work-wrapper .work-content .projects-container .project .repair-overlay h3 {
+main .work-wrapper .work-content .projects-container .project .overlay .title h3,
+main .work-wrapper .work-content .projects-container .project .repair-overlay .title h3 {
   font-size: var(--font-size-32);
+  text-transform: uppercase;
+  line-height: 0.85;
+}
+
+main .work-wrapper .work-content .projects-container .project .overlay .title h3 span,
+main .work-wrapper .work-content .projects-container .project .repair-overlay .title h3 span {
+  display: block;
+}
+
+main .work-wrapper .work-content .projects-container .project .overlay .title span,
+main .work-wrapper .work-content .projects-container .project .repair-overlay .title span {
   text-transform: uppercase;
 }
 
@@ -449,12 +497,29 @@ main .work-wrapper .work-content .projects-container .project .repair-overlay ul
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-column-gap: var(--space-20);
-          column-gap: var(--space-20);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: var(--space-10);
+          column-gap: var(--space-10);
+}
+
+main .work-wrapper .work-content .projects-container .project .overlay ul li,
+main .work-wrapper .work-content .projects-container .project .repair-overlay ul li {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  font-size: var(--font-size-12);
+}
+
+main .work-wrapper .work-content .projects-container .project .overlay ul span,
+main .work-wrapper .work-content .projects-container .project .repair-overlay ul span {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  background: var(--primary-color-gray);
+  width: 1px;
+  height: var(--space-8);
 }
 
 main .work-wrapper .work-content .projects-container .project .repair-overlay {
