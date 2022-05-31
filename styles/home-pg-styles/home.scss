@@ -1,12 +1,5 @@
 @use 'foundation/main';
 
-.title-l {
-    margin-bottom: var(--space-20);
-}
-.subtitle {
-    margin-bottom: var(--space-10);
-}
-
 @keyframes header_in {
     from {
         /* top: -60px; */
@@ -33,10 +26,10 @@
 .work-wrapper {
     grid-column: 2 / span 10;
 }
-.cards-container,
-.techs-container {
-    margin-top: var(--space-30);
-}
+// .cards-container,
+// .techs-container {
+//     margin-top: var(--space-30);
+// }
 .link-btn {
     margin-top: var(--space-30);
 }
@@ -131,20 +124,9 @@ main {
             // gap: var(--space-80);
             column-gap: var(--space-80);
 
-            h3 {
-                flex-basis: 100%;
-                flex: 1 1 100%;
-            }
             .details {
-                // display: flex;
-                // flex-direction: column;
-
                 flex-basis: 35%;
                 flex: 1 1 calc(40% - var(--space-40));
-
-                & > * {
-                    display: block;
-                }
             }
             .image-wrapper {
                 flex-basis: 65%;
@@ -171,6 +153,32 @@ main {
             }
         }
     }
+    .details {
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-30);
+    }
+    .title-container {
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-20);
+        h3 {
+            span {
+                display: block;
+            }
+        }
+
+        p {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-8);
+            text-transform: uppercase;
+            span {
+                display: block;
+                margin-bottom: var(--space-5);
+            }
+        }
+    }
 
     .tech-wrapper {
         position: relative;
@@ -185,7 +193,7 @@ main {
             gap: var(--space-80);
 
             .details {
-                flex-basis: 40%;
+                flex-basis: calc(40% - var(--space-40));
                 .techs-container {
                     gap: var(--space-40);
                     display: flex;
@@ -226,8 +234,7 @@ main {
             gap: var(--space-40);
 
             .details {
-                flex-basis: 40%;
-                gap: var(--space-80);
+                flex-basis: calc(40% - var(--space-40));
                 .cards-container {
                     gap: var(--space-40);
                     display: flex;
@@ -257,7 +264,7 @@ main {
     }
     .work-wrapper {
         position: relative;
-        // grid-column: 1 / span 7;
+
         .work-content {
             padding: var(--space-120) 0;
             color: var(--primary-color-light);
@@ -266,14 +273,12 @@ main {
             column-gap: var(--space-80);
 
             .details {
-                order: 1;
-                flex-basis: calc(35% - var(--space-40));
+                width: 50%;
                 margin-bottom: var(--space-40);
             }
 
             .projects-container {
-                order: 2;
-                flex-basis: calc(65% - var(--space-40));
+                margin-bottom: var(--space-40);
                 flex-basis: 100%;
                 display: grid;
                 grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
@@ -293,9 +298,6 @@ main {
                         height: 100%;
                         object-fit: cover;
                     }
-                    // .overlay {
-                    //     display: flex;
-                    // }
                     .overlay,
                     .repair-overlay {
                         position: absolute;
@@ -325,7 +327,6 @@ main {
                             span {
                                 margin-bottom: var(--space-5);
                                 display: block;
-                                // text-transform: uppercase;
                             }
                         }
                         ul {
@@ -391,6 +392,7 @@ main {
                         color: var(--primary-color-light);
                         margin-bottom: var(--space-5);
 
+                        font-size: var(--font-size-18);
                         font-weight: var(--font-weight-500);
                         text-transform: uppercase;
                     }
