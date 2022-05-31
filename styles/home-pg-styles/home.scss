@@ -315,16 +315,17 @@ main {
                         align-items: center;
 
                         .title {
+                            line-height: 0.85;
+                            margin-bottom: var(--space-10);
                             h3 {
                                 font-size: var(--font-size-32);
                                 text-transform: uppercase;
-                                line-height: 0.85;
-                                span {
-                                    display: block;
-                                }
+                                margin-bottom: var(--space-10);
                             }
                             span {
-                                text-transform: uppercase;
+                                margin-bottom: var(--space-5);
+                                display: block;
+                                // text-transform: uppercase;
                             }
                         }
                         ul {

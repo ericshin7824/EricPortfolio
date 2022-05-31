@@ -475,21 +475,23 @@ main .work-wrapper .work-content .projects-container .project .repair-overlay {
           align-items: center;
 }
 
+main .work-wrapper .work-content .projects-container .project .overlay .title,
+main .work-wrapper .work-content .projects-container .project .repair-overlay .title {
+  line-height: 0.85;
+  margin-bottom: var(--space-10);
+}
+
 main .work-wrapper .work-content .projects-container .project .overlay .title h3,
 main .work-wrapper .work-content .projects-container .project .repair-overlay .title h3 {
   font-size: var(--font-size-32);
   text-transform: uppercase;
-  line-height: 0.85;
-}
-
-main .work-wrapper .work-content .projects-container .project .overlay .title h3 span,
-main .work-wrapper .work-content .projects-container .project .repair-overlay .title h3 span {
-  display: block;
+  margin-bottom: var(--space-10);
 }
 
 main .work-wrapper .work-content .projects-container .project .overlay .title span,
 main .work-wrapper .work-content .projects-container .project .repair-overlay .title span {
-  text-transform: uppercase;
+  margin-bottom: var(--space-5);
+  display: block;
 }
 
 main .work-wrapper .work-content .projects-container .project .overlay ul,
