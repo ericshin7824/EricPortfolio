@@ -97,6 +97,7 @@
     --font-size-26: 1.625rem;
     --font-size-27: 1.6875rem;
     --font-size-28: 1.75rem;
+    --font-size-30: 1.875rem;
     --font-size-32: 2rem;
     --font-size-36: 2.25rem;
     --font-size-40: 2.5rem;
@@ -107,6 +108,8 @@
     --font-size-64: 4rem;
     --font-size-72: 4.5rem;
     --font-size-80: 5rem;
+    --font-size-90: 5.625rem;
+    --font-size-96: 6rem;
     --font-size-108: 6.75rem;
     --font-size-126: 7.875rem;
 
@@ -176,7 +179,7 @@
     white-space: nowrap;
 }
 .title-xl {
-    font-size: var(--font-size-144);
+    font-size: var(--font-size-108);
     line-height: 0.85;
     font-weight: 800;
 }
@@ -541,28 +544,26 @@ body {
         }
     }
     .title-xl {
-        font-size: var(--font-size-108);
-        font-weight: 800;
+        font-size: var(--font-size-90);
     }
     .title-l {
-        text-transform: uppercase;
-        font-size: var(--font-size-54);
-        font-weight: 700;
+        font-size: var(--font-size-60);
     }
     .subtitle {
-        font-size: var(--font-size-18);
-        font-weight: 500;
+        font-size: var(--font-size-30);
     }
+    // .outline {
+    // }
 
-    .global-nav {
-        div {
-            ul {
-                &:nth-of-type(2) {
-                    display: block;
-                }
-            }
-        }
-    }
+    // .global-nav {
+    //     div {
+    //         ul {
+    //             &:nth-of-type(2) {
+    //                 display: block;
+    //             }
+    //         }
+    //     }
+    // }
     .global-nav {
         .nav-links {
             position: fixed;
@@ -591,7 +592,6 @@ body {
 @media only screen and (max-width: 35rem) {
     :root {
         font-size: 14px;
-        // line-height: 1.25;
     }
     .max-width-bander {
         padding-left: var(--space-20);
@@ -599,6 +599,16 @@ body {
     }
     .grid-12 {
         column-gap: var(--space-20);
+    }
+
+    .title-xl {
+        font-size: var(--font-size-60);
+    }
+    .title-l {
+        font-size: var(--font-size-48);
+    }
+    .subtitle {
+        font-size: var(--font-size-24);
     }
     .section-link-btn {
         span {
@@ -617,22 +627,6 @@ body {
         span {
             font-size: var(--font-size-10);
         }
-    }
-
-    .title-xl {
-        font-size: var(--font-size-48);
-        line-height: 0.85;
-        font-weight: 800;
-    }
-    .title-l {
-        text-transform: uppercase;
-        line-height: 0.85;
-        font-size: var(--font-size-40);
-        font-weight: 700;
-    }
-    .subtitle {
-        font-size: 1.5rem;
-        font-weight: 500;
     }
     .global-nav {
         .nav-links {

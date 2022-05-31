@@ -111,25 +111,57 @@ header {
 
 main {
     width: inherit;
+
+    .about-content,
+    .tech-content,
+    .service-content,
+    .work-content,
+    .information-content {
+        padding: var(--space-120) 0;
+        gap: var(--space-40);
+    }
+    .details {
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-40);
+    }
+    .title-container {
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-20);
+        h3 {
+            span {
+                display: block;
+            }
+        }
+        p {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-8);
+            text-transform: uppercase;
+            span {
+                display: block;
+                margin-bottom: var(--space-5);
+            }
+        }
+    }
+
     .about-wrapper {
         position: relative;
         z-index: 3;
         .about-content {
             color: var(--primary-color-light);
             border-bottom: 2px solid var(--primary-color-gray);
-            padding: var(--space-120) 0;
             display: flex;
             flex-wrap: wrap;
             align-items: flex-start;
-            // gap: var(--space-80);
-            column-gap: var(--space-80);
 
             .details {
-                flex-basis: 35%;
+                // flex-basis: 35%;
                 flex: 1 1 calc(40% - var(--space-40));
             }
             .image-wrapper {
-                flex-basis: 65%;
+                // flex-basis: 65%;
                 flex: 1 1 calc(60% - var(--space-40));
 
                 display: flex;
@@ -153,32 +185,6 @@ main {
             }
         }
     }
-    .details {
-        display: flex;
-        flex-direction: column;
-        gap: var(--space-30);
-    }
-    .title-container {
-        display: flex;
-        flex-direction: column;
-        gap: var(--space-20);
-        h3 {
-            span {
-                display: block;
-            }
-        }
-
-        p {
-            display: flex;
-            flex-direction: column;
-            gap: var(--space-8);
-            text-transform: uppercase;
-            span {
-                display: block;
-                margin-bottom: var(--space-5);
-            }
-        }
-    }
 
     .tech-wrapper {
         position: relative;
@@ -186,11 +192,9 @@ main {
 
         .tech-content {
             color: var(--primary-color-light);
-            padding: var(--space-120) 0;
             border-bottom: 2px solid var(--primary-color-gray);
             display: flex;
             justify-content: flex-end;
-            gap: var(--space-80);
 
             .details {
                 flex-basis: calc(40% - var(--space-40));
@@ -198,11 +202,10 @@ main {
                     gap: var(--space-40);
                     display: flex;
                     flex-wrap: wrap;
-                    flex: 1;
                     li {
-                        width: calc(50% - var(--space-40));
+                        flex: 1 1 calc(50% - var(--space-40));
                         color: var(--primary-color-light);
-                        min-width: 80px;
+                        min-width: 5rem;
                         display: flex;
                         justify-content: flex-start;
                         align-items: center;
@@ -228,10 +231,8 @@ main {
         .service-content {
             color: var(--primary-color-light);
             border-bottom: 2px solid var(--primary-color-gray);
-            padding: var(--space-120) 0;
             display: flex;
             justify-content: flex-end;
-            gap: var(--space-40);
 
             .details {
                 flex-basis: calc(40% - var(--space-40));
@@ -239,9 +240,9 @@ main {
                     gap: var(--space-40);
                     display: flex;
                     flex-wrap: wrap;
-                    flex: 1;
                     .card {
-                        width: calc(50% - var(--space-40));
+                        // width: calc(50% - var(--space-40));
+                        flex: 1 1 calc(50% - var(--space-40));
                         min-width: 5rem;
                         color: inherit;
                         display: flex;
@@ -266,19 +267,15 @@ main {
         position: relative;
 
         .work-content {
-            padding: var(--space-120) 0;
             color: var(--primary-color-light);
             display: flex;
             flex-direction: column;
-            column-gap: var(--space-80);
 
             .details {
-                width: 50%;
-                margin-bottom: var(--space-40);
+                flex: 1 1 100%;
             }
 
             .projects-container {
-                margin-bottom: var(--space-40);
                 flex-basis: 100%;
                 display: grid;
                 grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
@@ -363,7 +360,6 @@ main {
         .information-content {
             color: var(--primary-color-light);
             border-top: 2px solid var(--primary-color-gray);
-            padding: var(--space-120) 0;
             display: flex;
             justify-content: center;
             text-align: center;
@@ -379,7 +375,6 @@ main {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                gap: var(--space-40);
 
                 .email,
                 .location,
@@ -435,19 +430,32 @@ main {
     .information-wrapper {
         grid-column: 2 / span 10;
     }
-    .cards-container,
-    .cards-container,
-    .techs-container {
-        margin-top: var(--space-30);
-    }
-    .link-btn {
-        margin-top: var(--space-30);
-    }
+
     main {
+        .about-content,
+        .tech-content,
+        .service-content,
+        .work-content,
+        .information-content {
+            padding: var(--space-80) 0;
+            gap: var(--space-30);
+        }
+        .details {
+            gap: var(--space-30);
+        }
+        .title-container {
+            gap: var(--space-15);
+
+            p {
+                gap: var(--space-8);
+                span {
+                    margin-bottom: var(--space-5);
+                }
+            }
+        }
+
         .about-wrapper {
             .about-content {
-                padding: var(--space-80) 0;
-                gap: var(--space-60);
                 .details {
                     flex-basis: 40%;
                 }
@@ -462,8 +470,6 @@ main {
         }
         .tech-wrapper {
             .tech-content {
-                padding: var(--space-80) 0;
-                gap: var(--space-60);
                 .details {
                     flex-basis: 100%;
                     .techs-container {
@@ -475,8 +481,6 @@ main {
 
         .service-wrapper {
             .service-content {
-                padding: var(--space-80) 0;
-                gap: var(--space-60);
                 .details {
                     flex-basis: 100%;
                     .cards-container {
@@ -494,8 +498,6 @@ main {
 
         .work-wrapper {
             .work-content {
-                padding: var(--space-80) 0;
-                gap: var(--space-60);
                 flex-direction: column;
                 // .projects-container {
                 //     gap: var(--space-15);
@@ -505,9 +507,8 @@ main {
 
         .information-wrapper {
             .information-content {
-                padding-top: var(--space-80);
-                .details {
-                    gap: var(--space-60);
+                .title-xl {
+                    margin-bottom: var(--space-60);
                 }
             }
         }
@@ -515,13 +516,6 @@ main {
 }
 
 @media only screen and (max-width: 35rem) {
-    .cards-container,
-    .techs-container {
-        margin-top: var(--space-20);
-    }
-    .link-btn {
-        margin-top: var(--space-20);
-    }
     header {
         .home-wrapper {
             .home-content {
@@ -530,38 +524,48 @@ main {
         }
     }
     main {
+        .about-content,
+        .tech-content,
+        .service-content,
+        .work-content,
+        .information-content {
+            padding: var(--space-60) 0;
+            gap: var(--space-20);
+        }
+        .details {
+            gap: var(--space-20);
+        }
+        .title-container {
+            gap: var(--space-10);
+
+            p {
+                gap: var(--space-8);
+                span {
+                    margin-bottom: var(--space-5);
+                }
+            }
+        }
         .about-wrapper {
             .about-content {
-                padding: var(--space-40) 0;
-                gap: var(--space-40);
                 flex-direction: column-reverse;
             }
         }
         .tech-wrapper {
             .tech-content {
-                padding: var(--space-40) 0;
-                gap: var(--space-40);
                 .details {
                     flex-basis: 100%;
-                }
-                .techs-container {
-                    gap: var(--space-20);
+                    .techs-container {
+                        gap: var(--space-20);
+                    }
                 }
             }
         }
         .service-wrapper {
             .service-content {
-                padding: var(--space-40) 0;
-                gap: var(--space-40);
                 .details {
                     flex-basis: 100%;
                     .cards-container {
                         gap: var(--space-20);
-                        .card {
-                            i {
-                                margin-right: var(--space-10);
-                            }
-                        }
                     }
                 }
             }
@@ -569,26 +573,14 @@ main {
 
         .work-wrapper {
             .work-content {
-                padding: var(--space-40) 0;
-                gap: var(--space-40);
-
                 .details {
-                    order: 1;
-                    margin-bottom: var(--space-10);
                     flex-basis: 100%;
-                }
-                .projects-container {
-                    order: 2;
-                    flex-basis: 100%;
-                    // gap: var(--space-20);
                 }
             }
         }
 
         .information-wrapper {
             .information-content {
-                padding: var(--space-40) 0;
-                // gap: var(--space-40);
                 .details {
                     gap: var(--space-40);
                 }

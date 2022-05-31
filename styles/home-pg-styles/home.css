@@ -167,6 +167,58 @@ main {
   width: inherit;
 }
 
+main .about-content,
+main .tech-content,
+main .service-content,
+main .work-content,
+main .information-content {
+  padding: var(--space-120) 0;
+  gap: var(--space-40);
+}
+
+main .details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: var(--space-40);
+}
+
+main .title-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: var(--space-20);
+}
+
+main .title-container h3 span {
+  display: block;
+}
+
+main .title-container p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: var(--space-8);
+  text-transform: uppercase;
+}
+
+main .title-container p span {
+  display: block;
+  margin-bottom: var(--space-5);
+}
+
 main .about-wrapper {
   position: relative;
   z-index: 3;
@@ -175,7 +227,6 @@ main .about-wrapper {
 main .about-wrapper .about-content {
   color: var(--primary-color-light);
   border-bottom: 2px solid var(--primary-color-gray);
-  padding: var(--space-120) 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -184,21 +235,15 @@ main .about-wrapper .about-content {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  -webkit-column-gap: var(--space-80);
-          column-gap: var(--space-80);
 }
 
 main .about-wrapper .about-content .details {
-  -ms-flex-preferred-size: 35%;
-      flex-basis: 35%;
   -webkit-box-flex: 1;
       -ms-flex: 1 1 calc(40% - var(--space-40));
           flex: 1 1 calc(40% - var(--space-40));
 }
 
 main .about-wrapper .about-content .image-wrapper {
-  -ms-flex-preferred-size: 65%;
-      flex-basis: 65%;
   -webkit-box-flex: 1;
       -ms-flex: 1 1 calc(60% - var(--space-40));
           flex: 1 1 calc(60% - var(--space-40));
@@ -237,49 +282,6 @@ main .about-wrapper .about-content .image-wrapper .image img {
      object-fit: cover;
 }
 
-main .details {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  gap: var(--space-30);
-}
-
-main .title-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  gap: var(--space-20);
-}
-
-main .title-container h3 span {
-  display: block;
-}
-
-main .title-container p {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  gap: var(--space-8);
-  text-transform: uppercase;
-}
-
-main .title-container p span {
-  display: block;
-  margin-bottom: var(--space-5);
-}
-
 main .tech-wrapper {
   position: relative;
   z-index: 4;
@@ -287,7 +289,6 @@ main .tech-wrapper {
 
 main .tech-wrapper .tech-content {
   color: var(--primary-color-light);
-  padding: var(--space-120) 0;
   border-bottom: 2px solid var(--primary-color-gray);
   display: -webkit-box;
   display: -ms-flexbox;
@@ -295,7 +296,6 @@ main .tech-wrapper .tech-content {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  gap: var(--space-80);
 }
 
 main .tech-wrapper .tech-content .details {
@@ -310,15 +310,14 @@ main .tech-wrapper .tech-content .details .techs-container {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
 }
 
 main .tech-wrapper .tech-content .details .techs-container li {
-  width: calc(50% - var(--space-40));
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 calc(50% - var(--space-40));
+          flex: 1 1 calc(50% - var(--space-40));
   color: var(--primary-color-light);
-  min-width: 80px;
+  min-width: 5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -350,14 +349,12 @@ main .service-wrapper {
 main .service-wrapper .service-content {
   color: var(--primary-color-light);
   border-bottom: 2px solid var(--primary-color-gray);
-  padding: var(--space-120) 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  gap: var(--space-40);
 }
 
 main .service-wrapper .service-content .details {
@@ -372,13 +369,12 @@ main .service-wrapper .service-content .details .cards-container {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
 }
 
 main .service-wrapper .service-content .details .cards-container .card {
-  width: calc(50% - var(--space-40));
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 calc(50% - var(--space-40));
+          flex: 1 1 calc(50% - var(--space-40));
   min-width: 5rem;
   color: inherit;
   display: -webkit-box;
@@ -409,7 +405,6 @@ main .work-wrapper {
 }
 
 main .work-wrapper .work-content {
-  padding: var(--space-120) 0;
   color: var(--primary-color-light);
   display: -webkit-box;
   display: -ms-flexbox;
@@ -418,17 +413,15 @@ main .work-wrapper .work-content {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-column-gap: var(--space-80);
-          column-gap: var(--space-80);
 }
 
 main .work-wrapper .work-content .details {
-  width: 50%;
-  margin-bottom: var(--space-40);
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 100%;
+          flex: 1 1 100%;
 }
 
 main .work-wrapper .work-content .projects-container {
-  margin-bottom: var(--space-40);
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
   display: -ms-grid;
@@ -544,7 +537,6 @@ main .information-wrapper {
 main .information-wrapper .information-content {
   color: var(--primary-color-light);
   border-top: 2px solid var(--primary-color-gray);
-  padding: var(--space-120) 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -574,7 +566,6 @@ main .information-wrapper .information-content .details {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: var(--space-40);
 }
 
 main .information-wrapper .information-content .details .email .title-l,
@@ -636,17 +627,25 @@ main .information-wrapper .information-content .details .media .icons-bander i {
     -ms-grid-column-span: 10;
     grid-column: 2 / span 10;
   }
-  .cards-container,
-  .cards-container,
-  .techs-container {
-    margin-top: var(--space-30);
-  }
-  .link-btn {
-    margin-top: var(--space-30);
-  }
-  main .about-wrapper .about-content {
+  main .about-content,
+  main .tech-content,
+  main .service-content,
+  main .work-content,
+  main .information-content {
     padding: var(--space-80) 0;
-    gap: var(--space-60);
+    gap: var(--space-30);
+  }
+  main .details {
+    gap: var(--space-30);
+  }
+  main .title-container {
+    gap: var(--space-15);
+  }
+  main .title-container p {
+    gap: var(--space-8);
+  }
+  main .title-container p span {
+    margin-bottom: var(--space-5);
   }
   main .about-wrapper .about-content .details {
     -ms-flex-preferred-size: 40%;
@@ -660,20 +659,12 @@ main .information-wrapper .information-content .details .media .icons-bander i {
     width: 100%;
     border-radius: 0;
   }
-  main .tech-wrapper .tech-content {
-    padding: var(--space-80) 0;
-    gap: var(--space-60);
-  }
   main .tech-wrapper .tech-content .details {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
   }
   main .tech-wrapper .tech-content .details .techs-container {
     gap: var(--space-30);
-  }
-  main .service-wrapper .service-content {
-    padding: var(--space-80) 0;
-    gap: var(--space-60);
   }
   main .service-wrapper .service-content .details {
     -ms-flex-preferred-size: 100%;
@@ -687,54 +678,52 @@ main .information-wrapper .information-content .details .media .icons-bander i {
     margin-right: var(--space-10);
   }
   main .work-wrapper .work-content {
-    padding: var(--space-80) 0;
-    gap: var(--space-60);
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  main .information-wrapper .information-content {
-    padding-top: var(--space-80);
-  }
-  main .information-wrapper .information-content .details {
-    gap: var(--space-60);
+  main .information-wrapper .information-content .title-xl {
+    margin-bottom: var(--space-60);
   }
 }
 
 @media only screen and (max-width: 35rem) {
-  .cards-container,
-  .techs-container {
-    margin-top: var(--space-20);
-  }
-  .link-btn {
-    margin-top: var(--space-20);
-  }
   header .home-wrapper .home-content {
     height: 40vh;
   }
+  main .about-content,
+  main .tech-content,
+  main .service-content,
+  main .work-content,
+  main .information-content {
+    padding: var(--space-60) 0;
+    gap: var(--space-20);
+  }
+  main .details {
+    gap: var(--space-20);
+  }
+  main .title-container {
+    gap: var(--space-10);
+  }
+  main .title-container p {
+    gap: var(--space-8);
+  }
+  main .title-container p span {
+    margin-bottom: var(--space-5);
+  }
   main .about-wrapper .about-content {
-    padding: var(--space-40) 0;
-    gap: var(--space-40);
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
   }
-  main .tech-wrapper .tech-content {
-    padding: var(--space-40) 0;
-    gap: var(--space-40);
-  }
   main .tech-wrapper .tech-content .details {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
   }
-  main .tech-wrapper .tech-content .techs-container {
+  main .tech-wrapper .tech-content .details .techs-container {
     gap: var(--space-20);
-  }
-  main .service-wrapper .service-content {
-    padding: var(--space-40) 0;
-    gap: var(--space-40);
   }
   main .service-wrapper .service-content .details {
     -ms-flex-preferred-size: 100%;
@@ -743,30 +732,9 @@ main .information-wrapper .information-content .details .media .icons-bander i {
   main .service-wrapper .service-content .details .cards-container {
     gap: var(--space-20);
   }
-  main .service-wrapper .service-content .details .cards-container .card i {
-    margin-right: var(--space-10);
-  }
-  main .work-wrapper .work-content {
-    padding: var(--space-40) 0;
-    gap: var(--space-40);
-  }
   main .work-wrapper .work-content .details {
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
-    margin-bottom: var(--space-10);
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
-  }
-  main .work-wrapper .work-content .projects-container {
-    -webkit-box-ordinal-group: 3;
-        -ms-flex-order: 2;
-            order: 2;
-    -ms-flex-preferred-size: 100%;
-        flex-basis: 100%;
-  }
-  main .information-wrapper .information-content {
-    padding: var(--space-40) 0;
   }
   main .information-wrapper .information-content .details {
     gap: var(--space-40);
