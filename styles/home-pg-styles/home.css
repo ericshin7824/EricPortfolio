@@ -683,9 +683,6 @@ main .information-wrapper .information-content .details .media .icons-bander i {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  main .work-wrapper .work-content .projects-container {
-    gap: var(--space-15);
-  }
   main .information-wrapper .information-content {
     padding-top: var(--space-80);
   }
@@ -750,16 +747,12 @@ main .information-wrapper .information-content .details .media .icons-bander i {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
   }
-  main .work-wrapper .work-content .details .projects-container {
-    gap: var(--space-5);
-  }
   main .work-wrapper .work-content .projects-container {
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
             order: 2;
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
-    gap: var(--space-10);
   }
   main .information-wrapper .information-content {
     padding: var(--space-40) 0;

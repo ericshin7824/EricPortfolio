@@ -494,9 +494,9 @@ main {
                 padding: var(--space-80) 0;
                 gap: var(--space-60);
                 flex-direction: column;
-                .projects-container {
-                    gap: var(--space-15);
-                }
+                // .projects-container {
+                //     gap: var(--space-15);
+                // }
             }
         }
 
@@ -573,14 +573,11 @@ main {
                     order: 1;
                     margin-bottom: var(--space-10);
                     flex-basis: 100%;
-                    .projects-container {
-                        gap: var(--space-5);
-                    }
                 }
                 .projects-container {
                     order: 2;
                     flex-basis: 100%;
-                    gap: var(--space-10);
+                    // gap: var(--space-20);
                 }
             }
         }
