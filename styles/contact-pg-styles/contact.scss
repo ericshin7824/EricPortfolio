@@ -1,99 +1,112 @@
 @use 'foundation/main';
+
 body {
+    width: inherit;
+    padding-top: var(--nav-height-l);
     background: var(--primary-color-dark);
     display: flex;
+    align-items: center;
     flex-direction: column;
-    justify-content: space-between;
-    min-height: 100vh;
+}
+
+header {
+    width: inherit;
+    .details {
+        color: var(--primary-color-light);
+        grid-column: 1 / span 12;
+        margin: var(--space-120) 0 var(--space-60);
+        p {
+            text-transform: uppercase;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            span {
+                display: block;
+            }
+        }
+    }
 }
 main {
     width: inherit;
-}
-.contact-wrapper {
-    width: 100%;
-    padding: var(--space-140) 0 var(--space-140);
-    .contact-content {
-        color: var(--primary-color-light);
-        .details {
-            grid-column: 1 / span 12;
-        }
-        .contact-form {
-            grid-column: 3 / span 8;
-            padding: 0 var(--space-80);
-        }
-        .details {
-            margin-bottom: var(--space-120);
-            p {
-                text-transform: uppercase;
+    .contact-wrapper {
+        grid-column: 1 / span 12;
+        margin: var(--space-60) 0 var(--space-120);
+        display: flex;
+        justify-content: center;
+        .contact-content {
+            color: var(--primary-color-light);
+            width: calc(100% / 12 * 6);
+
+            .contact-form {
+                width: 100%;
+                text-align: left;
                 display: flex;
-                justify-content: center;
-                align-items: center;
                 flex-direction: column;
-                span {
+                gap: var(--space-20);
+
+                label,
+                textarea,
+                input,
+                button {
+                    width: 100%;
                     display: block;
                 }
-            }
-        }
-        .contact-form {
-            text-align: left;
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: var(--space-20);
+                label {
+                    margin-bottom: var(--space-5);
+                    font-weight: 300;
+                    text-transform: uppercase;
+                }
+                textarea,
+                input {
+                    border: none;
+                    outline: none;
+                    padding: var(--space-10);
+                }
+                .name {
+                    display: flex;
+                    gap: var(--space-20);
+                    .first-name,
+                    .last-name {
+                        width: 100%;
+                    }
+                }
+                .name,
+                .email,
+                .mobile,
+                .comment,
+                .submit-btn {
+                    flex-basis: 100%;
+                }
 
-            label,
-            textarea,
-            input,
-            button {
-                width: 100%;
-                display: block;
-            }
-            label {
-                margin-bottom: var(--space-5);
-                font-weight: 300;
-                text-transform: uppercase;
-            }
-            textarea,
-            input {
-                border: none;
-                outline: none;
-                padding: var(--space-10);
-            }
-
-            .first-name,
-            .last-name {
-                grid-column: span 1;
-            }
-            .email,
-            .mobile,
-            .comment,
-            .submit-btn {
-                grid-column: span 2;
-            }
-
-            .submit-btn {
-                border: none;
-                background: var(--primary-color-yellow);
-                padding: var(--space-15);
-                margin-top: var(--space-20);
-                text-transform: uppercase;
-                cursor: pointer;
+                .submit-btn {
+                    border: none;
+                    background: var(--primary-color-yellow);
+                    padding: var(--space-15);
+                    margin-top: var(--space-20);
+                    text-transform: uppercase;
+                    cursor: pointer;
+                }
             }
         }
     }
 }
 
 @media only screen and (max-width: 60rem) {
+    header {
+        .details {
+            color: var(--primary-color-light);
+            grid-column: 1 / span 12;
+            margin: var(--space-80) 0 var(--space-40);
+        }
+    }
     main {
         .contact-wrapper {
-            padding: var(--space-120) 0 var(--space-120);
+            grid-column: 1 / span 12;
+            margin: var(--space-40) 0 var(--space-80);
+
             .contact-content {
-                .details,
-                .contact-form {
-                    grid-column: 3 / span 8;
-                }
-                .details {
-                    margin-bottom: var(--space-30);
-                }
+                width: calc(100% / 12 * 10);
                 .contact-form {
                     gap: var(--space-15);
                     textarea,
@@ -110,17 +123,18 @@ main {
     }
 }
 @media only screen and (max-width: 35rem) {
+    header {
+        .details {
+            color: var(--primary-color-light);
+            grid-column: 1 / span 12;
+            margin: var(--space-60) 0 var(--space-30);
+        }
+    }
     main {
         .contact-wrapper {
-            padding: var(--space-100) 0 var(--space-100);
+            margin: var(--space-30) 0 var(--space-60);
             .contact-content {
-                .details,
-                .contact-form {
-                    grid-column: 2 / span 10;
-                }
-                .details {
-                    margin-bottom: var(--space-20);
-                }
+                width: calc(100% / 12 * 12);
                 .contact-form {
                     gap: var(--space-10);
                     textarea,

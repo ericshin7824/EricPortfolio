@@ -117,41 +117,40 @@
     --font-size-144: 9rem;
 }
 
-// html,
-// body {
-//     overflow-x: hidden;
-// }
-// html {
-//     width: 100%;
-//     min-height: 100%;
-//     // scroll-behavior: smooth;
-//     // -webkit-font-smoothing: antialiased;
-// }
-// body {
-//     width: inherit;
-// }
-// * {
-//     padding: 0;
-//     margin: 0;
-//     box-sizing: border-box;
-//     transition: 0.4s ease-in-out;
-// }
-// li {
-//     list-style: none;
-// }
-// a {
-//     text-decoration: none;
-//     color: inherit;
-//     white-space: nowrap;
-//     cursor: pointer;
-// }
+html,
+body {
+    min-height: 100vh;
+}
+html {
+    width: 100%;
+    // scroll-behavior: smooth;
+    // -webkit-font-smoothing: antialiased;
+}
+body {
+    overflow-x: hidden;
+    width: inherit;
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    // transition: 0.4s ease-in-out;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+    white-space: nowrap;
+    cursor: pointer;
+}
 .max-width-bander {
     width: 100%;
     max-width: var(--max-w-1920);
     max-width: var(--max-w-1440);
     padding-left: var(--space-80);
     padding-right: var(--space-80);
-    // margin: 0 auto;
 }
 
 // ==== GRID CLASSES ====
@@ -498,8 +497,13 @@ body {
     }
 }
 .global-footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
     background: var(--primary-color-dark);
     width: inherit;
+
     display: flex;
     justify-content: center;
     .legal-contents {

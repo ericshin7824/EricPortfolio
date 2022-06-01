@@ -38,6 +38,22 @@
   }
 }
 
+body {
+  position: relative;
+  background: var(--primary-color-dark);
+  padding-top: var(--nav-height-l);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 .about-wrapper,
 .tech-wrapper,
 .service-wrapper,
@@ -55,52 +71,6 @@
 
 .link-btn {
   margin-top: var(--space-30);
-}
-
-html,
-body {
-  overflow-x: hidden;
-}
-
-html {
-  width: 100%;
-  min-height: 100%;
-}
-
-body {
-  width: inherit;
-  padding-top: var(--nav-height-l);
-  background: var(--primary-color-dark);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-* {
-  padding: 0;
-  margin: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  -webkit-transition: 0.4s ease-in-out;
-  transition: 0.4s ease-in-out;
-}
-
-li {
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-  white-space: nowrap;
-  cursor: pointer;
 }
 
 header {

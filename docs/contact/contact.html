@@ -12,6 +12,7 @@
     <body>
         <div class="menu-overlay hidden"></div>
         <a class="back-to-top hidden" href="#home" id="back-to-top">Top</a>
+        <!-- <a class="scrollTop-btn" onclick="scrollToTop()">Top</a> -->
         <nav class="global-nav">
             <div class="nav-contents max-width-bander grid-12 col-gap-20">
                 <a class="logo" href="https://www.erichoonshin.com">Hn.</a>
@@ -29,12 +30,14 @@
                 </ul>
             </div>
         </nav>
-        <main>
+        <header class="grid-12 col-gap-40 max-width-bander">
+            <article class="details">
+                <p class="title-xl"><span>Ready to</span><span>work</span><span class="outline-m">with me?</span></p>
+            </article>
+        </header>
+        <main class="grid-12 col-gap-40 max-width-bander">
             <section class="contact-wrapper">
-                <section class="contact-content max-width-bander grid-12 col-gap-40">
-                    <article class="details">
-                        <p class="title-xl"><span>Ready to</span><span>work</span><span class="outline">with me?</span></p>
-                    </article>
+                <section class="contact-content">
                     <form class="contact-form" action="https://formsubmit.co/4baedba34c5b14e6074e8f5cdfe3085e" method="post">
                         <!-- honeypot -->
                         <input type="text" name="_honey" style="display: none;">
@@ -43,13 +46,15 @@
                         <input type="hidden" name="_captcha" value="false">
                         <!-- link to my web -->
                         <input type="hidden" name="_next" value="https://www.erichoonshin.com/docs/contact/success.html">
-                        <div class="first-name">
-                            <label class="title-s" for="contact-firstName">First name *</label>
-                            <input class="form-control" type="text" name="First&nbsp;name" id="contact-firstName" required />
-                        </div>
-                        <div class="last-name">
-                            <label class="title-s" for="contact-lastName">Last name *</label>
-                            <input class="form-control" type="text" name="Last&nbsp;name" id="contact-lastName" required />
+                        <div class="name">
+                            <div class="first-name">
+                                <label class="title-s" for="contact-firstName">First name *</label>
+                                <input class="form-control" type="text" name="First&nbsp;name" id="contact-firstName" required />
+                            </div>
+                            <div class="last-name">
+                                <label class="title-s" for="contact-lastName">Last name *</label>
+                                <input class="form-control" type="text" name="Last&nbsp;name" id="contact-lastName" required />
+                            </div>
                         </div>
                         <div class="email">
                             <label class="title-s" for="contact-email">Email *</label>

@@ -79,6 +79,38 @@
   --font-size-144: 9rem;
 }
 
+html,
+body {
+  min-height: 100vh;
+}
+
+html {
+  width: 100%;
+}
+
+body {
+  overflow-x: hidden;
+  width: inherit;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
 .max-width-bander {
   width: 100%;
   max-width: var(--max-w-1920);
@@ -467,6 +499,9 @@ body {
 }
 
 .global-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
   background: var(--primary-color-dark);
   width: inherit;
   display: -webkit-box;

@@ -1,50 +1,33 @@
 @use 'foundation/main';
 body {
+  width: inherit;
+  padding-top: var(--nav-height-l);
   background: var(--primary-color-dark);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  min-height: 100vh;
 }
 
-main {
+header {
   width: inherit;
 }
 
-.contact-wrapper {
-  width: 100%;
-  padding: var(--space-140) 0 var(--space-140);
-}
-
-.contact-wrapper .contact-content {
+header .details {
   color: var(--primary-color-light);
-}
-
-.contact-wrapper .contact-content .details {
   -ms-grid-column: 1;
   -ms-grid-column-span: 12;
   grid-column: 1 / span 12;
+  margin: var(--space-120) 0 var(--space-60);
 }
 
-.contact-wrapper .contact-content .contact-form {
-  -ms-grid-column: 3;
-  -ms-grid-column-span: 8;
-  grid-column: 3 / span 8;
-  padding: 0 var(--space-80);
-}
-
-.contact-wrapper .contact-content .details {
-  margin-bottom: var(--space-120);
-}
-
-.contact-wrapper .contact-content .details p {
+header .details p {
   text-transform: uppercase;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -61,53 +44,88 @@ main {
           flex-direction: column;
 }
 
-.contact-wrapper .contact-content .details p span {
+header .details p span {
   display: block;
 }
 
-.contact-wrapper .contact-content .contact-form {
+main {
+  width: inherit;
+}
+
+main .contact-wrapper {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 12;
+  grid-column: 1 / span 12;
+  margin: var(--space-60) 0 var(--space-120);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main .contact-wrapper .contact-content {
+  color: var(--primary-color-light);
+  width: calc(100% / 12 * 6);
+}
+
+main .contact-wrapper .contact-content .contact-form {
+  width: 100%;
   text-align: left;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (1fr)[2];
-      grid-template-columns: repeat(2, 1fr);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   gap: var(--space-20);
 }
 
-.contact-wrapper .contact-content .contact-form label,
-.contact-wrapper .contact-content .contact-form textarea,
-.contact-wrapper .contact-content .contact-form input,
-.contact-wrapper .contact-content .contact-form button {
+main .contact-wrapper .contact-content .contact-form label,
+main .contact-wrapper .contact-content .contact-form textarea,
+main .contact-wrapper .contact-content .contact-form input,
+main .contact-wrapper .contact-content .contact-form button {
   width: 100%;
   display: block;
 }
 
-.contact-wrapper .contact-content .contact-form label {
+main .contact-wrapper .contact-content .contact-form label {
   margin-bottom: var(--space-5);
   font-weight: 300;
   text-transform: uppercase;
 }
 
-.contact-wrapper .contact-content .contact-form textarea,
-.contact-wrapper .contact-content .contact-form input {
+main .contact-wrapper .contact-content .contact-form textarea,
+main .contact-wrapper .contact-content .contact-form input {
   border: none;
   outline: none;
   padding: var(--space-10);
 }
 
-.contact-wrapper .contact-content .contact-form .first-name,
-.contact-wrapper .contact-content .contact-form .last-name {
-  grid-column: span 1;
+main .contact-wrapper .contact-content .contact-form .name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: var(--space-20);
 }
 
-.contact-wrapper .contact-content .contact-form .email,
-.contact-wrapper .contact-content .contact-form .mobile,
-.contact-wrapper .contact-content .contact-form .comment,
-.contact-wrapper .contact-content .contact-form .submit-btn {
-  grid-column: span 2;
+main .contact-wrapper .contact-content .contact-form .name .first-name,
+main .contact-wrapper .contact-content .contact-form .name .last-name {
+  width: 100%;
 }
 
-.contact-wrapper .contact-content .contact-form .submit-btn {
+main .contact-wrapper .contact-content .contact-form .name,
+main .contact-wrapper .contact-content .contact-form .email,
+main .contact-wrapper .contact-content .contact-form .mobile,
+main .contact-wrapper .contact-content .contact-form .comment,
+main .contact-wrapper .contact-content .contact-form .submit-btn {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+}
+
+main .contact-wrapper .contact-content .contact-form .submit-btn {
   border: none;
   background: var(--primary-color-yellow);
   padding: var(--space-15);
@@ -117,17 +135,21 @@ main {
 }
 
 @media only screen and (max-width: 60rem) {
+  header .details {
+    color: var(--primary-color-light);
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 12;
+    grid-column: 1 / span 12;
+    margin: var(--space-80) 0 var(--space-40);
+  }
   main .contact-wrapper {
-    padding: var(--space-120) 0 var(--space-120);
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 12;
+    grid-column: 1 / span 12;
+    margin: var(--space-40) 0 var(--space-80);
   }
-  main .contact-wrapper .contact-content .details,
-  main .contact-wrapper .contact-content .contact-form {
-    -ms-grid-column: 3;
-    -ms-grid-column-span: 8;
-    grid-column: 3 / span 8;
-  }
-  main .contact-wrapper .contact-content .details {
-    margin-bottom: var(--space-30);
+  main .contact-wrapper .contact-content {
+    width: calc(100% / 12 * 10);
   }
   main .contact-wrapper .contact-content .contact-form {
     gap: var(--space-15);
@@ -143,17 +165,18 @@ main {
 }
 
 @media only screen and (max-width: 35rem) {
+  header .details {
+    color: var(--primary-color-light);
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 12;
+    grid-column: 1 / span 12;
+    margin: var(--space-60) 0 var(--space-30);
+  }
   main .contact-wrapper {
-    padding: var(--space-100) 0 var(--space-100);
+    margin: var(--space-30) 0 var(--space-60);
   }
-  main .contact-wrapper .contact-content .details,
-  main .contact-wrapper .contact-content .contact-form {
-    -ms-grid-column: 2;
-    -ms-grid-column-span: 10;
-    grid-column: 2 / span 10;
-  }
-  main .contact-wrapper .contact-content .details {
-    margin-bottom: var(--space-20);
+  main .contact-wrapper .contact-content {
+    width: calc(100% / 12 * 12);
   }
   main .contact-wrapper .contact-content .contact-form {
     gap: var(--space-10);
