@@ -34,6 +34,10 @@ body {
 .information-wrapper {
     grid-column: 1 / span 12;
 }
+// .tech-wrapper,
+// .service-wrapper {
+//     grid-column: 2 / span 10;
+// }
 .work-wrapper {
     grid-column: 2 / span 10;
 }
@@ -41,8 +45,46 @@ body {
 .link-btn {
     margin-top: var(--space-30);
 }
+.divider {
+    position: relative;
+    grid-column: 1 / span 12;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &::before {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        background: var(--primary-color-dark-gray);
+        width: 100%;
+        height: 3px;
+    }
+    a {
+        background: var(--primary-color-dark);
+        width: var(--space-80);
+        height: var(--space-80);
+        border: 2px solid var(--primary-color-dark-gray);
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &:hover {
+            background: var(--primary-color-yellow);
+            border: 2px solid var(--primary-color-yellow);
+            i {
+                color: var(--primary-color-dark);
+            }
+        }
+        i {
+            padding: var(--space-40);
+            color: var(--primary-color-light);
+            font-size: var(--font-size-24);
+        }
+    }
+}
 header {
     width: inherit;
+    height: calc(100vh - (var(--space-80) + var(--nav-height-l)));
     .home-wrapper {
         grid-column: 1 / span 12;
         position: relative;
@@ -52,8 +94,7 @@ header {
         align-items: center;
 
         .home-content {
-            height: 90vh;
-            border-bottom: 2px solid var(--primary-color-gray);
+            // border-bottom: 2px solid var(--primary-color-gray);
 
             color: var(--primary-color-light);
             text-align: center;
@@ -125,7 +166,7 @@ main {
         z-index: 3;
         .about-content {
             color: var(--primary-color-light);
-            border-bottom: 2px solid var(--primary-color-gray);
+            // border-bottom: 2px solid var(--primary-color-gray);
             display: flex;
             flex-wrap: wrap;
             align-items: flex-start;
@@ -166,26 +207,37 @@ main {
 
         .tech-content {
             color: var(--primary-color-light);
-            border-bottom: 2px solid var(--primary-color-gray);
+            // border-bottom: 2px solid var(--primary-color-gray);
             display: flex;
             justify-content: flex-end;
 
             .details {
                 flex-basis: calc(40% - var(--space-40));
                 .techs-container {
-                    gap: var(--space-40);
+                    border: {
+                        top: 1px solid var(--primary-color-dark-gray);
+                        bottom: 1px solid var(--primary-color-dark-gray);
+                    }
                     display: flex;
-                    flex-wrap: wrap;
+                    flex-direction: column;
                     li {
-                        flex: 1 1 calc(50% - var(--space-40));
-                        color: var(--primary-color-light);
                         min-width: 5rem;
+                        padding: var(--space-20) var(--space-10);
+                        color: var(--primary-color-light);
+
+                        flex: 1 1 calc(50% - var(--space-40));
                         display: flex;
                         justify-content: flex-start;
                         align-items: center;
+                        &:not(:last-of-type) {
+                            border-bottom: 1px solid var(--primary-color-dark-gray);
+                        }
+                        &:hover {
+                            background: var(--primary-color-dark-gray);
+                        }
                         i {
                             margin-right: var(--space-15);
-                            font-size: var(--font-size-24);
+                            font-size: var(--font-size-18);
                         }
                         h2 {
                             font-size: var(--font-size-14);
@@ -204,27 +256,37 @@ main {
 
         .service-content {
             color: var(--primary-color-light);
-            border-bottom: 2px solid var(--primary-color-gray);
             display: flex;
             justify-content: flex-end;
 
             .details {
                 flex-basis: calc(40% - var(--space-40));
                 .cards-container {
-                    gap: var(--space-40);
+                    border: {
+                        top: 1px solid var(--primary-color-dark-gray);
+                        bottom: 1px solid var(--primary-color-dark-gray);
+                    }
                     display: flex;
-                    flex-wrap: wrap;
-                    .card {
+                    flex-direction: column;
+                    li {
                         // width: calc(50% - var(--space-40));
                         flex: 1 1 calc(50% - var(--space-40));
                         min-width: 5rem;
+                        padding: var(--space-20) var(--space-10);
+
                         color: inherit;
                         display: flex;
                         justify-content: flex-start;
                         align-items: center;
+                        &:not(:last-of-type) {
+                            border-bottom: 1px solid var(--primary-color-dark-gray);
+                        }
+                        &:hover {
+                            background: var(--primary-color-dark-gray);
+                        }
                         i {
                             margin-right: var(--space-15);
-                            font-size: var(--font-size-24);
+                            font-size: var(--font-size-18);
                         }
                         h2 {
                             font-size: var(--font-size-14);
@@ -333,7 +395,7 @@ main {
 
         .information-content {
             color: var(--primary-color-light);
-            border-top: 2px solid var(--primary-color-gray);
+            // border-top: 2px solid var(--primary-color-gray);
             display: flex;
             justify-content: center;
             text-align: center;
@@ -446,9 +508,9 @@ main {
             .tech-content {
                 .details {
                     flex-basis: 100%;
-                    .techs-container {
-                        gap: var(--space-30);
-                    }
+                    // .techs-container {
+                    //     gap: var(--space-30);
+                    // }
                 }
             }
         }
@@ -459,8 +521,8 @@ main {
                     flex-basis: 100%;
                     .cards-container {
                         min-width: 90px;
-                        gap: var(--space-30);
-                        .card {
+                        // gap: var(--space-30);
+                        li {
                             i {
                                 margin-right: var(--space-10);
                             }
@@ -473,9 +535,6 @@ main {
         .work-wrapper {
             .work-content {
                 flex-direction: column;
-                // .projects-container {
-                //     gap: var(--space-15);
-                // }
             }
         }
 
@@ -529,7 +588,9 @@ main {
                 .details {
                     flex-basis: 100%;
                     .techs-container {
-                        gap: var(--space-20);
+                        li {
+                            padding: var(--space-10) 0;
+                        }
                     }
                 }
             }
@@ -539,7 +600,9 @@ main {
                 .details {
                     flex-basis: 100%;
                     .cards-container {
-                        gap: var(--space-20);
+                        li {
+                            padding: var(--space-10) 0;
+                        }
                     }
                 }
             }

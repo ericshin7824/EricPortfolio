@@ -7,6 +7,7 @@
   --primary-color-light: rgba(255, 255, 255, 1);
   --primary-color-yellow: rgba(255, 194, 41, 1);
   --primary-color-gray: rgba(160, 160, 160, 1);
+  --primary-color-dark-gray: rgba(100, 100, 100, 1);
   --success-color-green: rgb(104, 241, 99);
   --logo-size: 1.4rem;
   --nav-height-l: 3.125rem;
@@ -43,7 +44,6 @@
   --space-160: 10rem;
   --radius-4: 4px;
   --radius-8: 8px;
-  --default-text-align: left;
   --font-weight-300: 300;
   --font-weight-500: 500;
   --font-weight-600: 600;
@@ -425,12 +425,12 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-column-gap: var(--space-40);
-          column-gap: var(--space-40);
+  gap: var(--space-40);
 }
 
 .global-nav .nav-contents .nav-links a {
-  padding: 0.5rem 0;
+  line-height: 0.85;
+  padding: var(--space-8) 0;
   font-size: var(--font-size-12);
   font-weight: var(--font-weight-600);
   text-transform: uppercase;
@@ -566,23 +566,35 @@ body {
   .subtitle {
     font-size: var(--font-size-30);
   }
-  .global-nav .nav-links {
+  .global-nav .nav-contents .nav-links {
     position: fixed;
     top: 0;
     right: -240px;
+    z-index: 1;
     background: var(--primary-color-yellow);
     width: 240px;
     height: 100vh;
+    padding: 0 var(--space-40);
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+    gap: var(--space-20);
     visibility: visible;
     opacity: 1;
-    z-index: 1;
   }
-  .global-nav .nav-links.open {
+  .global-nav .nav-contents .nav-links.open {
     right: 0;
+  }
+  .global-nav .nav-contents .nav-links a {
+    padding: 0;
+    font-size: var(--font-size-28);
+  }
+  .global-nav .nav-contents .nav-links a:hover {
+    color: var(--primary-color-dark);
   }
   .global-nav .nav-menu-btn {
     display: -webkit-box;
