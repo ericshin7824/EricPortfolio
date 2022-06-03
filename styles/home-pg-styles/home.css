@@ -363,6 +363,11 @@ main .tech-wrapper .tech-content .details .techs-container li:not(:last-of-type)
 
 main .tech-wrapper .tech-content .details .techs-container li:hover {
   background: var(--primary-color-dark-gray);
+  padding: var(--space-20) var(--space-20);
+}
+
+main .tech-wrapper .tech-content .details .techs-container li:hover i {
+  margin-right: var(--space-20);
 }
 
 main .tech-wrapper .tech-content .details .techs-container li i {
@@ -433,6 +438,11 @@ main .service-wrapper .service-content .details .cards-container li:not(:last-of
 
 main .service-wrapper .service-content .details .cards-container li:hover {
   background: var(--primary-color-dark-gray);
+  padding: var(--space-20) var(--space-20);
+}
+
+main .service-wrapper .service-content .details .cards-container li:hover i {
+  margin-right: var(--space-20);
 }
 
 main .service-wrapper .service-content .details .cards-container li i {

@@ -234,6 +234,10 @@ main {
                         }
                         &:hover {
                             background: var(--primary-color-dark-gray);
+                            padding: var(--space-20) var(--space-20);
+                            i {
+                                margin-right: var(--space-20);
+                            }
                         }
                         i {
                             margin-right: var(--space-15);
@@ -283,6 +287,10 @@ main {
                         }
                         &:hover {
                             background: var(--primary-color-dark-gray);
+                            padding: var(--space-20) var(--space-20);
+                            i {
+                                margin-right: var(--space-20);
+                            }
                         }
                         i {
                             margin-right: var(--space-15);
