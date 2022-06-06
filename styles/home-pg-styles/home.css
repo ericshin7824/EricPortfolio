@@ -586,11 +586,6 @@ main .work-wrapper .work-content .details {
           justify-content: flex-end;
 }
 
-main .work-wrapper .work-content .details .title-container {
-  -ms-flex-preferred-size: calc(50% - var(--space-40));
-      flex-basis: calc(50% - var(--space-40));
-}
-
 main .work-wrapper .work-content .projects-container {
   width: 100%;
   display: -ms-grid;
@@ -842,10 +837,9 @@ main .information-wrapper .information-content .details .media .icons-bander i {
     margin-right: var(--space-10);
   }
   main .work-wrapper .work-content {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
   }
   main .information-wrapper .information-content .title-xl {
     margin-bottom: var(--space-60);

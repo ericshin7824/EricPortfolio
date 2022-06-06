@@ -260,8 +260,6 @@ main {
                             }
                         }
                         .stars {
-                            // padding: 0 var(--space-20);
-                            // width: var(--space-120);
                             position: relative;
 
                             display: flex;
@@ -380,9 +378,6 @@ main {
                 width: calc(50% - var(--space-40));
                 display: flex;
                 justify-content: flex-end;
-                .title-container {
-                    flex-basis: calc(50% - var(--space-40));
-                }
             }
 
             .projects-container {
@@ -609,7 +604,7 @@ main {
 
         .work-wrapper {
             .work-content {
-                flex-direction: column;
+                align-items: flex-start;
             }
         }
 
