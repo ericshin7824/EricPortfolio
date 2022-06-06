@@ -115,7 +115,6 @@ a {
 
 .max-width-bander {
   width: 100%;
-  max-width: var(--max-w-1920);
   max-width: var(--max-w-1440);
   padding-left: var(--space-80);
   padding-right: var(--space-80);

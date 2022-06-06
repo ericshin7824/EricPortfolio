@@ -147,7 +147,7 @@ a {
 }
 .max-width-bander {
     width: 100%;
-    max-width: var(--max-w-1920);
+    // max-width: var(--max-w-1920);
     max-width: var(--max-w-1440);
     padding-left: var(--space-80);
     padding-right: var(--space-80);
@@ -157,12 +157,20 @@ a {
     grid-template-columns: repeat(12, 1fr);
     grid-auto-rows: auto;
 }
-.col-gap-20 {
-    column-gap: var(--space-40);
+.col-gap {
+    &-20 {
+        column-gap: var(--space-40);
+    }
+    &-40 {
+        column-gap: var(--space-80);
+    }
 }
-.col-gap-40 {
-    column-gap: var(--space-80);
-}
+// .col-gap-20 {
+//     column-gap: var(--space-40);
+// }
+// .col-gap-40 {
+//     column-gap: var(--space-80);
+// }
 // .justify-center {
 //     justify-content: center;
 // }
